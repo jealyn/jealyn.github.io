@@ -1864,7 +1864,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #717150;
+  background: #5be79f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3057,6 +3057,13 @@ pre .javascript .function {
 }
 body {
   background-color: #eee;
+}
+#needsharebutton-float {
+  bottom: 60px;
+  right: 26px;
+}
+#needsharebutton-float .btn {
+  padding: 0 8px 0 8px;
 }
 .mod_404 .desc {
   text-align: center;
