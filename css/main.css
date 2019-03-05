@@ -1864,7 +1864,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff12eb;
+  background: #426ba6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3058,9 +3058,13 @@ pre .javascript .function {
 body {
   background-color: #eee;
 }
+.post-body li {
+  margin-left: -1rem;
+}
 #needsharebutton-float {
   bottom: 60px;
   right: 26px;
+  left: auto;
 }
 #needsharebutton-float .btn {
   padding: 0 8px 0 8px;
