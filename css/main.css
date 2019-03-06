@@ -1047,7 +1047,7 @@ pre .javascript .function {
   }
 }
 .comments {
-  margin: 60px 20px 0;
+  margin: 20px 20px 0;
 }
 .tag-cloud {
   text-align: center;
@@ -1400,7 +1400,8 @@ pre .javascript .function {
   border-radius: 50%;
 }
 .posts-collapse .post {
-  margin: 30px 0;
+  margin: 10px 0;
+  padding: 0;
 }
 .posts-collapse .post-header {
   position: relative;
@@ -1429,8 +1430,12 @@ pre .javascript .function {
 .posts-collapse .post-header:hover {
   border-bottom-color: #666;
 }
+.posts-collapse .post-header:hover .post-title-link,
+.posts-collapse .post-header:hover .post-time {
+  color: #ffa200;
+}
 .posts-collapse .post-header:hover::before {
-  background: #222;
+  background: #ffa200;
 }
 .posts-collapse .post-meta {
   position: absolute;
@@ -1879,7 +1884,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2ee475;
+  background: #a2cf6a;
 }
 .links-of-blogroll {
   font-size: 13px;
