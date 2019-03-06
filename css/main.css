@@ -1267,6 +1267,14 @@ pre .javascript .function {
 .use-motion .collection-title {
   opacity: 0;
 }
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: 1px solid #fc6423;
+}
 .posts-expand {
   padding-top: 40px;
 }
@@ -1864,7 +1872,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b5a6d4;
+  background: #adffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3099,8 +3107,20 @@ body {
 }
 code {
   color: #ff7600;
+  color: #d14;
   background: #fbf7f8;
   margin: 2px;
+}
+.post-body .note.warning p {
+  color: #f0ad4e;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+.post-body .note.info h3 {
+  font-size: 0.95em;
+  font-weight: normal;
 }
 .highlight {
   position: relative;
