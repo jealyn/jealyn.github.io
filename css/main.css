@@ -1275,6 +1275,14 @@ pre .javascript .function {
   color: #fc6423;
   border-bottom: 1px solid #fc6423;
 }
+.post-body .note a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body .note a:hover {
+  color: #fc6423;
+  border-bottom: 1px solid #fc6423;
+}
 .posts-expand {
   padding-top: 40px;
 }
@@ -1884,7 +1892,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a2cf6a;
+  background: #ffb34d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3133,6 +3141,9 @@ code {
 .post-body .note.info h3 {
   font-size: 0.95em;
   font-weight: normal;
+}
+.post-body .note.danger p {
+  color: #d9534f;
 }
 .highlight {
   position: relative;
