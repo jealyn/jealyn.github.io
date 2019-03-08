@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Jealyn的个人网站">
 <meta property="og:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第五天。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-07T09:36:08.912Z">
+<meta property="og:updated_time" content="2019-03-07T09:36:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js基础练习题 第5天">
 <meta name="twitter:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第五天。">
@@ -818,8 +818,6 @@
 
 
 
-  
-
 
 
   
@@ -850,11 +848,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
 
@@ -1088,12 +1081,23 @@
   
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script type="text/javascript" src="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/love.js"></script>
   <!-- 页面点击爆炸效果 -->
   
   <!-- 代码块复制功能 -->
-  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
-  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+  <script type="text/javascript" src="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/clipboard.min.js"></script>  
+  <script type="text/javascript" src="	https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/clipboard-use.js"></script>
+  <!-- 花瓣飘落 -->
+  <script src="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/snowfall.jquery.js"></script>
+  <script>
+    $(document).snowfall('clear');
+    $(document).snowfall({
+        image: "/images/huaban.png",
+        flakeCount:30,
+        minSize: 18,
+        maxSize: 38
+    });
+  </script>
 </body>
 </html>
 

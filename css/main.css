@@ -1892,7 +1892,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff4ff;
+  background: #0affeb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3084,7 +3084,9 @@ pre .javascript .function {
   }
 }
 body {
-  background-color: #eee;
+  background: url("https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/bg38.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .post-body li {
   margin-left: -1rem;
