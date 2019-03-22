@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Jealyn的个人网站">
 <meta property="og:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第六天。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-14T13:52:16.000Z">
+<meta property="og:updated_time" content="2019-03-22T13:46:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js基础练习题 第6天">
 <meta name="twitter:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第六天。">
@@ -364,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  312 字
+                  336 字
                 </span>
               
 
@@ -407,6 +407,7 @@
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.执行完下列代码段后，页面中输出__________，<code>s1</code> = __________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"010-98989999"</span>); </span><br><span class="line"><span class="built_in">document</span>.write(s1.substring(<span class="number">1</span>, <span class="number">4</span>)); </span><br><span class="line"><span class="built_in">document</span>.write(s1.substr(<span class="number">1</span>, <span class="number">4</span>));</span><br></pre></td></tr></table></figure><br>2.执行完下列代码段后，<code>emp.length</code> = __________，<code>emp[0]</code> = __________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> emp = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">5</span>);</span><br><span class="line">emp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">emp[<span class="number">2</span>] = <span class="number">2</span>;</span><br></pre></td></tr></table></figure><br>3.以下代码运行的结果是输出 __________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = b = <span class="number">10</span>; </span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">  <span class="keyword">var</span> a = b = <span class="number">20</span> </span><br><span class="line">&#125;)(); </span><br><span class="line"><span class="built_in">console</span>.log(b); </span><br></pre></td></tr></table></figure><br>4.以下代码运行后弹出的结果是 __________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">888</span>;    </span><br><span class="line">++a;  </span><br><span class="line">alert(a++);</span><br></pre></td></tr></table></figure><br>5.下面代码运行后,<code>k</code>的值是__________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">for</span>(;i &lt; <span class="number">10</span>, j &lt; <span class="number">6</span>; i++, j++)&#123; </span><br><span class="line">  k = i + j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>6.<code>[1,2,3,4].join(&quot;0&quot;).split(&quot;&quot;)</code> 的返回值是__________。<br>7.下面代码运行时，第一次弹出__________，第二次弹出__________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">  alert(<span class="number">1</span>);</span><br><span class="line">&#125;    </span><br><span class="line">alert(fn1());</span><br></pre></td></tr></table></figure><br>8.以下代码运行后,弹出的结果为__________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fn1();    </span><br><span class="line"><span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">  alert(a);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><br>9.<code>&quot;12&quot; &gt; &quot;9&quot;</code>的返回值是__________<br></p>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript</p>
 <p>2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~</p>
+<p>3.查看答案和解析，请点击<a href="/jsexer6-ans.html" title="js基础练习题 第6天 答案及解析">js基础练习题第6天 答案及解析</a></p>
 
       
     </div>
@@ -592,7 +593,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
