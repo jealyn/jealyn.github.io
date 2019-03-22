@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="javascript,web前端,前端面试题,">
+  <meta name="keywords" content="css,三栏布局,flex布局,grid布局,table布局,position布局,float布局,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="在本栏中，我将更新一些JavaScript基础练习题。这些习题，很大一部分是我在学习过程中记下的笔记或者遇到的坑，还有就是很重要很重要的基础概念。我觉得非常适合刚入门前端开发的朋友们，希望大家有所收获，这就足够咯。">
-<meta name="keywords" content="javascript,web前端,前端面试题">
+<meta name="description" content="如何实现三栏布局，也是前端面试常问的问题了。所谓的三栏布局，一般指的是“左右侧定宽，中间部分自适应”，在这篇文章中，我将分享实现三栏布局的5种方式。">
+<meta name="keywords" content="css,三栏布局,flex布局,grid布局,table布局,position布局,float布局">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js基础练习题 第2天">
-<meta property="og:url" content="https://www.jealyn.top/jsexer2.html">
+<meta property="og:title" content="CSS三栏布局的几种实现方式">
+<meta property="og:url" content="https://www.jealyn.top/three-cols-display.html">
 <meta property="og:site_name" content="Jealyn的个人网站">
-<meta property="og:description" content="在本栏中，我将更新一些JavaScript基础练习题。这些习题，很大一部分是我在学习过程中记下的笔记或者遇到的坑，还有就是很重要很重要的基础概念。我觉得非常适合刚入门前端开发的朋友们，希望大家有所收获，这就足够咯。">
+<meta property="og:description" content="如何实现三栏布局，也是前端面试常问的问题了。所谓的三栏布局，一般指的是“左右侧定宽，中间部分自适应”，在这篇文章中，我将分享实现三栏布局的5种方式。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T14:40:54.000Z">
+<meta property="og:updated_time" content="2019-03-22T15:02:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js基础练习题 第2天">
-<meta name="twitter:description" content="在本栏中，我将更新一些JavaScript基础练习题。这些习题，很大一部分是我在学习过程中记下的笔记或者遇到的坑，还有就是很重要很重要的基础概念。我觉得非常适合刚入门前端开发的朋友们，希望大家有所收获，这就足够咯。">
+<meta name="twitter:title" content="CSS三栏布局的几种实现方式">
+<meta name="twitter:description" content="如何实现三栏布局，也是前端面试常问的问题了。所谓的三栏布局，一般指的是“左右侧定宽，中间部分自适应”，在这篇文章中，我将分享实现三栏布局的5种方式。">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://www.jealyn.top/jsexer2.html">
+  <link rel="canonical" href="https://www.jealyn.top/three-cols-display.html">
 
 
 
 
 
-  <title>js基础练习题 第2天 | Jealyn的个人网站</title>
+  <title>CSS三栏布局的几种实现方式 | Jealyn的个人网站</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/jsexer2.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/three-cols-display.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js基础练习题 第2天</h1>
+          <h1 class="post-title" itemprop="name headline">CSS三栏布局的几种实现方式</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text"> </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T21:20:08+08:00">
-                2019-03-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T22:10:32+08:00">
+                2019-03-22
               </time>
             
 
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS基础练习题/" itemprop="url" rel="index">
-                    <span itemprop="name">JS基础练习题</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -339,7 +339,7 @@
 
           
           
-             <span id="/jsexer2.html" class="leancloud_visitors" data-flag-title="js基础练习题 第2天">
+             <span id="/three-cols-display.html" class="leancloud_visitors" data-flag-title="CSS三栏布局的几种实现方式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -364,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  329 字
+                  1.1k 字
                 </span>
               
 
@@ -380,7 +380,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -401,39 +401,24 @@
       
 
       
-        <blockquote><p>在本栏中，我将更新一些JavaScript基础练习题。这些习题，很大一部分是我在学习过程中记下的笔记或者遇到的坑，还有就是很重要很重要的基础概念。我觉得非常适合刚入门前端开发的朋友们，希望大家有所收获，这就足够咯。</p>
+        <blockquote><p>如何实现三栏布局，也是前端面试常问的问题了。所谓的三栏布局，一般指的是“左右侧定宽，中间部分自适应”，在这篇文章中，我将分享实现三栏布局的5种方式。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
-<li><p><code>var exerOne = &#39;test;</code><br><code>console.log(exerOne);</code> 的结果是<strong><strong>___</strong></strong>。</p>
-</li>
-<li><p><code>var exerTwo = 52 / 0;</code><br><code>console.log(exerTwo);</code> 的结果是<strong><strong>____</strong></strong> ，<br><code>console.log(typeof(exerTwo));</code> 的结果是<strong><strong>____</strong></strong>。</p>
-</li>
-</ol>
-<ol start="3">
-<li><code>var exerThree = 0 / 0;</code><br><code>console.log(exerThree);</code> 的结果是<strong><strong>__</strong></strong>，<br><code>console.log(typeof(exerThree));</code> 的结果是<strong><strong>____</strong></strong>。</li>
-</ol>
-<ol start="4">
-<li><code>var exerFour = &quot;-3.3E+2-5&quot;;</code><br><code>console.log(Number(exerFour));</code> 的结果是<strong><strong>____</strong></strong>；<br><code>console.log(parseFloat(exerFour));</code> 的结果是<strong><strong><strong>_</strong></strong></strong>。</li>
-</ol>
-<ol start="5">
-<li><code>var exerFive_1 = 5 / 2;</code><br><code>var exerFive_2=&quot; is float?&quot;;</code><br><code>console.log(exerFive_1 + exerFive_2);</code> 的结果是<strong><strong>_</strong></strong>。</li>
-</ol>
-<ol start="6">
-<li><code>0.1 + 0.2 == 0.3;</code> 的返回值为<strong><strong>____</strong></strong>，若结果为假，请设计一种方法，使结果准确。<br><br><br><br></li>
-</ol>
-<ol start="7">
-<li><code>var exerSeven = &quot;this is\&quot; test string&quot;;</code><br><code>console.log(exerSeven.slice(5,9));</code> 的结果是<strong><strong>___</strong></strong>。</li>
-</ol>
-<ol start="8">
-<li>下面哪些操作不会改变原始数组，而是返回一个新的数组<strong><strong>_</strong></strong>。<br>A、<code>pop( )</code>    B、<code>reverse( )</code>   C、<code>sort( )</code>   D、<code>slice( )</code>   E、<code>concat( )</code>    F、<code>splice（ ）</code> G、<code>join（ ）</code>   H、<code>map（ ）</code>  I、<code>reduce（ ）</code>   J、<code>copyWithin( )</code></li>
-</ol>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ol>
-<li>题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript</li>
-</ol>
-<ol start="2">
-<li>题目中，若有错误和需完善的地方，可在下方留言反馈哈~~</li>
-</ol>
+<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>假设我们要实现一个页面布局需求，其要求“从左至右，页面可分为3部分，这3部分的高度都为<code>300px</code>。其中左右侧宽度固定，为<code>200px</code>宽，中间部分自动充满剩余空间”，你该如何实现呢？<br>在这里我们假设已经对所有元素设置了：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin</span>: 0;</span><br><span class="line"><span class="selector-tag">padding</span>: 0;</span><br></pre></td></tr></table></figure></p>
+<h3 id="二、布局方式"><a href="#二、布局方式" class="headerlink" title="二、布局方式"></a>二、布局方式</h3><h4 id="1-position布局"><a href="#1-position布局" class="headerlink" title="1.position布局"></a>1.position布局</h4><p>HTML代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--我们假设容器元素为body元素，实际情况，可自定义一个container --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>CSS代码如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.left</span>, <span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 左侧定位 */</span></span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 中间自适应区 */</span></span><br><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 右侧定位 */</span></span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>代码逻辑方面还是比较清晰的，通过定位，将几个块放在一堆。不过其冗余度太高，而且维护成本和维护难度也相当之大。违背了<strong>DRY</strong>原则（<strong>Don’t Repeat Yourself</strong>）。</p>
+<h4 id="2-float-calc-布局"><a href="#2-float-calc-布局" class="headerlink" title="2.float + calc 布局"></a>2.float + calc 布局</h4><p>HTML部分不变。<br>CSS部分：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 三者共有样式 */</span></span><br><span class="line"><span class="selector-class">.left</span>, <span class="selector-class">.center</span>, <span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 左侧样式 */</span></span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 中间样式，关键在 calc */</span></span><br><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(100% - 400px);</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 右侧样式 */</span></span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>该方式的逻辑还是挺简单的，三个块依次浮动，从而形成一行。关键部分在于 <code>calc</code>属性，其可以动态计算值，在该例中，其用来计算<code>center</code>部分的宽度，其为 父元素的宽度（<code>100%</code>）减去左右侧实际宽度之和（<code>200 + 200</code> ），利用该属性，实现了自适应宽度布局。关于该属性的具体介绍，参看 <a href="https://www.w3cplus.com/css3/how-to-use-css3-calc-function.html" target="_blank" rel="noopener">CSS3的calc()使用</a>。</p>
+<h4 id="3-flex布局"><a href="#3-flex布局" class="headerlink" title="3.flex布局"></a>3.flex布局</h4><p>HTML部分：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--我们假设容器元素为body元素，实际情况，可自定义一个container --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>CSS部分：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 外层容器设置为 flex 布局 */</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 左右侧定宽处理 */</span> </span><br><span class="line"><span class="selector-class">.left</span>, <span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">flex-basis</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 中间部分自适应布局 */</span></span><br><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: auto;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;   </span><br></pre></td></tr></table></figure><code>flex</code>布局一如既往的灵活与简单。还是那句话，如果不用苦逼的兼容IE9及以下浏览器，愉快的使用<code>flex</code>布局吧。</p>
+<h4 id="4-grid布局"><a href="#4-grid布局" class="headerlink" title="4.grid布局"></a>4.grid布局</h4><p>HTML代码部分与flex布局一致<br>CSS部分：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">display</span>: grid; <span class="comment">/* 设置为 grid 布局 */</span></span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="number">200px</span> auto <span class="number">200px</span>;<span class="comment">/* 定义每列的宽度，左右200px，中间自适应 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span>, <span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>grid布局设置起来更方便，不过其兼容性较差，所以可以作为实验性功能使用。要查看效果，建议使用最新版的谷歌浏览器。另外，可以使用自动加前缀插件来优化代码，自动加前缀插件为<strong>Autoprefixer</strong>，这里推荐其在线工具：<a href="https://autoprefixer.github.io" target="_blank" rel="noopener">Autoprefixer在线工具</a> 。</p>
+<h4 id="5-table布局"><a href="#5-table布局" class="headerlink" title="5.table布局"></a>5.table布局</h4><p>HTML与flex布局一致<br>CSS部分：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">display</span>: table;<span class="comment">/* 设置为 table 布局 */</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 将其子项设置为 table-cell 布局 */</span></span><br><span class="line"><span class="selector-class">.left</span>, <span class="selector-class">.center</span>, <span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: table-cell;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span>, <span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>table布局很形象，就把其理解为一个表格。不过在实际运用中其实用得比较少。</p>
+<h3 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h3><p>通过上文的分析，咱们可以有5种方式，以实现三栏布局。</p>
+<ul>
+<li>position布局：兼容性好，不过维护和修改困难</li>
+<li>float + calc 布局：必须要IE9以上浏览器才支持，遵循流式布局原理</li>
+<li>flex布局：必须要IE9以上浏览器才支持，不过使用灵活、方便，推荐使用</li>
+<li>grid布局：兼容性相对较差，可作为实验性功能</li>
+<li>table布局：了解即可</li>
+</ul>
+<h3 id="四、下载代码"><a href="#四、下载代码" class="headerlink" title="四、下载代码"></a>四、下载代码</h3><p>我将每种布局方式写入了单独的HTML文件，可<a href="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/css-three-columns-layout.zip" target="_blank" rel="noopener">点击此处下载示例代码压缩包</a>。代码下载后，尽量在新版谷歌浏览器中查看效果。</p>
 
       
     </div>
@@ -491,7 +476,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.jealyn.top/jsexer2.html" title="js基础练习题 第2天">https://www.jealyn.top/jsexer2.html</a>
+    <a href="https://www.jealyn.top/three-cols-display.html" title="CSS三栏布局的几种实现方式">https://www.jealyn.top/three-cols-display.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -506,11 +491,19 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+            <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
           
-            <a href="/tags/web前端/" rel="tag"><i class="fa fa-tag"></i> web前端</a>
+            <a href="/tags/三栏布局/" rel="tag"><i class="fa fa-tag"></i> 三栏布局</a>
           
-            <a href="/tags/前端面试题/" rel="tag"><i class="fa fa-tag"></i> 前端面试题</a>
+            <a href="/tags/flex布局/" rel="tag"><i class="fa fa-tag"></i> flex布局</a>
+          
+            <a href="/tags/grid布局/" rel="tag"><i class="fa fa-tag"></i> grid布局</a>
+          
+            <a href="/tags/table布局/" rel="tag"><i class="fa fa-tag"></i> table布局</a>
+          
+            <a href="/tags/position布局/" rel="tag"><i class="fa fa-tag"></i> position布局</a>
+          
+            <a href="/tags/float布局/" rel="tag"><i class="fa fa-tag"></i> float布局</a>
           
         </div>
       
@@ -523,8 +516,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/jsexer1.html" rel="next" title="js基础练习题 第1天">
-                <i class="fa fa-chevron-left"></i> js基础练习题 第1天
+              <a href="/jsexer10-ans.html" rel="next" title="js练习题第10天 答案及解析">
+                <i class="fa fa-chevron-left"></i> js练习题第10天 答案及解析
               </a>
             
           </div>
@@ -532,10 +525,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/jsexer3.html" rel="prev" title="js基础练习题 第3天">
-                js基础练习题 第3天 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -728,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、前言"><span class="nav-number">1.</span> <span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、布局方式"><span class="nav-number">2.</span> <span class="nav-text">二、布局方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-position布局"><span class="nav-number">2.1.</span> <span class="nav-text">1.position布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-float-calc-布局"><span class="nav-number">2.2.</span> <span class="nav-text">2.float + calc 布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-flex布局"><span class="nav-number">2.3.</span> <span class="nav-text">3.flex布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-grid布局"><span class="nav-number">2.4.</span> <span class="nav-text">4.grid布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-table布局"><span class="nav-number">2.5.</span> <span class="nav-text">5.table布局</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、总结"><span class="nav-number">3.</span> <span class="nav-text">三、总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、下载代码"><span class="nav-number">4.</span> <span class="nav-text">四、下载代码</span></a></li></ol></div>
             
 
           </div>
