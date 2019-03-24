@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="javascript,web前端,前端面试题,">
+  <meta name="keywords" content="let,ES6,const,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第六天。">
-<meta name="keywords" content="javascript,web前端,前端面试题">
+<meta name="description" content="在前端面试中，特别是前端实习生的面试问题中，对于ES6的考查上，var、let、const这三种变量声明方式的异同点几乎是必考的，本文就来分析一下三者之间有什么区别。">
+<meta name="keywords" content="let,ES6,const">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js基础练习题 第6天">
-<meta property="og:url" content="https://www.jealyn.top/jsexer6.html">
+<meta property="og:title" content="JavaScript中var、let和const的区别">
+<meta property="og:url" content="https://www.jealyn.top/var-let-const.html">
 <meta property="og:site_name" content="Jealyn的个人网站">
-<meta property="og:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第六天。">
+<meta property="og:description" content="在前端面试中，特别是前端实习生的面试问题中，对于ES6的考查上，var、let、const这三种变量声明方式的异同点几乎是必考的，本文就来分析一下三者之间有什么区别。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-24T07:42:46.000Z">
+<meta property="og:updated_time" content="2019-03-24T09:33:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js基础练习题 第6天">
-<meta name="twitter:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第六天。">
+<meta name="twitter:title" content="JavaScript中var、let和const的区别">
+<meta name="twitter:description" content="在前端面试中，特别是前端实习生的面试问题中，对于ES6的考查上，var、let、const这三种变量声明方式的异同点几乎是必考的，本文就来分析一下三者之间有什么区别。">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://www.jealyn.top/jsexer6.html">
+  <link rel="canonical" href="https://www.jealyn.top/var-let-const.html">
 
 
 
 
 
-  <title>js基础练习题 第6天 | Jealyn的个人网站</title>
+  <title>JavaScript中var、let和const的区别 | Jealyn的个人网站</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/jsexer6.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/var-let-const.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js基础练习题 第6天</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript中var、let和const的区别</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text"> </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-08T20:42:38+08:00">
-                2019-03-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-24T16:59:08+08:00">
+                2019-03-24
               </time>
             
 
@@ -322,19 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS基础练习题/" itemprop="url" rel="index">
-                    <span itemprop="name">JS基础练习题</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS基础练习题/习题/" itemprop="url" rel="index">
-                    <span itemprop="name">习题</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -350,7 +339,7 @@
 
           
           
-             <span id="/jsexer6.html" class="leancloud_visitors" data-flag-title="js基础练习题 第6天">
+             <span id="/var-let-const.html" class="leancloud_visitors" data-flag-title="JavaScript中var、let和const的区别">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -375,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  336 字
+                  945 字
                 </span>
               
 
@@ -391,7 +380,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -412,13 +401,25 @@
       
 
       
-        <blockquote><p>在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。<br>该篇文章是<a href="/categories/JS基础练习题/">该系列</a>的第六天。</p>
+        <blockquote><p>在前端面试中，特别是前端实习生的面试问题中，对于ES6的考查上，var、let、const这三种变量声明方式的异同点几乎是必考的，本文就来分析一下三者之间有什么区别。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.执行完下列代码段后，页面中输出__________，<code>s1</code> = __________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"010-98989999"</span>); </span><br><span class="line"><span class="built_in">document</span>.write(s1.substring(<span class="number">1</span>, <span class="number">4</span>)); </span><br><span class="line"><span class="built_in">document</span>.write(s1.substr(<span class="number">1</span>, <span class="number">4</span>));</span><br></pre></td></tr></table></figure><br>2.执行完下列代码段后，<code>emp.length</code> = __________，<code>emp[0]</code> = __________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> emp = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">5</span>);</span><br><span class="line">emp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">emp[<span class="number">2</span>] = <span class="number">2</span>;</span><br></pre></td></tr></table></figure><br>3.以下代码运行的结果是输出 __________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = b = <span class="number">10</span>; </span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">  <span class="keyword">var</span> a = b = <span class="number">20</span> </span><br><span class="line">&#125;)(); </span><br><span class="line"><span class="built_in">console</span>.log(b); </span><br></pre></td></tr></table></figure><br>4.以下代码运行后弹出的结果是 __________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">888</span>;    </span><br><span class="line">++a;  </span><br><span class="line">alert(a++);</span><br></pre></td></tr></table></figure><br>5.下面代码运行后,<code>k</code>的值是__________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">for</span>(;i &lt; <span class="number">10</span>, j &lt; <span class="number">6</span>; i++, j++)&#123; </span><br><span class="line">  k = i + j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>6.<code>[1,2,3,4].join(&quot;0&quot;).split(&quot;&quot;)</code> 的返回值是__________。<br>7.下面代码运行时，第一次弹出__________，第二次弹出__________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">  alert(<span class="number">1</span>);</span><br><span class="line">&#125;    </span><br><span class="line">alert(fn1());</span><br></pre></td></tr></table></figure><br>8.以下代码运行后,弹出的结果为__________。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fn1();    </span><br><span class="line"><span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">  alert(a);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><br>9.<code>&quot;12&quot; &gt; &quot;9&quot;</code>的返回值是__________<br></p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript</p>
-<p>2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~</p>
-<p>3.查看答案和解析，请点击<a href="/jsexer6-ans.html" title="js基础练习题 第6天 答案及解析">js基础练习题第6天 答案及解析</a></p>
+<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>在<strong>ES6</strong>（<strong>ES2015</strong>）出现之前，JavaScript中声明变量只有通过<code>var</code>关键字，函数声明是通过 <code>function</code>关键字，而ES6出现后，声明的方式有<code>var</code> 、<code>let</code> 、<code>const</code> 、<code>function</code> 、 <code>class</code>，本文主要讨论 <code>var</code> 、<code>let</code> 和 <code>const</code> 之间的区别。</p>
+<h3 id="二、var"><a href="#二、var" class="headerlink" title="二、var"></a>二、var</h3><p>如果使用关键字<code>var</code>声明一个变量，那么这个变量就属于当前的函数作用域，如果声明是发生在任何函数外的顶层声明，那么这个变量就属于全局作用域。举例说明：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;  <span class="comment">//此处声明的变量a为全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> a = <span class="number">2</span>;  <span class="comment">//此处声明的变量a为函数foo的局部变量</span></span><br><span class="line">   <span class="built_in">console</span>.log(a);  <span class="comment">//2</span></span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//1</span></span><br></pre></td></tr></table></figure>如果在声明变量时，省略<code>var</code>的话，该变量就会变成全局变量，如全局作用域中存在该变量，就会更新其值。如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;  <span class="comment">//此处声明的变量a为全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   a = <span class="number">2</span>;  <span class="comment">//此处的变量a也是全局变量</span></span><br><span class="line">   <span class="built_in">console</span>.log(a);  <span class="comment">//2</span></span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//2</span></span><br></pre></td></tr></table></figure>注意：<code>var</code>声明的变量存在<strong>提升</strong>（<strong>hoisting</strong>）。</p>
+<h3 id="三、提升"><a href="#三、提升" class="headerlink" title="三、提升"></a>三、提升</h3><p>提升是指无论<code>var</code>出现在一个作用域的哪个位置，这个声明都属于当前的整个作用域，在其中到处都可以访问到。注意只有变量声明才会提升，对变量赋值并不会提升。如下例所示：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>该代码段跟下列代码段是一样的逻辑：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//undefined</span></span><br><span class="line">a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>而如果对未声明过的变量进行操作，就会报错<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(b);  <span class="comment">//假设b未声明过，Uncaught ReferenceError: b is not defined</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="四、let"><a href="#四、let" class="headerlink" title="四、let"></a>四、let</h3><p><code>let</code>声明的变量，具有如下几个特点：</p>
+<ul>
+<li><code>let</code>声明的变量具有块作用域的特征。</li>
+<li>在同一个块级作用域，不能重复声明变量。</li>
+<li><code>let</code>声明的变量不存在变量提升，换一种说法，就是<code>let</code>声明存在<strong>暂时性死区</strong>（<strong>TDZ</strong>）。</li>
+</ul>
+<p>如下面几个例子所示<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(b);  <span class="comment">//Uncaught ReferenceError: b is not defined</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">2</span>;  <span class="comment">//Uncaught SyntaxError: Identifier 'a' has already been declared</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>以下是一个经典的关于<code>var</code>和<code>let</code>的一个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;, <span class="number">100</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>该代码运行后，会在控制台打印出10个10.若修改为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;, <span class="number">100</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>则该代码运行后，就会在控制台打印出 0 1 2 … 7 8 9。</p>
+<h3 id="五、const"><a href="#五、const" class="headerlink" title="五、const"></a>五、const</h3><p><code>const</code>声明方式，除了具有<code>let</code>的上述特点外，其还具备一个特点，即<code>const</code>定义的变量，一旦定义后，就不能修改，即<code>const</code>声明的为常量。<br>例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//1</span></span><br><span class="line">a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>但是，并不是说<code>const</code>声明的变量其内部内容不可变，如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj.a);  <span class="comment">//1</span></span><br><span class="line">obj.a = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj.a);  <span class="comment">//3</span></span><br></pre></td></tr></table></figure>所以准确的说，是<code>const</code>声明创建一个值的只读引用。但这并不意味着它所持有的值是不可变的，只是变量标识符不能重新分配。</p>
+<h3 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h3><ol>
+<li><code>var</code>声明的变量属于函数作用域，<code>let</code>和<code>const</code>声明的变量属于块级作用域；</li>
+<li><code>var</code>存在变量提升现象，而<code>let</code>和<code>const</code>没有此类现象；</li>
+<li><code>var</code>变量可以重复声明，而在同一个块级作用域，<code>let</code>变量不能重新声明，<code>const</code>变量不能修改。</li>
+</ol>
 
       
     </div>
@@ -476,7 +477,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.jealyn.top/jsexer6.html" title="js基础练习题 第6天">https://www.jealyn.top/jsexer6.html</a>
+    <a href="https://www.jealyn.top/var-let-const.html" title="JavaScript中var、let和const的区别">https://www.jealyn.top/var-let-const.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -491,11 +492,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+            <a href="/tags/let/" rel="tag"><i class="fa fa-tag"></i> let</a>
           
-            <a href="/tags/web前端/" rel="tag"><i class="fa fa-tag"></i> web前端</a>
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
           
-            <a href="/tags/前端面试题/" rel="tag"><i class="fa fa-tag"></i> 前端面试题</a>
+            <a href="/tags/const/" rel="tag"><i class="fa fa-tag"></i> const</a>
           
         </div>
       
@@ -508,8 +509,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/jsexer5-ans.html" rel="next" title="js练习题第5天 答案及解析">
-                <i class="fa fa-chevron-left"></i> js练习题第5天 答案及解析
+              <a href="/jsexer11-ans.html" rel="next" title="js练习题第11天 答案及解析">
+                <i class="fa fa-chevron-left"></i> js练习题第11天 答案及解析
               </a>
             
           </div>
@@ -517,10 +518,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/jsexer6-ans.html" rel="prev" title="js练习题第6天 答案及解析">
-                js练习题第6天 答案及解析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -717,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、前言"><span class="nav-number">1.</span> <span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、var"><span class="nav-number">2.</span> <span class="nav-text">二、var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、提升"><span class="nav-number">3.</span> <span class="nav-text">三、提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、let"><span class="nav-number">4.</span> <span class="nav-text">四、let</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、const"><span class="nav-number">5.</span> <span class="nav-text">五、const</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、总结"><span class="nav-number">6.</span> <span class="nav-text">六、总结</span></a></li></ol></div>
             
 
           </div>
