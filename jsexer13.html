@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Jealyn的个人网站">
 <meta property="og:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十三天。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T12:03:00.000Z">
+<meta property="og:updated_time" content="2019-03-28T14:25:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js基础练习题 第13天">
 <meta name="twitter:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十三天。">
@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  297 字
+                  321 字
                 </span>
               
 
@@ -428,6 +428,7 @@
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.js有几种基本数据类型？<br><br><br>2.js有几种引用数据类型？<br><br><br>3.简述基本数据类型与引用数据类型的区别。<br><br><br><br>4.深拷贝与浅拷贝有何区别？如何利用js实现一个简单的深拷贝，试给出你的代码。<br><br><br><br>5.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  a: <span class="number">30</span>,</span><br><span class="line">  b: <span class="keyword">this</span>.a + <span class="number">40</span>,</span><br><span class="line">  foo: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.a; </span><br><span class="line">  &#125;,</span><br><span class="line">  bar: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.a ,</span><br><span class="line">  baz: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.b;</span><br><span class="line">    &#125; </span><br><span class="line">    abc(); </span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>以上代码运行后，则<code>obj.b</code> = __________，<code>obj.foo()</code>的返回值为 __________，执行了<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> test = obj.foo;</span><br></pre></td></tr></table></figure>后，<code>test()</code>的返回值为__________，<code>obj.bar()</code>的返回值为__________，<code>obj.baz()</code>的返回值为__________。<br><br>6.实现一个add方法，使计算结果能够满足如下预期：<br>    <code>add(1, 2, 3) = 6</code><br>    <code>add(1, 2, 3)(4) = 10</code><br>    <code>add(1)(2)(3)(4)(5) = 15</code><br><br><br><br>7.说说你了解的<code>Promise</code>。<br><br></p>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript</p>
 <p>2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~</p>
+<p>3.查看答案和解析，请点击<a href="/jsexer13-ans.html" title="js基础练习题 第13天 答案及解析">js基础练习题第13天 答案及解析</a></p>
 
       
     </div>
@@ -533,6 +534,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/jsexer13-ans.html" rel="prev" title="js练习题第13天 答案及解析">
+                js练习题第13天 答案及解析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -615,7 +620,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

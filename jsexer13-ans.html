@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="javascript,web前端,前端面试题,js练习题答案,Array,">
+  <meta name="keywords" content="javascript,web前端,前端面试题,数据类型,柯里化,Promise,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="本篇文章是js基础练习题第十二天的答案及解析部分，纯题目部分请移步js基础练习题 第12天">
-<meta name="keywords" content="javascript,web前端,前端面试题,js练习题答案,Array">
+<meta name="description" content="本篇文章是js基础练习题第十三天的答案及解析部分，纯题目部分请移步js基础练习题 第13天">
+<meta name="keywords" content="javascript,web前端,前端面试题,数据类型,柯里化,Promise">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js练习题第12天 答案及解析">
-<meta property="og:url" content="https://www.jealyn.top/jsexer12-ans.html">
+<meta property="og:title" content="js练习题第13天 答案及解析">
+<meta property="og:url" content="https://www.jealyn.top/jsexer13-ans.html">
 <meta property="og:site_name" content="Jealyn的个人网站">
-<meta property="og:description" content="本篇文章是js基础练习题第十二天的答案及解析部分，纯题目部分请移步js基础练习题 第12天">
+<meta property="og:description" content="本篇文章是js基础练习题第十三天的答案及解析部分，纯题目部分请移步js基础练习题 第13天">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-26T13:34:54.000Z">
+<meta property="og:updated_time" content="2019-03-28T14:24:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js练习题第12天 答案及解析">
-<meta name="twitter:description" content="本篇文章是js基础练习题第十二天的答案及解析部分，纯题目部分请移步js基础练习题 第12天">
+<meta name="twitter:title" content="js练习题第13天 答案及解析">
+<meta name="twitter:description" content="本篇文章是js基础练习题第十三天的答案及解析部分，纯题目部分请移步js基础练习题 第13天">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://www.jealyn.top/jsexer12-ans.html">
+  <link rel="canonical" href="https://www.jealyn.top/jsexer13-ans.html">
 
 
 
 
 
-  <title>js练习题第12天 答案及解析 | Jealyn的个人网站</title>
+  <title>js练习题第13天 答案及解析 | Jealyn的个人网站</title>
   
 
 
@@ -280,7 +280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/jsexer12-ans.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/jsexer13-ans.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
@@ -297,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js练习题第12天 答案及解析</h1>
+          <h1 class="post-title" itemprop="name headline">js练习题第13天 答案及解析</h1>
         
 
         <div class="post-meta">
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text"> </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T20:01:01+08:00">
-                2019-03-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T20:52:28+08:00">
+                2019-03-28
               </time>
             
 
@@ -360,7 +360,7 @@
 
           
           
-             <span id="/jsexer12-ans.html" class="leancloud_visitors" data-flag-title="js练习题第12天 答案及解析">
+             <span id="/jsexer13-ans.html" class="leancloud_visitors" data-flag-title="js练习题第13天 答案及解析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  543 字
+                  869 字
                 </span>
               
 
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -422,23 +422,30 @@
       
 
       
-        <blockquote><p>本篇文章是js基础练习题第十二天的答案及解析部分，纯题目部分请移步<a href="/jsexer12.html" title="js基础练习题 第12天">js基础练习题 第12天</a></p>
+        <blockquote><p>本篇文章是js基础练习题第十三天的答案及解析部分，纯题目部分请移步<a href="/jsexer13.html" title="js基础练习题 第13天">js基础练习题 第13天</a></p>
 </blockquote>
 <a id="more"></a>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.有三个数字：1、2、3，能组成多少个互不相同且无重复数字的三位数?各是多少?试用JS实现之。<br><div class="note info"><p></p><h3>答案：如下代码块所示</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr1) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j <span class="keyword">of</span> arr1) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> k <span class="keyword">of</span> arr1) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">new</span> <span class="built_in">Set</span>([i, j, k]).size == <span class="number">3</span>) &#123;</span><br><span class="line">        arr2.push(i * <span class="number">100</span> + j * <span class="number">10</span> + k);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr2.length);</span><br><span class="line"><span class="built_in">console</span>.log(arr2);</span><br></pre></td></tr></table></figure><p></p></div><div class="note warning"><p>我总觉得有比三层暴力循环好的算法，如果您能提供的话，欢迎留言哦！</p></div><br>
-2.一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数有几种取值?分别是多少?通过JS实现之。
-<div class="note info"><p></p><h3>答案：如下代码块所示</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> n = <span class="number">0</span>; n &lt;= <span class="number">13</span>; n++) &#123;</span><br><span class="line">  <span class="keyword">let</span> y = <span class="number">84</span> / n - n / <span class="number">2</span>; </span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">Number</span>.isInteger(y)) &#123;</span><br><span class="line">    arr.push( y * y - <span class="number">100</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure><p></p></div><div class="note warning"><p>设该数为<code>x</code>。则<code>x + 100 = y * y</code>，<code>y * y + 168 = z * z</code>。假设<code>z = y + n</code>，则 <code>y * y + 168 = (y + n)(y + n)</code>，化解可得<code>y = 84 / n - n / 2</code>。则 <code>x = y * y - 100</code>。当y为整数时，条件成立。</p></div><br>
-3.利用JS随机生成1-100的10个整数，并把这10个数由小到大输出。
-<div class="note info"><p></p><h3>答案：如下代码块所示</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  arr.push(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">100</span>) + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b));</span><br></pre></td></tr></table></figure><p></p></div><div class="note warning"><p>注意Math.random()生成的<code>[0, 1)</code>形式的随机数，即包含0，不包含1。</p></div><br>
-4.将一个数组的2到5号（不包括5号）位置的数据复制到另一个数组的1号位置中（索引值从0开始）。利用JS实现之。
-<div class="note info"><p></p><h3>答案：如下代码块所示</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">let</span> arr2= [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line">arr2.splice(<span class="number">1</span>, <span class="number">0</span>, arr1.slice(<span class="number">2</span>, <span class="number">5</span>));</span><br><span class="line"><span class="built_in">console</span>.log(arr2);</span><br></pre></td></tr></table></figure><p></p></div></p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.js有几种基本数据类型？<br><div class="note info"><h3>答案：在js中一共有7种基本数据类型，分别是<code>number</code>, <code>string</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code></h3></div><div class="note warning"><p>关于<code>symbol</code>的介绍，可以参照<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol" target="_blank" rel="noopener">MDN symbol</a>，关于<code>bigint</code>的介绍，可以参看<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt" target="_blank" rel="noopener">MDN bigint</a></p></div><br>
+2.js有几种引用数据类型？
+<div class="note info"><h3>答案：在js中一共有3种引用数据类型，分别是<code>object</code>、<code>array</code>、<code>function</code></h3></div><br>3.简述基本数据类型与引用数据类型的区别。<br><div class="note info"><h3>从数据存储上来说，基本数据类型的名（key）和值（value）都存储在栈内存中；而引用数据类型的名存在栈内存中，值存在于堆内存中，栈内存会提供一个引用的地址（指针）指向堆内存中的值。</h3></div><br>
+4.深拷贝与浅拷贝有何区别？如何利用js实现一个简单的深拷贝，试给出你的代码。
+<div class="note info"><p></p><h3>浅拷贝是对栈内存中的值（即指针）的拷贝，拷贝前后对象指向的是堆内存中的同一个值；深拷贝是指在堆内存中开辟一个新的内存专门来存放拷贝值，此时拷贝后的值与原值就是相互独立、互不影响的。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以使用递归去复制所有层级属性</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> objClone = <span class="built_in">Array</span>.isArray(obj) ? [] : &#123;&#125;;</span><br><span class="line">  <span class="keyword">if</span>(obj &amp;&amp; <span class="keyword">typeof</span> obj === <span class="string">“object”</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">      <span class="keyword">if</span>(obj.hasOwnProperty(key)) &#123;</span><br><span class="line">        <span class="comment">//判断ojb子元素是否为对象，如果是，递归复制</span></span><br><span class="line">        <span class="keyword">if</span>(obj[key] &amp;&amp; <span class="keyword">typeof</span> obj[key] === <span class="string">“object”</span>) &#123;</span><br><span class="line">          objClone[key] = deepClone(obj[key]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="comment">//如果不是，简单复制</span></span><br><span class="line">          objClone[key] = obj[key];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">return</span> objClone;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure><p></p></div><div class="note warning"><p>使用复制代码时，请将代码中的中文双引号替换为英文引号。</p></div><br>
+5.
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  a: <span class="number">30</span>,</span><br><span class="line">  b: <span class="keyword">this</span>.a + <span class="number">40</span>,</span><br><span class="line">  foo: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.a; </span><br><span class="line">  &#125;,</span><br><span class="line">  bar: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.a ,</span><br><span class="line">  baz: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.b;</span><br><span class="line">    &#125; </span><br><span class="line">    abc(); </span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>以上代码运行后，则<code>obj.b</code> = __________，<code>obj.foo()</code>的返回值为 __________，
+<div class="note info"><h3>答案：50、30</h3></div>执行了<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> test = obj.foo;</span><br></pre></td></tr></table></figure>后，<code>test()</code>的返回值为__________，<code>obj.bar()</code>的返回值为__________，<code>obj.baz()</code>的返回值为__________。
+<div class="note info"><h3>答案：10、10、undefined</h3></div><div class="note warning"><p>关于js中<code>this</code>的讲解，可以参照<a href="https://www.jianshu.com/p/d647aa6d1ae6" target="_blank" rel="noopener">这波能反杀的个人博客</a>。</p></div><br>
+6.实现一个add方法，使计算结果能够满足如下预期： <br>
+<code>add(1, 2, 3) = 6</code><br>  
+<code>add(1, 2, 3)(4) = 10</code><br> 
+<code>add(1)(2)(3)(4)(5) = 15</code>
+<div class="note info"><p></p><h3>答案：如下方代码段所示</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> add = <span class="function">(<span class="params">…args</span>) =&gt;</span> &#123; </span><br><span class="line">  <span class="keyword">const</span> _add = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    args.push(…arguments); </span><br><span class="line">      <span class="keyword">return</span> _add;</span><br><span class="line">  &#125;</span><br><span class="line">  _add.toString = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> args.reduce( <span class="function">(<span class="params">a, b</span>) =&gt;</span>  a + b );</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _add;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p></div><br>7.说说你了解的<code>Promise</code>。<br><div class="note info"><h3><code>Promise</code>是一种异步机制，主要是用来解决回调地狱的问题。<code>Promise</code>对象有三种状态，分别是<code>pending</code>、<code>resolved</code>、<code>rejected</code>；在<code>Promise</code>对象的构造函数中，接收<code>resolve</code>和<code>reject</code>函数修改状态；<code>Promise</code>对象中的<code>then</code>方法，可以接收构造函数中处理的状态变化，并分别对应执行。<code>then</code>方法的执行结果也会返回一个<code>Promise</code>对象，因此可以进行<code>then</code>的链式执行，这也是解决回调地狱的主要方式。</h3></div></p>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ol>
 <li>题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript</li>
 </ol>
 <ol start="2">
 <li><p>答案中，若有错误和需完善的地方，可在下方留言反馈哈~~</p>
 </li>
-<li><p>查看纯习题版，请点击<a href="/jsexer12.html" title="js基础练习题 第12天">js基础练习题 第12天</a></p>
+<li><p>查看纯习题版，请点击<a href="/jsexer13.html" title="js基础练习题 第13天">js基础练习题 第13天</a></p>
 </li>
 </ol>
 
@@ -498,7 +505,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.jealyn.top/jsexer12-ans.html" title="js练习题第12天 答案及解析">https://www.jealyn.top/jsexer12-ans.html</a>
+    <a href="https://www.jealyn.top/jsexer13-ans.html" title="js练习题第13天 答案及解析">https://www.jealyn.top/jsexer13-ans.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -519,9 +526,11 @@
           
             <a href="/tags/前端面试题/" rel="tag"><i class="fa fa-tag"></i> 前端面试题</a>
           
-            <a href="/tags/js练习题答案/" rel="tag"><i class="fa fa-tag"></i> js练习题答案</a>
+            <a href="/tags/数据类型/" rel="tag"><i class="fa fa-tag"></i> 数据类型</a>
           
-            <a href="/tags/Array/" rel="tag"><i class="fa fa-tag"></i> Array</a>
+            <a href="/tags/柯里化/" rel="tag"><i class="fa fa-tag"></i> 柯里化</a>
+          
+            <a href="/tags/Promise/" rel="tag"><i class="fa fa-tag"></i> Promise</a>
           
         </div>
       
@@ -534,8 +543,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/jsexer12.html" rel="next" title="js基础练习题 第12天">
-                <i class="fa fa-chevron-left"></i> js基础练习题 第12天
+              <a href="/jsexer13.html" rel="next" title="js基础练习题 第13天">
+                <i class="fa fa-chevron-left"></i> js基础练习题 第13天
               </a>
             
           </div>
@@ -543,10 +552,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/jsexer13.html" rel="prev" title="js基础练习题 第13天">
-                js基础练习题 第13天 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -743,7 +748,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">答案：如下代码块所示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">答案：如下代码块所示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">答案：如下代码块所示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">答案：如下代码块所示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">答案：在js中一共有7种基本数据类型，分别是number, string, boolean, null, undefined, symbol, bigint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">答案：在js中一共有3种引用数据类型，分别是object、array、function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">从数据存储上来说，基本数据类型的名（key）和值（value）都存储在栈内存中；而引用数据类型的名存在栈内存中，值存在于堆内存中，栈内存会提供一个引用的地址（指针）指向堆内存中的值。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">浅拷贝是对栈内存中的值（即指针）的拷贝，拷贝前后对象指向的是堆内存中的同一个值；深拷贝是指在堆内存中开辟一个新的内存专门来存放拷贝值，此时拷贝后的值与原值就是相互独立、互不影响的。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.5.</span> <span class="nav-text">答案：50、30</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.6.</span> <span class="nav-text">答案：10、10、undefined</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.7.</span> <span class="nav-text">答案：如下方代码段所示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.8.</span> <span class="nav-text">Promise是一种异步机制，主要是用来解决回调地狱的问题。Promise对象有三种状态，分别是pending、resolved、rejected；在Promise对象的构造函数中，接收resolve和reject函数修改状态；Promise对象中的then方法，可以接收构造函数中处理的状态变化，并分别对应执行。then方法的执行结果也会返回一个Promise对象，因此可以进行then的链式执行，这也是解决回调地狱的主要方式。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li></ol></div>
             
 
           </div>
