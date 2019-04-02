@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Jealyn的个人网站">
 <meta property="og:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十五天。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-31T14:39:14.000Z">
+<meta property="og:updated_time" content="2019-04-02T03:04:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js基础练习题 第15天">
 <meta name="twitter:description" content="在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十五天。">
@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  386 字
+                  392 字
                 </span>
               
 
@@ -425,9 +425,10 @@
         <blockquote><p>在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。<br>该篇文章是<a href="/categories/JS基础练习题/">该系列</a>的第十五天。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.<br><code>(function foo(a, b, c = 5){}).length</code> = ____________，<br><code>(function foo(x, ...y){}).length</code> = ___________，<br><code>(function foo([a, b, c]){}).length</code> = ___________，<br><code>(function foo(x, ...y, z){}).length</code> = ___________。<br><br>2.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x, y = x</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>运行<code>f(2)</code>控制台将输出___________，运行<code>f()</code>控制台将输出___________。假设没有第一行的变量声明，则运行<code>f()</code>控制台将输出___________。<br><br>3.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">y = x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> x = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>运行<code>f(2)</code>控制台将输出___________，调用<code>f()</code>控制台将输出___________。<br><br>4.试设计一个程序，能执行任意个数的加减法，如<code>1 + 2</code>，<code>3 + 5 + 0.2</code>，<code>0.5 - 3.5 + 3 - 8</code>等。<br><br><br><br>5.阅读以下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> id = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">var</span> handler = &#123;</span><br><span class="line">  id: <span class="number">456</span>,</span><br><span class="line">  dosomething: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.id); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>运行<code>handler.dosomething()</code>控制台将输出___________，<br><code>console.log(handler.dosomething());</code>的结果是___________。<br>若把 <code>dosomething</code>改为<code>dosomething: () =&gt; {console.log(this.id);}</code><br>则运行<code>handler.dosomething()</code>控制台将输出___________，<br><code>console.log(handler.dosomething());</code>的结果是___________。<br><br>6.<br><code>{} == {}</code>的返回值为___________，<code>Object.is({}, {})</code>的返回值为__________，<code>Object.is(NaN, NaN)</code>的返回值为__________，<code>+0 === -0</code>的返回值为__________，<code>Object.is(+0, -0)</code>的返回值为__________。<br><br>7.js一共有几种方法可以遍历对象的属性，试列举并指出区别。<br><br></p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.<br><code>(function foo(a, b, c = 5){}).length</code> = ____________，<br><code>(function foo(x, ...y){}).length</code> = ___________，<br><code>(function foo([a, b, c]){}).length</code> = ___________，<br><code>(function foo(x, ...y, z){}).length</code> = ___________。<br><br>2.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x, y = x</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>运行<code>f(2)</code>控制台将输出___________，运行<code>f()</code>控制台将输出___________。<br><br>3.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">y = x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> x = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>运行<code>f(2)</code>控制台将输出___________，调用<code>f()</code>控制台将输出___________。假设没有第一行的变量声明，则运行<code>f()</code>控制台将输出___________。<br><br>4.试设计一个程序，能执行任意个数的加减法，如<code>1 + 2</code>，<code>3 + 5 + 0.2</code>，<code>0.5 - 3.5 + 3 - 8</code>等。<br><br><br><br>5.阅读以下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> id = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">var</span> handler = &#123;</span><br><span class="line">  id: <span class="number">456</span>,</span><br><span class="line">  dosomething: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.id); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>运行<code>handler.dosomething()</code>控制台将输出___________。<br>若把 <code>dosomething</code>改为<code>dosomething: () =&gt; {console.log(this.id);}</code><br>则运行<code>handler.dosomething()</code>控制台将输出___________。<br><br>6.<br><code>{} == {}</code>的返回值为___________，<code>Object.is({}, {})</code>的返回值为__________，<code>Object.is(NaN, NaN)</code>的返回值为__________，<code>+0 === -0</code>的返回值为__________，<code>Object.is(+0, -0)</code>的返回值为__________。<br><br>7.js一共有几种方法可以遍历对象的属性，试列举并指出区别。<br><br></p>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript</p>
 <p>2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~</p>
+<p>3.查看答案和解析，请点击<a href="/jsexer15-ans.html" title="js基础练习题 第15天 答案及解析">js基础练习题第15天 答案及解析</a></p>
 
       
     </div>
@@ -531,6 +532,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/jsexer15-ans.html" rel="prev" title="js练习题第15天 答案及解析">
+                js练习题第15天 答案及解析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -613,7 +618,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
