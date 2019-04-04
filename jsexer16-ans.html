@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Jealyn的个人网站">
 <meta property="og:description" content="本篇文章是js基础练习题第十六天的答案及解析部分，纯题目部分请移步js基础练习题 第16天">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-04T09:16:44.000Z">
+<meta property="og:updated_time" content="2019-04-04T10:00:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js练习题第16天 答案及解析">
 <meta name="twitter:description" content="本篇文章是js基础练习题第十六天的答案及解析部分，纯题目部分请移步js基础练习题 第16天">
@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  758 字
+                  757 字
                 </span>
               
 
@@ -425,7 +425,7 @@
         <blockquote><p>本篇文章是js基础练习题第十六天的答案及解析部分，纯题目部分请移步<a href="/jsexer16.html" title="js基础练习题 第16天">js基础练习题 第16天</a></p>
 </blockquote>
 <a id="more"></a>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>();</span><br></pre></td></tr></table></figure>则<code>typeof(s1)</code>的返回值为___________，<code>let s2 = new Symbol();</code>的返回值为___________，<div class="note info"><h3>答案：<code>&quot;symbol&quot;</code>、报错（<code>TypeError</code>）</h3></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s3 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line"><span class="keyword">let</span> s4 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br></pre></td></tr></table></figure>则<code>s3 === s4</code>的返回值为___________，<code>Object.is(s3, s4)</code>的返回值为___________。<div class="note info"><h3>答案：<code>false</code>、<code>false</code></h3></div><div class="note warning"><p><code>Symbol</code>是一种新的数据类型，且<code>Symbol</code>标示的是独一无二的值，任意两个<code>Symbol</code>都是不相等的，<code>Symbol</code>不是构造函数，不能用<code>new</code>的方式创建。</p></div><br>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>1.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>();</span><br></pre></td></tr></table></figure>则<code>typeof(s1)</code>的返回值为___________，<code>let s2 = new Symbol();</code>的返回值为___________，<div class="note info"><h3>答案：<code>&quot;symbol&quot;</code>、报错（<code>TypeError</code>）</h3></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s3 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line"><span class="keyword">let</span> s4 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br></pre></td></tr></table></figure>则<code>s3 === s4</code>的返回值为___________，<code>Object.is(s3, s4)</code>的返回值为___________。<div class="note info"><h3>答案：<code>false</code>、<code>false</code></h3></div><div class="note warning"><p><code>Symbol</code>是一种新的数据类型，且<code>Symbol</code>标示的是独一无二的值，任意两个<code>Symbol</code>都是不相等的，<code>Symbol</code>不是构造器，不能用<code>new</code>的方式创建。</p></div><br>
 2.
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newValue = oldValue;</span><br></pre></td></tr></table></figure>则<code>newValue</code>的值为___________，<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newValue = <span class="built_in">window</span>.oldValue;</span><br></pre></td></tr></table></figure>则<code>newValue</code>的值为___________。<div class="note info"><h3>答案：报错（<code>ReferenceError</code>）、<code>undefined</code></h3></div><div class="note warning"><p>第一种写法为访问不存在的变量，故会报错；第二种写法为访问对象中未定义的属性，故会返回<code>undefined</code>。</p></div><br>
 3.简述<code>alert()</code>、<code>confirm()</code>、<code>prompt()</code>三者的作用和区别。<div class="note info"><h3>如下所示：</h3>
@@ -558,6 +558,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/jsexer17.html" rel="prev" title="js基础练习题 第17天">
+                js基础练习题 第17天 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -640,7 +644,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
