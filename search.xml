@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[js练习题第18天 答案及解析]]></title>
+    <url>%2Fjsexer18-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十八天的答案及解析部分，纯题目部分请移步js基础练习题 第18天 正文1.12345var x = 1; function f(n) &#123; n = n + 1;&#125;y = f(x);上述代码运行后，y的值为___________。答案：undefined 2.以下代码运行后，arr的结果为___________，arr2的结果为___________。 123var arr = [1, 2]; var arr2 = arr.concat(); arr2.push(arr.splice(1, 1, 3)); 答案：[1, 3]、[1, 2, [2]]splice()方法会改变原数组且返回值为所有删除的元素组成的数组。 3.找出数组[-1, -2, 1, 10, 4, 5, 8]中的最大值，至少写出两种方法。代码如下所示： 1234567891011121314151617// 方法1：利用Math.max()var arr = [-1, -2, 1, 10, 4, 5, 8];Math.max.apply(null, arr);// 方法2：先降序排序，然后取出第一个值，即为最大值var arr = [-1, -2, 1, 10, 4, 5, 8];arr.sort((a, b) =&gt; b - a);arr[0];// 方法3：利用for循环取出最大值var arr = [-1, -2, 1, 10, 4, 5, 8];var max = -Infinity;for (var i = 0; i &lt; arr.length; i++) &#123; if(max &lt; arr[i])&#123; max = arr[i]; &#125;&#125;4.封装一个函数，将字符串&quot;js-exercise-day-eighteen&quot;从第二个单词开始首字母大写，然后拼成字符串 &quot;jsExerciseDayEighteen&quot;，并返回。（注意：封装成一个函数）代码如下所示： 1234567891011121314151617// 方法1：数组和字符串的来回转换function transToCamel(str) &#123; var str_arr = str.split(&quot;-&quot;); for (var i = 1; i &lt; str_arr.length; i++) &#123; str_arr[i] = str_arr[i].slice(0, 1).toUpperCase() + str_arr[i].slice(1); &#125; return str_arr.join(&quot;&quot;);&#125;transToCamel(&quot;js-exercise-day-eighteen&quot;);// 方法2：利用正则表达式的相关知识function transToCamel(str) &#123; return str.replace(/-(\w)/g, function($0, $1) &#123; return $1.toUpperCase(); &#125;)&#125;transToCamel(&quot;js-exercise-day-eighteen&quot;);5.用js实现类似下列Python代码所呈现出的效果，list(range(1,101))[::2]。答案：如下方代码段所示 1234var arr_find_odd = new Array(100) .fill(&quot;&quot;) .map((item, index) =&gt; index + 1) .filter((item) =&gt; item % 2 == 1);上述Python代码段的意思是创建一个从1到100的列表，并筛选出其中的奇数值。 6. 1var str = "It's humorous,you'll feel heart-broken!";则str.split("").reverse().join("")的结果是___________。答案：&quot;!nekorb-traeh leef ll&#39;uoy,suoromuh s&#39;tI&quot;7.利用正则表达式的相关知识实现内置的trim()方法。答案：如下方代码段所示 123function myTrim(str) &#123; return str.replace(/(^\s+)|(\s+$)/g, &quot;&quot;);&#125; 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第18天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+        <tag>正则表达式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第18天]]></title>
+    <url>%2Fjsexer18.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十八天。 正文1.12345var x = 1; function f(n) &#123; n = n + 1;&#125;y = f(x);上述代码运行后，y的值为___________。2.以下代码运行后，arr的结果为___________，arr2的结果为___________。123var arr = [1, 2]; var arr2 = arr.concat(); arr2.push(arr.splice(1, 1, 3)); 3.找出数组[-1, -2, 1, 10, 4, 5, 8]中的最大值，至少写出两种方法。4.封装一个函数，将字符串&quot;js-exercise-day-eighteen&quot;从第二个单词开始首字母大写，然后拼成字符串 &quot;jsExerciseDayEighteen&quot;，并返回。（注意：封装成一个函数）5.用js实现类似下列Python代码所呈现出的效果，list(range(1,101))[::2]。6.1var str = "It's humorous,you'll feel heart-broken!";则str.split(&quot;&quot;).reverse().join(&quot;&quot;)的结果是___________。7.利用正则表达式的相关知识实现内置的trim()方法。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第18天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+        <tag>正则表达式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第17天]]></title>
+    <url>%2Fjsexer17.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十七天。 正文1.获取页面中的第一个&lt;button&gt;元素，并添加一个点击事件，在点击事件中判断该元素是否具有类名&quot;color_change&quot;，如果没有，就加上；如果有，就移除掉。试用代码实现之。2.简述元素的offsetWidth()、clientWidth()、scrollWidth()的区别。3.网页上常见的“回到顶部”的JS代码应如何设计？4.试解释JS中的事件流和事件执行的三个阶段。5.写一个方法，找出字符串&quot;abghiabjeabbabeab&quot;中&quot;ab&quot;出现的次数和位置。6.12345678var a = 10; function test() &#123; a = 100; alert(a); alert(this.a); var a; alert(a); &#125; 则运行test()后页面中将按顺序弹出___________，___________，___________。7.for循环和forEach循环有什么区别？ 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第17天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>DOM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第17天 答案及解析]]></title>
+    <url>%2Fjsexer17-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十七天的答案及解析部分，纯题目部分请移步js基础练习题 第17天 正文1.获取页面中的第一个&lt;button&gt;元素，并添加一个点击事件，在点击事件中判断该元素是否具有类名&quot;color_change&quot;，如果没有，就加上；如果有，就移除掉。试用代码实现之。答案：如下代码段所示： 12345678910111213141516// 方法1var button = document.querySelector(&quot;button&quot;);button.onclick = function() &#123; var class_list = button.classList; if(class_list.contains(&quot;color_change&quot;)) &#123; class_list.remove(&quot;color_change&quot;); &#125; else &#123; class_list.add(&quot;color_change&quot;); &#125;&#125;// 方法2var button = document.querySelector(&quot;button&quot;);button.onclick = function() &#123; button.classList.toggle(&quot;color_change&quot;);&#125;2.简述元素的offsetWidth()、clientWidth()、scrollWidth()的区别。答案：区别如下所示 offsetWidth表示元素的实际宽度，包括width、padding、垂直滚动条的宽度以及border的宽度。 clientWidth指元素的可视区宽度，包括width和padding。 scrollWidth指实际内容的宽度，包括width、padding和溢出可视区的宽度，在无溢出的情况，与clientWidth相同。 3.网页上常见的“回到顶部”的JS代码应如何设计？如下所示： 12345function scrollToTop(element) &#123; if(element.scrollTop != 0) &#123; element.scrollTop = 0 ; &#125;&#125;4.试解释JS中的事件流和事件执行的三个阶段。答案：JS中的事件流包括事件冒泡和事件捕获；事件冒泡是向上生长型，即事件开始时由最具体的元素接收，然后逐级向上传播到较为不具体的节点；事件捕获是向下传播型，即事件开始时由最不具体的元素接收，然后逐渐向下传播到最具体的节点；js事件执行的三个阶段为捕获过程 -&gt; 处于目标阶段 -&gt; 冒泡过程 5.写一个方法，找出字符串"abghiabjeabbabeab"中"ab"出现的次数和位置。答案：如下方代码段所示 123456789101112function findRepeat(str, s) &#123; let count = 0; let pos = []; let i = 0; while(str.indexOf(s, i) &gt; -1 &amp;&amp; i &lt; str.length) &#123; count++; pos.push(str.indexOf(s, i)); i = str.indexOf(s, i) + s.length; &#125; return &#123; pos, count &#125;;&#125;findRepeat(&quot;abghiabjeabbabeab&quot;, &quot;ab&quot;);6.12345678var a = 10; function test() &#123; a = 100; alert(a); alert(this.a); var a; alert(a); &#125; 则运行test()后页面中将按顺序弹出___________，___________，___________。答案：100、10、100 7.for循环和forEach循环有什么区别？for循环可以跳过（continue）或者终止循环（break），而forEach不能这样操作，否则会报错。此外forEach是ECMA5引入的，在低版本浏览器下可能不兼容。 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第17天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>DOM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第16天 答案及解析]]></title>
+    <url>%2Fjsexer16-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十六天的答案及解析部分，纯题目部分请移步js基础练习题 第16天 正文1.1let s1 = Symbol();则typeof(s1)的返回值为___________，let s2 = new Symbol();的返回值为___________，答案：&quot;symbol&quot;、报错（TypeError）12let s3 = Symbol("foo");let s4 = Symbol("foo");则s3 === s4的返回值为___________，Object.is(s3, s4)的返回值为___________。答案：false、falseSymbol是一种新的数据类型，且Symbol标示的是独一无二的值，任意两个Symbol都是不相等的，Symbol不是构造器，不能用new的方式创建。 2. 1var newValue = oldValue;则newValue的值为___________，1var newValue = window.oldValue;则newValue的值为___________。答案：报错（ReferenceError）、undefined第一种写法为访问不存在的变量，故会报错；第二种写法为访问对象中未定义的属性，故会返回undefined。 3.简述alert()、confirm()、prompt()三者的作用和区别。如下所示： alert通常是用来表示警告，告知用户一些错误信息或者对用户的重要的警告。 confirm是确认对话框，该对话框有两个按钮，即确认和取消，可以由用户来决定，通常用在关闭网页或退出登录或删除文件时。 prompt是提示对话框，通常用来提示用户输入一些信息。 4.正常情况下，document.firstChild应该是___________。答案：&lt;!doctype html&gt; 5.document.documentElement获取到的是__________元素。答案：&lt;html&gt;6.(判断)使用document.body可以获取到body元素。答案：正确 7.在JS中，获取页面元素有几种方式，请简要叙述。答案：常用的方法有6种，如下所示： 通过id获取元素：document.getElementById(&quot;id&quot;) 通过标签名获取元素，结果为一个集合（类似数组）：document.getElementsByTagName(&quot;tag&quot;) 通过name属性获取元素，结果为一个集合（类似数组）：document.getElementsByName(&quot;name&quot;) 通过class名获取元素，结果为一个集合（类似数组）：document.getElementsByClassName(&quot;className&quot;) 访问指定元素，只取第一个值：document.querySelector(&quot;selector&quot;) 访问指定元素，结果为一个集合（类似数组）：document.querySelectorAll(&quot;selectors&quot;) 8.通过JS创建一个&lt;div&gt;元素，其类名为&quot;myDiv&quot;，其中文本内容为&quot;This is a div element created by JS.&quot;，创建成功后，将其加到&lt;body&gt;元素的末尾，试写出实现代码。答案：代码如下所示： 123456789// 方法1: 典型方法，创建元素并插入页面var divElement = document.createElement(&quot;div&quot;);divElement.className = &quot;myDiv&quot;;divElement.innerHTML = &quot;This is a div element created by JS.&quot;;document.body.appendChild(divElement);// 方法2: 简洁方法，但内存开销大var str = &quot;&lt;div class=&#39;myDiv&#39;&gt;This is a div element created by JS.&lt;/div&gt;&quot;;document.body.innerHTML += str; 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第16天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>DOM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第16天]]></title>
+    <url>%2Fjsexer16.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十六天。 正文1.1let s1 = Symbol();则typeof(s1)的返回值为___________，let s2 = new Symbol();的返回值为___________，12let s3 = Symbol("foo");let s4 = Symbol("foo");则s3 === s4的返回值为___________，Object.is(s3, s4)的返回值为___________。2.1var newValue = oldValue;则newValue的值为___________，1var newValue = window.oldValue;则newValue的值为___________。3.简述alert()、confirm()、prompt()三者的作用和区别。4.正常情况下，document.firstChild应该是___________。5.document.documentElement获取到的是__________元素。6.(判断)使用document.body可以获取到body元素。7.在JS中，获取页面元素有几种方式，请简要叙述。8.通过JS创建一个&lt;div&gt;元素，其类名为&quot;myDiv&quot;，其中文本内容为&quot;This is a div element created by JS.&quot;，创建成功后，将其加到&lt;body&gt;元素的末尾，试写出实现代码。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第16天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>DOM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[BigInt]]></title>
+    <url>%2Fbigint.html</url>
+    <content type="text"><![CDATA[BigInt是JavaScript中一个新的基本数据类型，使用BigInt可以安全地存储和操作大整数，即使这个数已经超出了Number能够表示的安全整数范围。本文将介绍BigInt的用法以及其与Number的区别。 一、前言我们知道，在JavaScript中，Number有一个最大安全整数，即其可以准确表达的最大数字，如下所示1Number.MAX_SAFE_INTEGER; // 9007199254740991 ，超过该数，便不能安全的进行存储和操作。比如说：2 ** 53 + 1 == 2 ** 53会返回true，这显然是不正确的。于是乎，BigInt就从天而降，BigInt可以用任意精度表示整数，可以正确执行整数运算而不会溢出。 二、语法1.创建BigInt创建BigInt有两种方式，第一种方式是BigInt(value)函数，其中value为整数或字符串；第二种方式是在一个整数字面量后面加n。如：12const a = BigInt(9007199254740991); // 9007199254740991nconst b = 9007199254740991n； // 9007199254740991n注意， BigInt()不是构造函数，因此不能使用new操作符。 如果向BigInt函数中错误的传递值，会导致报错。如：12345const c = BigInt("hhh"); // SyntaxErrorconst d = BigInt(25.23); // RangeErrorconst e = BigInt("12ab"); // SyntaxErrorconst f = 1.5n; // SyntaxErrorconst g = BigInt(); // TypeError 2.类型检测对BigInt类型的变量执行typeof操作，会返回bigint。12const h = BigInt(9007199254740993); typeof h; // "bigint" 3.运算BigInt支持常见的运算符。二元运算 +, -, *, 和 ** 都可以正常使用。 / 和 % 可以使用，并根据需要向零取整。12345const i = BigInt(9007199254740991); i + 1n; // 9007199254740992ni - 2n; // 9007199254740989ni * 2n; // 18014398509481982n5n / 2n; // 2n需要注意的是BigInt类型不能与其他类型的值混合运算、不能和Math对象中的方法一起使用否则会报错，如：125n + 2; // TypeErrorMath.pow(2n, 3n); // TypeError 4.比较与转换BigInt和Number不是严格相等的，但是是宽松相等的。并且BigInt与其他类型的变量做比较和转换时，其转换规则与Number一致。1230n == 0; // true0n === 0; // false1n &lt; 2; // true注意， BigInt变量在转换成Number变量时可能会丢失精度。如：1Number(1234567890123456789n * 123n); // 151851850485185200000结果就很明显不正确。 三、API1.BigInt()函数BigInt()函数将其参数转换为BigInt。如果转换失败，它抛出一个SyntaxError或RangeError异常。123BigInt(123); // 123nBigInt(1.5); // RangeErrorBigInt('1.5'); // SyntaxError 2.两个库函数BigInt.asIntN(width,value)将一个BigInt值包装为一个width位的二进制有符号整数。BigInt.asUintN(width,value) 将一个BigInt值包装为一个width位的二进制无符号整数。例如，如果您正在执行64位算术，123const j = 2n ** 63n - 1n;BigInt.asIntN(64, j); // 9223372036854775807nBigInt.asIntN(64, j + 1n); // -9223372036854775808n则只要我们给传递BigInt超过64位整数范围的值，就会发生溢出。 3.两种新的类型数组BigInt64Array和BigUint64Array让我们更容易且高效地表示和操作64位有符号和无符号整数组成的列表。123456const k = new BigInt64Array(4); // [0n, 0n, 0n, 0n]const l = 2n ** 63n - 1n;const m = new BigInt64Array(2); m[0] = l; m[1] = l + 1n; m; // [9223372036854775807n, -9223372036854775808n]12345const n = 2n ** 63n - 1n;const o = new BigUint64Array(2); o[0] = n; o[1] = n + 1n; o; // [9223372036854775807n, 9223372036854775808n]BigInt64Array确保这些值是有符号的。BigUint64Array 确保这些值是无符号的。 四、参考链接 BigInt：JavaScript 中的任意精度整数 MDN]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>数据类型</tag>
+        <tag>bigint</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第15天 答案及解析]]></title>
+    <url>%2Fjsexer15-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十五天的答案及解析部分，纯题目部分请移步js基础练习题 第15天 正文1.(function foo(a, b, c = 5){}).length = ____________，(function foo(x, ...y){}).length = ___________，(function foo([a, b, c]){}).length = ___________，(function foo(x, ...y, z){}).length = ___________。答案：2、1、1、报错（SyntaxError）函数长度指的是函数形参中显式参数的个数，即除去默认参数、剩余参数之外的个数，且剩余参数（Rest parameter）必须位于末尾。 2. 1234var x = 1;function f(x, y = x) &#123; console.log(y);&#125;运行f(2)控制台将输出___________，运行f()控制台将输出___________。 答案：2、undefined3.12345let x = 1;function f(y = x)&#123; let x = 2; console.log(y);&#125;运行f(2)控制台将输出___________，调用f()控制台将输出___________。假设没有第一行的变量声明，则运行f()控制台将输出___________。答案：2、1、报错（ReferenceError） 4.试设计一个程序，能执行任意个数的加减法，如 1 + 2， 3 + 5 + 0.2， 0.5 - 3.5 + 3 - 8 等。 答案：如下代码块所示1234567891011// 方法一：利用扩展运算符const sum = (…values) =&gt; &#123; return […values].reduce((prev, next) =&gt; prev + next); &#125;// 方法二：利用argumentsfunction sum() &#123; return [].slice.apply(arguments).reduce(function(prev, next) &#123; return prev + next; &#125;);&#125;5.阅读以下代码：1234567var id = 123;var handler = &#123; id: 456, dosomething: function() &#123; console.log(this.id); &#125;&#125;运行handler.dosomething()控制台将输出___________。若把 dosomething改为dosomething: () =&gt; {console.log(this.id);}则运行handler.dosomething()控制台将输出___________。答案：456、123 6.{} == {}的返回值为___________，Object.is({}, {})的返回值为___________，Object.is(NaN, NaN)的返回值为___________，+0 === -0的返回值为___________，Object.is(+0, -0)的返回值为___________。 答案：false、false、true、true、false7.js一共有几种方法可以遍历对象的属性，试列举并指出区别。答案：js一共有5种遍历对象属性的方法。 for...in：遍历自身和继承的可枚举属性（不含symbol属性） Object.keys(obj)：返回对象自身的所有可枚举属性（不含symbol属性） Object.getOwnPropertyNames(obj)：返回对象自身的所有属性（不含symbol属性） Object.getOwnPropertySymbols(obj)：返回对象自身的所有symbol属性 Reflect.ownKeys(obj)：返回对象自身的所有属性 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第15天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Object</tag>
+        <tag>Function</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第15天]]></title>
+    <url>%2Fjsexer15.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十五天。 正文1.(function foo(a, b, c = 5){}).length = ____________，(function foo(x, ...y){}).length = ___________，(function foo([a, b, c]){}).length = ___________，(function foo(x, ...y, z){}).length = ___________。2.1234var x = 1;function f(x, y = x) &#123; console.log(y);&#125;运行f(2)控制台将输出___________，运行f()控制台将输出___________。3.12345let x = 1;function f(y = x)&#123; let x = 2; console.log(y);&#125;运行f(2)控制台将输出___________，调用f()控制台将输出___________。假设没有第一行的变量声明，则运行f()控制台将输出___________。4.试设计一个程序，能执行任意个数的加减法，如1 + 2，3 + 5 + 0.2，0.5 - 3.5 + 3 - 8等。5.阅读以下代码：1234567var id = 123;var handler = &#123; id: 456, dosomething: function() &#123; console.log(this.id); &#125;&#125;运行handler.dosomething()控制台将输出___________。若把 dosomething改为dosomething: () =&gt; {console.log(this.id);}则运行handler.dosomething()控制台将输出___________。6.{} == {}的返回值为___________，Object.is({}, {})的返回值为__________，Object.is(NaN, NaN)的返回值为__________，+0 === -0的返回值为__________，Object.is(+0, -0)的返回值为__________。7.js一共有几种方法可以遍历对象的属性，试列举并指出区别。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第15天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Object</tag>
+        <tag>Function</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第14天 答案及解析]]></title>
+    <url>%2Fjsexer14-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十四天的答案及解析部分，纯题目部分请移步js基础练习题 第14天 正文1.&quot;na&quot;.repeat(1) = ____________，&quot;na&quot;.repeat(2.9) = ___________，&quot;na&quot;.repeat(0.3) = ___________，&quot;na&quot;.repeat(-2) = ___________。答案：&quot;na&quot;、&quot;nana&quot;、&quot;&quot;、报错（RangeError）repeat函数的参数必须为（可转换为）非负数。 2.将"User " + user.name + " is not authoried to do " + action + "."改写为模板字符串表示法为______________________。 答案：`User ${user.name} is not authoried to do ${action}.`3.Number.isInteger(&quot;15&quot;) = ____________，Number.isInteger(25.0) = ___________。答案：false、trueNumber.isInteger()函数不会进行类型转换。 4.试编写一个取整函数，要求只取出整数部分，如 -4.2 取为-4，3.4取为3。 答案：如下代码块所示123const trunc = (x) =&gt; &#123; return x &lt; 0 ? Math.ceil(x) : Math.floor(x);&#125;;5.已知arrayLike = { 0: &quot;a&quot;, 1: &quot;b&quot;, 2: &quot;c&quot;, length: 4 }，要将arrayLike转换为数组，有几种方法?写出你知道的所有方法。答案：如下代码块所示1234// 方法1：slice[].slice.call(arrayLike);// 方法2： Array.from()Array.from(arrayLike);6.Array.from([1, ,2, ,3], (n) =&gt; n || 0)的返回值为___________，Array.of(2)的返回值为___________。答案：[1, 0, 2, 0, 3]、[2] 7.阅读以下代码： 12345function log(x, y) &#123; x = x || "Hello"; y = y || "World"; console.log(x, y);&#125;运行log()控制台将输出___________，调用log("Hi")控制台将输出___________，调用log("Hi","")控制台将输出___________，调用log(,"China")控制台将输出___________。 答案：Hello World、Hi World、Hi World、报错（SyntaxError） 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第14天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第14天]]></title>
+    <url>%2Fjsexer14.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十四天。 正文1.&quot;na&quot;.repeat(1) = ____________，&quot;na&quot;.repeat(2.9) = ___________，&quot;na&quot;.repeat(0.3) = ___________，&quot;na&quot;.repeat(-2) = ___________。2.将&quot;User &quot; + user.name + &quot; is not authoried to do &quot; + action + &quot; . &quot;改写为模板字符串表示法为______________________。3.Number.isInteger(&quot;15&quot;) = ____________，Number.isInteger(25.0) = ___________。4.试编写一个取整函数，要求只取出整数部分，如 -4.2 取为-4，3.4取为3。5.已知arrayLike = { 0: &quot;a&quot;, 1: &quot;b&quot;, 2: &quot;c&quot;, length: 4 }，要将arrayLike转换为数组，有几种方法?写出你知道的所有方法。6.Array.from([1, ,2, ,3], (n) =&gt; n || 0)的返回值为___________，Array.of(2)的返回值为___________。7.阅读以下代码：12345function log(x, y) &#123; x = x || "Hello"; y = y || "World"; console.log(x, y);&#125;运行log()控制台将输出___________，调用log(&quot;Hi&quot;)控制台将输出___________，调用log(&quot;Hi&quot;,&quot;&quot;)控制台将输出___________，调用log(,&quot;China&quot;)控制台将输出___________。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第14天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第13天 答案及解析]]></title>
+    <url>%2Fjsexer13-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十三天的答案及解析部分，纯题目部分请移步js基础练习题 第13天 正文1.js有几种基本数据类型？答案：在js中一共有7种基本数据类型，分别是number, string, boolean, null, undefined, symbol, bigint关于symbol的介绍，可以参照MDN symbol，关于bigint的介绍，可以参看MDN bigint 2.js有几种引用数据类型？ 答案：在js中一共有3种引用数据类型，分别是object、array、function3.简述基本数据类型与引用数据类型的区别。从数据存储上来说，基本数据类型的名（key）和值（value）都存储在栈内存中；而引用数据类型的名存在栈内存中，值存在于堆内存中，栈内存会提供一个引用的地址（指针）指向堆内存中的值。 4.深拷贝与浅拷贝有何区别？如何利用js实现一个简单的深拷贝，试给出你的代码。 浅拷贝是对栈内存中的值（即指针）的拷贝，拷贝前后对象指向的是堆内存中的同一个值；深拷贝是指在堆内存中开辟一个新的内存专门来存放拷贝值，此时拷贝后的值与原值就是相互独立、互不影响的。1234567891011121314151617181920// 可以使用递归去复制所有层级属性function deepClone(obj) &#123; let objClone = Array.isArray(obj) ? [] : &#123;&#125;; if(obj &amp;&amp; typeof obj === “object”) &#123; for(var key in obj) &#123; if(obj.hasOwnProperty(key)) &#123; //判断ojb子元素是否为对象，如果是，递归复制 if(obj[key] &amp;&amp; typeof obj[key] === “object”) &#123; objClone[key] = deepClone(obj[key]); &#125; else &#123; //如果不是，简单复制 objClone[key] = obj[key]; &#125; &#125; &#125; &#125; else &#123; return obj; &#125; return objClone;&#125; 使用复制代码时，请将代码中的中文双引号替换为英文引号。 5. 12345678910111213141516var a = 10;var b = 20;var obj = &#123; a: 30, b: this.a + 40, foo: function () &#123; return this.a; &#125;, bar: () =&gt; this.a , baz: function() &#123; function abc() &#123; return this.b; &#125; abc(); &#125;,&#125;以上代码运行后，则obj.b = __________，obj.foo()的返回值为 __________， 答案：50、30执行了1var test = obj.foo;后，test()的返回值为__________，obj.bar()的返回值为__________，obj.baz()的返回值为__________。 答案：10、10、undefined关于js中this的讲解，可以参照这波能反杀的个人博客。 6.实现一个add方法，使计算结果能够满足如下预期： add(1, 2, 3) = 6 add(1, 2, 3)(4) = 10 add(1)(2)(3)(4)(5) = 15 答案：如下方代码段所示12345678910const add = (…args) =&gt; &#123; const _add = function() &#123; args.push(…arguments); return _add; &#125; _add.toString = () =&gt; &#123; return args.reduce( (a, b) =&gt; a + b ); &#125; return _add;&#125;7.说说你了解的Promise。Promise是一种异步机制，主要是用来解决回调地狱的问题。Promise对象有三种状态，分别是pending、resolved、rejected；在Promise对象的构造函数中，接收resolve和reject函数修改状态；Promise对象中的then方法，可以接收构造函数中处理的状态变化，并分别对应执行。then方法的执行结果也会返回一个Promise对象，因此可以进行then的链式执行，这也是解决回调地狱的主要方式。 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第13天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>数据类型</tag>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>柯里化</tag>
+        <tag>Promise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第13天]]></title>
+    <url>%2Fjsexer13.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十三天。 正文1.js有几种基本数据类型？2.js有几种引用数据类型？3.简述基本数据类型与引用数据类型的区别。4.深拷贝与浅拷贝有何区别？如何利用js实现一个简单的深拷贝，试给出你的代码。5.12345678910111213141516var a = 10;var b = 20;var obj = &#123; a: 30, b: this.a + 40, foo: function () &#123; return this.a; &#125;, bar: () =&gt; this.a , baz: function() &#123; function abc() &#123; return this.b; &#125; abc(); &#125;,&#125;以上代码运行后，则obj.b = __________，obj.foo()的返回值为 __________，执行了1var test = obj.foo;后，test()的返回值为__________，obj.bar()的返回值为__________，obj.baz()的返回值为__________。6.实现一个add方法，使计算结果能够满足如下预期： add(1, 2, 3) = 6 add(1, 2, 3)(4) = 10 add(1)(2)(3)(4)(5) = 157.说说你了解的Promise。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第13天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>数据类型</tag>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>柯里化</tag>
+        <tag>Promise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第12天 答案及解析]]></title>
+    <url>%2Fjsexer12-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十二天的答案及解析部分，纯题目部分请移步js基础练习题 第12天 正文1.有三个数字：1、2、3，能组成多少个互不相同且无重复数字的三位数?各是多少?试用JS实现之。答案：如下代码块所示12345678910111213let arr1 = [1, 2, 3];let arr2 = [];for (let i of arr1) &#123; for (let j of arr1) &#123; for (let k of arr1) &#123; if (new Set([i, j, k]).size == 3) &#123; arr2.push(i * 100 + j * 10 + k); &#125; &#125; &#125;&#125;console.log(arr2.length);console.log(arr2);我总觉得有比三层暴力循环好的算法，如果您能提供的话，欢迎留言哦！ 2.一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数有几种取值?分别是多少?通过JS实现之。 答案：如下代码块所示12345678let arr = [];for (let n = 0; n &lt;= 13; n++) &#123; let y = 84 / n - n / 2; if(Number.isInteger(y)) &#123; arr.push( y * y - 100); &#125;&#125;console.log(arr);设该数为x。则x + 100 = y * y，y * y + 168 = z * z。假设z = y + n，则 y * y + 168 = (y + n)(y + n)，化解可得y = 84 / n - n / 2。则 x = y * y - 100。当y为整数时，条件成立。 3.利用JS随机生成1-100的10个整数，并把这10个数由小到大输出。 答案：如下代码块所示12345let arr = [];for (var i = 0; i &lt; 10; i++) &#123; arr.push(Math.floor(Math.random() * 100) + 1);&#125;console.log(arr.sort((a, b) =&gt; a - b));注意Math.random()生成的[0, 1)形式的随机数，即包含0，不包含1。 4.将一个数组的2到5号（不包括5号）位置的数据复制到另一个数组的1号位置中（索引值从0开始）。利用JS实现之。 答案：如下代码块所示1234let arr1 = [1, 2, 3, 4, 5, 6];let arr2= [7, 8, 9];arr2.splice(1, 0, arr1.slice(2, 5));console.log(arr2); 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第12天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>Array</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第12天]]></title>
+    <url>%2Fjsexer12.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十二天。 正文1.有三个数字：1、2、3，能组成多少个互不相同且无重复数字的三位数?各是多少?试用JS实现之。2.一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数有几种取值?分别是多少?通过JS实现之。3.利用JS随机生成1-100的10个整数，并把这10个数由小到大输出。4.将一个数组的2到5号（不包括5号）位置的数据复制到另一个数组的1号位置中（索引值从0开始）。利用JS实现之。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第12天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS两栏布局的几种实现方式]]></title>
+    <url>%2Ftwo-cols-display.html</url>
+    <content type="text"><![CDATA[前两天我分享了如何实现三栏布局，本次将分享如何实现另一个经典的布局方式，两栏布局。两栏布局也是前端面试常问的问题，其实现方式相比三栏布局其实更为简单。所谓的两栏布局，一般指的是“一侧定宽，一侧自适应”，在这篇文章中，我将分享实现两栏布局的4种方式。 一、前言CSS两栏布局指的是在一个容器（container）中，其中一侧定宽布局，而另一侧自适应，自动填满剩余的空间。下面我们以“左侧定宽为200px，右侧自适应，且两侧的高度都为100px”为例，采用几种不同的方式来实现此布局。在这里我们假设已经对所有元素设置了：12margin: 0;padding: 0; 二、布局方式1.position布局HTML代码如下：12345&lt;!--我们假设容器元素为body元素，实际情况，可自定义一个container --&gt;&lt;body&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt;&lt;/body&gt;CSS代码如下：12345678910111213141516/* 左侧布局 */.left&#123; width: 200px; height: 100px; background-color: blue; &#125;/* 右侧布局，注意left属性的值 */.right&#123; height: 100px; position: absolute; top: 0; left: 200px; right: 0; bottom: 0; background-color: red;&#125;该布局方式其实不太灵活，需要手动计算和修改定位边的距离。如果定宽部分设置了margin、padding、border，则另一侧也需要做相应更改，维护起来比较麻烦。 2.float布局HTML部分不变。CSS部分：123456789101112/* 左侧部分 */.left&#123; width: 200px; height: 100px; float: left; background-color: blue;&#125;/* 右侧部分 */.right&#123; height: 100px; background-color: red;&#125;该布局方式更简洁，将左侧设置为浮动布局，右侧元素自然就跟随着浮动了，根据需要，可以在右侧元素后清除浮动（实际上，在此种方式下，不用设置清除浮动，该布局为流式布局）。12345/* 清除浮动 */right::after&#123; content: ""; clear: both;&#125; 3.flex布局HTML部分：1234&lt;div class="container"&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt;&lt;/div&gt;CSS代码如下：12345678910111213.container&#123; width: 100%; height: 100px; display: flex; /*设置布局方式为flex布局，一定要在父元素上设置*/&#125;.left&#123; flex-basis: 200px;/*定宽*/ background-color: blue;&#125;.right&#123; flex: auto; /*自动填满*/ background-color: red;&#125;实际上，flex布局应该是最灵活、最方便的响应式布局方式了，不过其也有一个缺点，那就是必须要IE9以上的浏览器才支持该布局方式。如果不需要兼容IE9及以下浏览器，尽情的使用flex布局吧。 4.grid布局HTML代码部分与flex布局一致CSS部分：123456789101112.container&#123; width: 100%; height: 100px; display: grid; /*设置为grid布局*/ grid-template-columns: 200px auto; /*设置每一列的宽度*/&#125;.left&#123; background-color: blue;&#125;.right&#123; background-color: red;&#125;gird布局是继flex布局后的又一种布局方式，不过其兼容性相对来说要差一些。 5.table布局HTML与flex布局一致CSS部分：12345678910111213141516.container &#123; width: 100%; height: 100px; display: table;/* 设置为 table 布局 */&#125;/* 将其子项设置为 table-cell 布局 */.left, .right &#123; display: table-cell;&#125;.left &#123; width: 200px; background-color: red;&#125;.right &#123; background-color: blue;&#125;table布局很形象，就把其理解为一个表格。不过在实际运用中其实用得比较少。 三、总结通过上文的分析，咱们可以有四种布局方式，以实现左侧定宽、右侧自适应的布局。 position布局：兼容性好，不过维护困难 float布局：兼容性好，遵循流式布局原理 flex布局：必须要IE9以上浏览器才支持，不过使用灵活、方便 grid布局：兼容性相对较差 table布局：了解即可 四、下载代码我将每种布局方式写入了单独的HTML文件，可点击此处下载示例代码压缩包。代码下载后，尽量在新版谷歌浏览器中查看效果。 您还有哪些好的布局方式呢？可以在下方留言分享哦！]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>布局</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript中var、let和const的区别]]></title>
+    <url>%2Fvar-let-const.html</url>
+    <content type="text"><![CDATA[在前端面试中，特别是前端实习生的面试问题中，对于ES6的考查上，var、let、const这三种变量声明方式的异同点几乎是必考的，本文就来分析一下三者之间有什么区别。 一、前言在ES6（ES2015）出现之前，JavaScript中声明变量只有通过var关键字，函数声明是通过 function关键字，而ES6出现后，声明的方式有var 、let 、const 、function 、 class，本文主要讨论 var 、let 和 const 之间的区别。 二、var如果使用关键字var声明一个变量，那么这个变量就属于当前的函数作用域，如果声明是发生在任何函数外的顶层声明，那么这个变量就属于全局作用域。举例说明：1234567var a = 1; //此处声明的变量a为全局变量function foo() &#123; var a = 2; //此处声明的变量a为函数foo的局部变量 console.log(a); //2&#125;foo();console.log(a); //1如果在声明变量时，省略var的话，该变量就会变成全局变量，如全局作用域中存在该变量，就会更新其值。如：1234567var a = 1; //此处声明的变量a为全局变量function foo()&#123; a = 2; //此处的变量a也是全局变量 console.log(a); //2&#125;foo();console.log(a); //2注意：var声明的变量存在提升（hoisting）。 三、提升提升是指无论var出现在一个作用域的哪个位置，这个声明都属于当前的整个作用域，在其中到处都可以访问到。注意只有变量声明才会提升，对变量赋值并不会提升。如下例所示：12console.log(a); //undefinedvar a = 1;该代码段跟下列代码段是一样的逻辑：123var a;console.log(a); //undefineda = 1;而如果对未声明过的变量进行操作，就会报错1console.log(b); //假设b未声明过，Uncaught ReferenceError: b is not defined 四、letlet声明的变量，具有如下几个特点： let声明的变量具有块作用域的特征。 在同一个块级作用域，不能重复声明变量。 let声明的变量不存在变量提升，换一种说法，就是let声明存在暂时性死区（TDZ）。 如下面几个例子所示1234let a = 1;console.log(a); //1console.log(b); //Uncaught ReferenceError: b is not definedlet b = 2;1234function foo() &#123; let a = 1; let a = 2; //Uncaught SyntaxError: Identifier 'a' has already been declared&#125;以下是一个经典的关于var和let的一个例子：12345for (var i = 0; i &lt; 10; i++) &#123; setTimeout(function()&#123; console.log(i); &#125;, 100)&#125;;该代码运行后，会在控制台打印出10个10.若修改为：12345for (let i = 0; i &lt; 10; i++) &#123; setTimeout(function()&#123; console.log(i); &#125;, 100)&#125;;则该代码运行后，就会在控制台打印出 0 1 2 … 7 8 9。 五、constconst声明方式，除了具有let的上述特点外，其还具备一个特点，即const定义的变量，一旦定义后，就不能修改，即const声明的为常量。例如：1234const a = 1;console.log(a); //1a = 2;console.log(a); //Uncaught TypeError: Assignment to constant variable.但是，并不是说const声明的变量其内部内容不可变，如：1234const obj = &#123; a: 1, b: 2 &#125;;console.log(obj.a); //1obj.a = 3;console.log(obj.a); //3所以准确的说，是const声明创建一个值的只读引用。但这并不意味着它所持有的值是不可变的，只是变量标识符不能重新分配。 六、总结 var声明的变量属于函数作用域，let和const声明的变量属于块级作用域； var存在变量提升现象，而let和const没有此类现象； var变量可以重复声明，而在同一个块级作用域，let变量不能重新声明，const变量不能修改。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>let</tag>
+        <tag>ES6</tag>
+        <tag>const</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第11天 答案及解析]]></title>
+    <url>%2Fjsexer11-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十一天的答案及解析部分，纯题目部分请移步js基础练习题 第11天 正文1.1234567var tmp = 123;function foo() &#123; console.log(tmp); if(false) &#123; var tmp = 456; &#125;&#125;运行foo()会在控制台输出__________，运行foo()的返回值是__________。答案：undefined、undefined在if语句中的var声明会提升到函数内部开始位置，即等价于：1234567function foo() &#123; var tmp; console.log(tmp); if(false) &#123; tmp = 456; &#125;&#125;2.1const PI;console.log(PI);的返回值是__________。答案：报错（SyntaxError）const声明必须进行初始化，即声明时必须显式赋值。 3.12const foo = &#123;&#125;;foo.name = "Jealyn";执行完上面那段代码后，foo.name = __________ 。 答案：Jealynconst声明创建一个值的只读引用。但这并不意味着它所持有的值是不可变的，只是变量标识符不能重新分配 4. 12var a = 1;let b = 2;则window.a = __________ ， window.b = __________。答案：1、undefinedvar声明的全局变量会自动变为window对象的属性，而let声明的变量不会。 5.JS中一共有几种声明变量的方法?请简要叙述它们的区别。答案： 普通声明方式：var 和 function，它们的典型特征是存在变量提升 块级作用域：let 和const，它们声明的变量都是具有块级作用域的，在一个块内不能重复声明，其中const声明时必须进行初始化操作 模块变量：import，用于导入相应模块且可以修改变量名 定义类：class，用于创建类 6.1let [head, ...tail] = [1, 2, 3, 4];则 head = __________，tail = __________。答案：1、[2, 3, 4]1let[x, y, ...z] = ["a"];则 x = _________，y = _________，z = __________。答案：”a”、undefined、[]1var [x = 1, y = undefined] = [null, 2];则 x = __________，y = __________。答案：null、2关于解构赋值，请参看MDN 解构赋值 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第11天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>let</tag>
+        <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第11天]]></title>
+    <url>%2Fjsexer11.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十一天。 正文1.1234567var tmp = 123;function foo() &#123; console.log(tmp); if(false) &#123; var tmp = 456; &#125;&#125;运行foo()会在控制台输出__________，运行foo()的返回值是__________。2.1const PI;console.log(PI);的返回值是__________。3.12const foo = &#123;&#125;;foo.name = "Jealyn";执行完上面那段代码后，foo.name = __________ 。4.12var a = 1;let b = 2;则window.a= __________ ， window.b = __________。5.JS中一共有几种声明变量的方法?请简要叙述它们的区别。6.1let [head, ...tail] = [1, 2, 3, 4];则 head = __________，tail = __________。1let[x, y, ...z] = ["a"];则 x = __________，y = __________，z = __________。1var [x = 1, y = undefined] = [null, 2];则 x = __________，y = __________。7.不建立临时变量，如何实现两个值的互换，试给出你的代码。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第11天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>let</tag>
+        <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS三栏布局的几种实现方式]]></title>
+    <url>%2Fthree-cols-display.html</url>
+    <content type="text"><![CDATA[如何实现三栏布局，也是前端面试常问的问题了。所谓的三栏布局，一般指的是“左右侧定宽，中间部分自适应”，在这篇文章中，我将分享实现三栏布局的5种方式。关于两栏布局的实现方式，可访问：两栏布局的实现。 一、前言假设我们要实现一个页面布局需求，其要求“从左至右，页面可分为3部分，这3部分的高度都为300px。其中左右侧宽度固定，为200px宽，中间部分自动充满剩余空间”，你该如何实现呢？在这里我们假设已经对所有元素设置了：12margin: 0;padding: 0; 二、布局方式1.position布局HTML代码如下：123456&lt;!--我们假设容器元素为body元素，实际情况，可自定义一个container --&gt;&lt;body&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="center"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt;&lt;/body&gt;CSS代码如下：1234567891011121314151617181920212223242526272829.left, .right &#123; width: 200px; height: 300px; position: absolute; top: 0;&#125; /* 左侧定位 */.left &#123; left: 0; background-color: red;&#125; /* 中间自适应区 */.center &#123; height: 300px; position: absolute; top: 0; left: 200px; right: 200px; bottom: 0; background-color: blue;&#125; /* 右侧定位 */.right &#123; right: 0; background-color: red;&#125;代码逻辑方面还是比较清晰的，通过定位，将几个块放在一堆。不过其冗余度太高，而且维护成本和维护难度也相当之大。违背了DRY原则（Don’t Repeat Yourself）。 2.float + calc 布局HTML部分不变。CSS部分：1234567891011121314151617181920212223/* 三者共有样式 */.left, .center, .right &#123; height: 300px; float: left;&#125; /* 左侧样式 */.left &#123; width: 200px; background-color: red;&#125; /* 中间样式，关键在 calc */.center &#123; width: calc(100% - 400px); background-color: blue;&#125; /* 右侧样式 */.right &#123; width: 200px; background-color: red;&#125; 该方式的逻辑还是挺简单的，三个块依次浮动，从而形成一行。关键部分在于 calc属性，其可以动态计算值，在该例中，其用来计算center部分的宽度，其为 父元素的宽度（100%）减去左右侧实际宽度之和（200 + 200 ），利用该属性，实现了自适应宽度布局。关于该属性的具体介绍，参看 CSS3的calc()使用。 3.flex布局HTML部分：123456&lt;!--我们假设容器元素为body元素，实际情况，可自定义一个container --&gt;&lt;div class="container"&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="center"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt;&lt;/div&gt;CSS部分：123456789101112131415161718/* 外层容器设置为 flex 布局 */.container &#123; width: 100%; height: 300px; display: flex;&#125; /* 左右侧定宽处理 */ .left, .right &#123; flex-basis: 200px; background-color: red;&#125; /* 中间部分自适应布局 */.center &#123; flex: auto; background-color: blue;&#125; flex布局一如既往的灵活与简单。还是那句话，如果不用苦逼的兼容IE9及以下浏览器，愉快的使用flex布局吧。 4.grid布局HTML代码部分与flex布局一致CSS部分：123456789101112.container &#123; width: 100%; height: 300px; display: grid; /* 设置为 grid 布局 */ grid-template-columns: 200px auto 200px;/* 定义每列的宽度，左右200px，中间自适应 */&#125;.left, .right &#123; background-color: red;&#125;.center &#123; background-color: blue;&#125;grid布局设置起来更方便，不过其兼容性较差，所以可以作为实验性功能使用。要查看效果，建议使用最新版的谷歌浏览器。另外，可以使用自动加前缀插件来优化代码，自动加前缀插件为Autoprefixer，这里推荐其在线工具：Autoprefixer在线工具 。 5.table布局HTML与flex布局一致CSS部分：1234567891011121314151617.container &#123; width: 100%; height: 300px; display: table;/* 设置为 table 布局 */&#125; /* 将其子项设置为 table-cell 布局 */.left, .center, .right &#123; display: table-cell;&#125;.left, .right &#123; width: 200px; background-color: red;&#125;.center &#123; background-color: blue;&#125;table布局很形象，就把其理解为一个表格。不过在实际运用中其实用得比较少。 三、总结通过上文的分析，咱们可以有5种方式，以实现三栏布局。 position布局：兼容性好，不过维护和修改困难 float + calc 布局：必须要IE9以上浏览器才支持，遵循流式布局原理 flex布局：必须要IE9以上浏览器才支持，不过使用灵活、方便，推荐使用 grid布局：兼容性相对较差，可作为实验性功能 table布局：了解即可 四、下载代码我将每种布局方式写入了单独的HTML文件，可点击此处下载示例代码压缩包。代码下载后，尽量在新版谷歌浏览器中查看效果。 您还有哪些好的布局方式呢？可以在下方留言分享哦！]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>布局</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第10天 答案及解析]]></title>
+    <url>%2Fjsexer10-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十天的答案及解析部分，纯题目部分请移步js基础练习题 第10天 正文1.分析以下代码:123456789var name = "Window";var object = &#123; name: "Object", getName: function() &#123; return function() &#123; return this.name; &#125; &#125;&#125;该代码段运行后，object.getName = __________,object.getName() = __________,object.getName()() = __________,getName()() = __________,答案：f(){return function(){return this.name;}}、f(){return this.name;}、Window、报错（ReferenceError）若把getName函数修改成 123456getName: function() &#123; var that = this; return function() &#123; return that.name; &#125;&#125;则object.getName()() = __________。答案：Object该题目想考察的就是JS中this绑定与失绑的问题，具体可查看这篇文章。 2.请简述IIFE的作用和声明方法。 IIFE是Immediately Invoked Function Expression的简称，意为立即执行的函数表达式，即立即执行函数，IIFE通常用来模拟私有作用域，将只使用一次的函数通过IIFE的形式调用，来大大节省资源占用；其声明方式为:123(function functionName(i) &#123; //your code&#125;)(i);3.运行下列代码，将在控制台输出__________：12console.log(a);let a = 1;答案：报错（ReferenceError）let方式声明的变量不存在变量提升。 4. 123function foo(x = y, y = 2) &#123; return x + y;&#125;foo()的返回值为__________。答案：报错（ReferenceError）在函数参数解析中，是按照从左向右的顺序进行解析的，当将y赋给x时，因此时y并为声明，故报错。 5.123function bar(x = "2", y = +x) &#123; return x + y;&#125;bar()的返回值为__________。答案：&quot;22&quot;函数执行后，x = &quot;2&quot;, y = 2, 此时的+为拼接操作符。 6.分析下列代码的运行结果: 1234function bar(x, y) &#123; let x = x.toUpperCase(); return x;&#125;运行bar("hello", "world");的返回值是__________。报错（SyntaxError） 由于在函数参数中已经声明了x，在函数内再进行let声明已然重复，故会报错Identifier &#39;x&#39; has already been declared，提示x已声明。 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第10天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>let</tag>
+        <tag>ES6</tag>
+        <tag>IIFE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第10天]]></title>
+    <url>%2Fjsexer10.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第十天。 正文1.分析以下代码:123456789var name = "Window";var object = &#123; name: "Object", getName: function() &#123; return function() &#123; return this.name; &#125; &#125;&#125;该代码段运行后，object.getName = __________,object.getName() = __________,object.getName()() = __________,getName()() = __________,若把getName函数修改成123456getName: function() &#123; var that = this; return function() &#123; return that.name; &#125;&#125;则object.getName()() = __________。2.请简述IIFE的作用和声明方法。3.运行下列代码，将在控制台输出__________：12console.log(a);let a = 1;4.123function foo(x = y, y = 2) &#123; return x + y;&#125;foo()的返回值为__________。5.123function bar(x = "2", y = +x) &#123; return x + y;&#125;bar()的返回值为__________。6.分析下列代码的运行结果:1234function bar(x, y) &#123; let x = x.toUpperCase(); return x;&#125;运行bar(&quot;hello&quot;, &quot;world&quot;);的返回值是__________。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第10天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>let</tag>
+        <tag>ES6</tag>
+        <tag>IIFE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第9天 答案及解析]]></title>
+    <url>%2Fjsexer9-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第九天的答案及解析部分，纯题目部分请移步js基础练习题 第9天 正文1.分析以下代码:1var arr = new Array("3");运行后arr.length = __________, arr[1] = __________。答案：1、undefined 12arr[arr.length] = 4; arr[arr.length] = 5;现在，arr = __________。 答案：[&quot;3&quot;, 4, 5]当向Array函数中传入数字参数时，会被解析为数组的初始长度值；传入其他参数时，解析为数组项的值。 2.分析以下代码。 12var arr = [0, 15, 10, 1, 5];arr.sort();代码运行后，arr = __________。答案：[0, 1, 10, 15, 5]sort函数默认采用的是字符的Unicode编码方式进行升序排序。 3.要实现数组中的值按数值大小降序排序，应如何编写代码?以第2题中的arr为例。答案：12var arr = [0, 15, 10, 1, 5];arr.sort((a, b) =&gt; b-a);sort函数通过sortBy回调函数，可实现自定义排序。函数中带有两个参数，代表数组中的前后元素。如果计算后（a-b）&gt; 0,就是升序，（b-a）&gt; 0,就是降序 4.简要阐述call( )和apply( )的作用和异同点。call和apply都是在特定的作用域中调用函数，它们都能够扩充函数运行的作用域；除了接受参数的方式不同外，它们并没有区别；使用call方法时，传递给函数的参数必须逐个列出来，而apply接收的是参数数组。5.typeof(Number(&quot;42&quot;) = __________，typeof(new Number(&quot;42&quot;)) = __________，new Number(&quot;42&quot;) instanceof Number = __________，Number(&quot;42&quot;) instanceof Number = __________。答案：number、object、true、false 6.试解释什么叫做递归函数然后利用递归设计一个阶乘函数。递归函数是“自己调用自己”的函数，执行递归函数将反复的调用其自身，直到满足某个条件才结束调用。1234567function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * factorial(num - 1); &#125;&#125; 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第9天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>数组</tag>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第9天]]></title>
+    <url>%2Fjsexer9.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第九天。 正文1.分析以下代码:1var arr = new Array("3");运行后arr.length = __________, arr[1] = __________12arr[arr.length] = 4; arr[arr.length] = 5;现在，arr = __________。2.分析以下代码。12var arr = [0, 15, 10, 1, 5];arr.sort();代码运行后，arr = __________。3.要实现数组中的值按数值大小降序排序，应如何编写代码?以第2题中的arr为例。4.简要阐述call( )和apply( )的作用和异同点。5.typeof(Number(&quot;42&quot;) = __________，typeof(new Number(&quot;42&quot;)) = __________，new Number(&quot;42&quot;) instanceof Number = __________，Number(&quot;42&quot;) instanceof Number = __________。6.试解释什么叫做递归函数然后利用递归设计一个阶乘函数。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第9天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>数组</tag>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第8天 答案及解析]]></title>
+    <url>%2Fjsexer8-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第八天的答案及解析部分，纯题目部分请移步js基础练习题 第8天 正文1.分析以下代码:1234var i = 0;do&#123; i += 2;&#125;while(i &lt; 10);运行结果为i = __________答案：10 1234var i = 0;while(i &lt; 10)&#123; i += 2;&#125;运行结果为i = __________。 答案：10while与do...while最重要的区别是后者至少会执行一次。 2.执行下列代码后，控制台将输出__________。 1234567891011var a = "0xa";switch(a)&#123; case 10: console.log("a is 10"); break; case "10": console.log("a is '10'"); break; default: console.log("other value");&#125;答案：other value在switch中，变量不会进行类型转换，或者说，使用的是===进行判断 3.sayHi函数被调用后，弹窗的弹出内容是__________。 1234function sayHi() &#123; return "hello"; alert("Hello World");&#125;答案：不会弹出弹窗位于return语句后的代码不会被执行 4.分析下列代码。 12var name = "Jealyn";name.age = 22;name.age = __________，name.job = __________。答案：undefined、undefined基本数据类型不能存储键值对 5.分析下列代码。 123var obj1 = new Object();var obj2 = obj1;obj1.name = "Jealyn";obj2.name = __________，执行obj2.age = 22;后，obj1.age = __________。答案：Jealyn、226.分析下列代码。12345678function setName(obj) &#123; obj.name = "Jealyn"; obj = new Object(); obj.name = "Jinlin"; return obj.name;&#125;var person = new Object();setName(person);person.name = __________，setName(person)的返回值为 __________。答案：Jealyn、Jinlin 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第8天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>object</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第8天]]></title>
+    <url>%2Fjsexer8.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第八天。 正文1.分析以下代码:1234var i = 0;do&#123; i += 2;&#125;while(i &lt; 10);运行结果为i = __________,1234var i = 0;while(i &lt; 10)&#123; i += 2;&#125;运行结果为i = __________。2.执行下列代码后，控制台将输出__________。1234567891011var a = "0xa";switch(a)&#123; case 10: console.log("a is 10"); break; case "10": console.log("a is '10'"); break; default: console.log("other value");&#125;3.sayHi函数被调用后，弹窗的弹出内容是__________。1234function sayHi() &#123; return "hello"; alert("Hello World");&#125;4.分析下列代码。12var name = "Jealyn";name.age = 22;name.age = __________，name.job = __________。5.分析下列代码。123var obj1 = new Object();var obj2 = obj1;obj1.name = "Jealyn";obj2.name = __________，执行obj2.age = 22;后，obj1.age = __________。6.分析下列代码。12345678function setName(obj) &#123; obj.name = "Jealyn"; obj = new Object(); obj.name = "Jinlin"; return obj.name;&#125;var person = new Object();setName(person);person.name = __________，setName(person)的返回值为 __________。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第8天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>object</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第7天 答案及解析]]></title>
+    <url>%2Fjsexer7-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第七天的答案及解析部分，纯题目部分请移步js基础练习题 第7天 正文1.分析以下代码（其中b未定义）:12345console.log(typeof(a));console.log(a);console.log(typeof(b));console.log(b);var a;第1行的运行结果为__________，第2行的运行结果为__________，第3行的运行结果为__________，第4行的运行结果为__________。答案：undefined、undefined、undefined、报错(ReferenceError)本题考查的是变量提升和类型检测，在我的文章中该类型的题已经多次出现过。 2.请简述undefined和null的区别以及用途。答案：undefined表示未对声明的变量进行初始化，通常不需要进行显式设置，常用于基本数据类型的设置；null表示一个空对象指针，常用来在将来保存对象，undefined值是派生自null值的。 3.写出下列代码运行的结果。Boolean(&quot;&quot;) = __________，Boolean({}) = __________，Boolean([]) = __________，Boolean(5/0) = __________，Boolean(0/0) = __________，Boolean(new Boolean(false)) = __________。答案：false、true、true、true、false、trueBoolean( )的转换规则： 数据类型 转换为true的值 转换为false的值 Boolean true false String 任何非空字符串 空字符串 Number 任何非零数字值 0和NaN Object 任何对象 null Undefined \ undefined 4.写出下列代码运行的结果。isNaN(&quot;10&quot;)的返回值为__________，Number.isNaN(&quot;10&quot;)的返回值为__________，isNaN(&quot;blue&quot;)的返回值为__________，Number.isNaN(&quot;blue&quot;)的返回值为__________。答案：false、false、true、falseisNaN( )会将参数转换为数字，若能转换成功，则返回false，否则返回true；Number.isNaN( )只判断数字值是否为NaN，对于其他类型的值，一律返回false。5.写出下列代码运行的结果。Number(&quot;abc&quot;)的返回值__________，Number(&quot;&quot;)的返回值为__________，Number(undefined)的返回值为__________，Number(null)的返回值为__________，parseInt(&quot;&quot;)的返回值为__________，parseInt(&quot;23a&quot;,7)的返回值为__________，parseFloat(&quot;0xa&quot;)的返回值为__________，parseFloat(&quot;012&quot;)的返回值为__________。答案：NaN、0、NaN、0、NaN、17、0、12(1)Number( )转换规则： 原始值 转换结果 原始值 转换结果 true 1 “number” number false 0 空字符串 0 null 0 “0number” number undefined NaN 其他 NaN (2)parseInt( )转换规则： 原始值 转换结果 原始值 转换结果 true/false NaN “num str” num null/undefined NaN “number” number 空字符串 NaN 带进制的字符串 根据相应进制转换 parseInt( )可以接受第2参数，表示转换时使用的基数。(3)parseFloat( )与parseInt( )类似，但有一点重要的区别，即parseFloat( )会忽略前导的0，即16进制数和8进制数始终都会返回0。 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第7天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>类型检测</tag>
+        <tag>null和undefined</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第7天]]></title>
+    <url>%2Fjsexer7.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第七天。 正文1.分析以下代码（其中b未定义）:12345console.log(typeof(a));console.log(a);console.log(typeof(b));console.log(b);var a;第1行的运行结果为__________，第2行的运行结果为__________，第3行的运行结果为__________，第4行的运行结果为__________。2.请简述undefined和null的区别以及用途。3.写出下列代码运行的结果。Boolean(&quot;&quot;) = __________，Boolean({}) = __________，Boolean([]) = __________，Boolean(5/0) = __________，Boolean(0/0) = __________，Boolean(new Boolean(false)) = __________。4.写出下列代码运行的结果。isNaN(&quot;10&quot;)的返回值为__________，Number.isNaN(&quot;10&quot;)的返回值为__________，isNaN(&#39;blue&#39;)的返回值为__________，Number.isNaN(&quot;blue&quot;)的返回值为__________。5.写出下列代码运行的结果。Number(&quot;abc&quot;)的返回值__________，Number(&quot;&quot;)的返回值为__________，Number(undefined)的返回值为__________，Number(null)的返回值为__________，parseInt(&quot;&quot;)的返回值为__________，parseInt(&quot;23a&quot;,7)的返回值为__________，parseFloat(&quot;0xa&quot;)的返回值为__________，parseFloat(&quot;012&quot;)的返回值为__________。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第7天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>类型检测</tag>
+        <tag>null和undefined</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第6天 答案及解析]]></title>
+    <url>%2Fjsexer6-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第六天的答案及解析部分，纯题目部分请移步js基础练习题 第6天 正文1.执行完下列代码段后，页面中输出__________，s1 = __________。123var s1 = new String("010-98989999"); document.write(s1.substring(1, 4)); document.write(s1.substr(1, 4));答案：10-10-9， 010-98989999substr第二个参数为要截取的子串的长度，substring第二个参数为结束截取的位置（不包含该位置），且两个方法均不改变原字符串的内容。 2.执行完下列代码段后，emp.length = ________________，emp[0] = ________________。 123var emp = new Array(5);emp[1] = 1;emp[2] = 2;答案：5、undefinedArray构造函数中的参数即为数组的长度，当未定义数组项值时，即为undefined 3.以下代码运行的结果是输出 ________________。 12345var a = b = 10; (function() &#123; var a = b = 20 &#125;)(); console.log(b); 答案：20立即执行函数中的b为全局变量 4.以下代码运行后弹出的结果是 ________________。 123var a = 888; ++a; alert(a++);答案：8895.下面代码运行后,k的值是 ____。1234var i = 0, j = 0; for(;i &lt; 10, j &lt; 6; i++, j++)&#123; k = i + j;&#125;答案：10当j = 6时终止循环，此时k = i + j = 5 + 5。 6.[1,2,3,4].join("0").split("") 的返回值是 ________________。 答案：[&quot;1&quot;, &quot;0&quot;, &quot;2&quot;, &quot;0&quot;, &quot;3&quot;, &quot;0&quot;, &quot;4&quot;][1,2,3,4].join(&quot;0&quot;) = &quot;1020304&quot;.split(&quot;&quot;) = [&quot;1&quot;, &quot;0&quot;, &quot;2&quot;, &quot;0&quot;, &quot;3&quot;, &quot;0&quot;, &quot;4&quot;] 7.下面代码运行时，第一次弹出 ________________，第二次弹出 ________________。 1234function fn1() &#123; alert(1);&#125; alert(fn1());答案：1、undefined8.以下代码运行后,弹出的结果为 ____。1234fn1(); var fn1 = function(a) &#123; alert(a);&#125;;答案：报错（TypeError） 9."12" > "9"的返回值是 ________________。 答案：falseUnicode编码方式 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第6天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第6天]]></title>
+    <url>%2Fjsexer6.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第六天。 正文1.执行完下列代码段后，页面中输出__________，s1 = __________。123var s1 = new String("010-98989999"); document.write(s1.substring(1, 4)); document.write(s1.substr(1, 4));2.执行完下列代码段后，emp.length = __________，emp[0] = __________。123var emp = new Array(5);emp[1] = 1;emp[2] = 2;3.以下代码运行的结果是输出 __________。12345var a = b = 10; (function() &#123; var a = b = 20 &#125;)(); console.log(b); 4.以下代码运行后弹出的结果是 __________。123var a = 888; ++a; alert(a++);5.下面代码运行后,k的值是__________。1234var i = 0, j = 0; for(;i &lt; 10, j &lt; 6; i++, j++)&#123; k = i + j;&#125;6.[1,2,3,4].join(&quot;0&quot;).split(&quot;&quot;) 的返回值是__________。7.下面代码运行时，第一次弹出__________，第二次弹出__________。1234function fn1() &#123; alert(1);&#125; alert(fn1());8.以下代码运行后,弹出的结果为__________。1234fn1(); var fn1 = function(a) &#123; alert(a);&#125;;9.&quot;12&quot; &gt; &quot;9&quot;的返回值是__________ 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第6天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第5天 答案及解析]]></title>
+    <url>%2Fjsexer5-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第五天的答案及解析部分，纯题目部分请移步js基础练习题 第5天 正文1.有一张0.0001米厚的纸，至少对折多少次可以达到珠穆朗玛峰的高度8848米?试通过JS程序设计出来并给出结果。答案：27 1234567let paperHei = 0.0001;let count = 0;while(paperHei &lt; 8888)&#123; count++; paperHei *= 2;&#125;console.log(count);2.12var a = 3, b = 2; var c = a+++b; 这段代码运行后，c的值为____，a的值为____。答案：5、4 a+++b拆分开来就是a++ + b,即a + b后，a再自增1。3.运用js代码分别在警告框、页面、控制台输出&quot;Hello world!&quot;。window.alert(&quot;Hello world!&quot;);document.write(&quot;Hello world!&quot;);console.log(&quot;Hello world!&quot;); 4. 12var i = 10;var j = i+++i+++ ++i+i--;这段代码运行后，i的值为________________，j--的值为________________。 答案：12、47i+++i+++ ++i+i--拆开就是i++ + i++ + ++i + i--，即10 + 11 + 13 + 13 5.有一些苹果，每人分5个多一个，每人分6个多2个，每人分7个多3个。最少有多少个苹果?试通过JS程序设计出来并给出结果。 答案：206 123456789let count = 0;while(1)&#123; if (count % 5 == 1 &amp;&amp; count % 6 == 2 &amp;&amp; count % 7 == 3) &#123; console.log(count); break; &#125; else &#123; count++; &#125;&#125;6.如何获取到现在时刻所对应的星期，并转换成类似”星期一”、”星期二”这样的格式?写出相应的JS程序。解法1：利用switch…case 123456789101112131415161718192021222324252627var day = new Date().getDay();var weekday;switch(day) &#123; case 0: weekday = “星期日”; break; case 1: weekday = “星期一”; break; case 2: weekday = “星期二”; break; case 3: weekday = “星期三”; break; case 4: weekday = “星期四”; break; case 5: weekday = “星期五”; break; case 6: weekday = “星期六”; break; default: weekday = “数据有误”;&#125;解法2：利用数组123var day = new Date().getDay();var weekday = [“星期日”, “星期一”, “星期二”, “星期三”, “星期四”, “星期五”, “星期六”];console.log(weekday[day]);case语句里面一定要加上break语句，否则程序总会执行最后一个语句的内容。 7.要生成一个1到7之间的随机数（包括1和7）的JS代码可以怎样写? 答案：var random = Math.ceil(Math.random( ) * 6) + 1; 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第5天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第5天]]></title>
+    <url>%2Fjsexer5.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第五天。 正文 有一张0.0001米厚的纸，对折多少次可以达到珠穆朗玛峰的高度8848米?试通过JS程序设计出来并给出结果。 12var a = 3, b = 2; var c = a+++b; 这段代码运行后，c的值为__________，a的值为__________。 运用js代码分别在警告框、页面、控制台输出&quot;Hello world!&quot;。 12var i = 10;var j = i+++i+++ ++i+i--;这段代码运行后，i的值为__________，j--的值为__________。 有一些苹果，每人分5个多一个，每人分6个多2个，每人分7个多3个。最少有多少个苹果?试通过JS程序设计出来并给出结果。 如何获取到现在时刻所对应的星期，并转换成类似“星期一”、“星期二”这样的格式?写出相应的JS程序。 要生成一个1到7之间的随机数（包括1和7）的JS代码可以怎样写? 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第5天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第4天 答案及解析]]></title>
+    <url>%2Fjsexer4-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第四天的答案及解析部分，纯题目部分请移步js基础练习题 第4天 正文该题目转自 80% 应聘者都不及格的 JS 面试题，原文中也含有详细的解析。 仔细阅读以下代码段，回答下列问题: 123456for (var i = 0; i &lt; 5; i++) &#123; setTimeout(function() &#123; console.log(i); &#125;, 1000);&#125; console.log(i); 1.该代码段的运行结果是什么？ 答案：5 5 5 5 5 5 由于setTimeout中的回调函数会异步执行，故首先输出循环体外的内容。经过循环，此时i已变为5，故输出5。然后再等待大概1秒后输出5个5。 2.若用箭头（=>）表示其前后的两次输出之间有 1 秒的时间间隔，而逗号（,）表示其前后的两次输出之间的时间间隔可以忽略，那么代码实际运行的结果该如何描述？ 答案：5 =&gt; 5, 5, 5, 5, 5 该题涉及到js的定时器工作机制和js的事件循环机制。5个定时器几乎是同时设置为1s后执行，故后面5次输出几乎没有间隔。 3.如果期望代码的输出变成：5 => 0, 1, 2, 3, 4，该怎么改造代码?给出你的解决方案 答案：提供两种解法解法1：利用立即执行函数IIFE 12345678for (var i = 0; i &lt; 5; i++) &#123; (function(j)&#123; setTimeout(function() &#123; console.log(j); &#125;, 1000); &#125;)(i);&#125;console.log(i);解法2：利用按值传递，循环中调用普通函数，而不是回调函数123456789var output = function(i)&#123; setTimeout(function() &#123; console.log(i); &#125;, 1000);&#125;;for (var i = 0; i &lt; 5; i++) &#123; output(i);&#125;console.log(i); 简单的把循环内的var声明改为let声明，并不能达到效果，因为let声明的变量在循环外并不能访问到。 4.如果期望代码的输出变成0 => 1 => 2 => 3 => 4 => 5，并且要求原有的代码块中的循环和两处console.log不变，该怎么改造代码?给出你的解决方案 答案：提供三种解法解法1：利用按值传递，每次递增计数器的延时 1234567891011var output = function(i) &#123; setTimeout(function() &#123; console.log(i); &#125;, 1000i);&#125;;for (var i = 0; i &lt; 5; i++) &#123; output(i);&#125;setTimeout(function() &#123; console.log(i); &#125;, 1000i);解法2：利用立即执行函数IIFE，思路同解法112345678910for (var i = 0; i &lt; 5; i++) &#123; (function(j)&#123; setTimeout(function() &#123; console.log(j); &#125;, 1000 j); &#125;)(i);&#125;setTimeout(function() &#123; console.log(i); &#125;, 1000 i);解法3：利用ES6的Promise1234567891011121314151617const tasks = [];const output = (i) =&gt; &#123; new Promise((resolve) =&gt; &#123; setTimeout(() =&gt; &#123; console.log(i); resolve(); &#125;, 1000 * i); &#125;);&#125;for (var i = 0; i &lt; 5; i++) &#123; tasks.push(output(i));&#125;Promise.all(tasks).then(() =&gt; &#123; setTimeout(() =&gt; &#123; console.log(i); &#125;, 1000);&#125;); 5.setTimeout定时是否准确?为什么?答案：SetTimeout定时并不一定是准确的，详见实际延时比设定值更久的原因 6.简单谈谈你对闭包的理解? 参考链接：学习Javascript闭包 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看纯习题版，请点击js基础练习题 第四天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>setTimeout</tag>
+        <tag>闭包</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第4天]]></title>
+    <url>%2Fjsexer4.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第四天。 正文该题目转自 80% 应聘者都不及格的 JS 面试题，感谢作者提供如此优质的面试题。 仔细阅读以下代码段，回答下列问题:123456for (var i = 0; i &lt; 5; i++) &#123; setTimeout(function() &#123; console.log(i); &#125;, 1000);&#125; console.log(i); 该代码段的运行结果是什么？ 若用箭头（=&gt;）表示其前后的两次输出之间有 1 秒的时间间隔，而逗号（,）表示其前后的两次输出之间的时间间隔可以忽略，那么代码实际运行的结果该如何描述？ 如果期望代码的输出变成：5 =&gt; 0, 1, 2, 3, 4，该怎么改造代码?给出你的解决方案 如果期望代码的输出变成0 =&gt; 1 =&gt; 2 =&gt; 3 =&gt; 4 =&gt; 5，并且要求原有的代码块中的循环和两处console.log不变，该怎么改造代码?给出你的解决方案 setTimeout定时是否准确?为什么? 简单谈谈你对闭包的理解? 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看答案和解析，请点击js基础练习题第4天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>setTimeout</tag>
+        <tag>闭包</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第3天 答案及解析]]></title>
+    <url>%2Fjsexer3-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第三天的答案及解析部分，纯题目部分请移步js基础练习题 第3天 正文1.1234var exerOne = false; if (exerOne = true) &#123; exerOne = true;&#125;执行以上代码后，exerOne 的值为______________。答案：true 注意第2行中的=为赋值操作2.1234567891011var weekday = new Date().getDay(); switch(weekday)&#123; case 0: weekday = "星期天"; case 1: weekday = "星期一"; case 2: weekday = "星期二"; case 3: weekday = "星期三"; case 4: weekday = "星期四"; case 5: weekday = "星期五"; case 6: weekday = "星期六"; default: weekday = 'unknown'; &#125;执行以上代码后，weekday 的值是____。答案：unknown switch循环中的case语句后若不添加break，则每个case都会执行，返回的内容取决于最后一个语句3.给定一个变量，如何检测它是否为 NaN ?答案：NaN是唯一一个自身与自身不相等的值，利用if(name !== name)如果结果为真，则证明该值为NaN。利用isNaN()函数，可以更准确的检测。关于isNaN()和Number.isNaN()的区别，点击这里 4. 123456789var array=[]; for (var i = 0; i &lt; 5; i++) &#123; if (i == 2) break; array.push(i); for (var j = 0; j &lt; 5; j++) &#123; if(j == 2) continue; array.push(j); &#125; &#125;执行完这段程序，array 的结果为______________。 答案：[0, 0, 1, 3, 4, 1, 0, 1, 3, 4]break语句是退出整个循环，而continue语句是退出当前循环而进入下一次循环 5. 123var foo = function bar() &#123; return 12; &#125;执行完这段代码后，请问： typeof(foo) = ______________； typeof(foo()) = ______________； typeof(bar) = ______________； typeof(bar()) = ______________。 答案：function、number、undefined、报错(ReferenceError)在此题中，foo才是函数名。执行typeof(foo())得到的是foo函数的返回值，如果没有返回值，则为undefined。 6. 12345678var a, b;(function() &#123; var a = b = 5; alert(a); alert(b);&#125;)();alert(a);alert(b);执行程序，依次弹出的值为______________、______________、______________、______________。 答案：5、5、undefined、5该题目考查了js变量定义及作用域的概念。在立即执行函数内部定义var a = b = 5;实际上相当于执行 123b = 5;var a;a = b;故在函数外部的变量b也同步修改了，而函数外部的变量a未被修改7.1var array = new Array(0x17);Number(array); 的结果是_______，array.length; 的值是_______。答案：NaN、23js会根据在Array构造函数中传入的参数值n确定数组的初始长度为n，0x17为十六进制，转换为十进制为23。对数组调用Number()方法，会先将该数组转为会string类型，再转换为number类型。 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第3天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>Array</tag>
+        <tag>类型检测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第3天]]></title>
+    <url>%2Fjsexer3.html</url>
+    <content type="text"><![CDATA[在本栏中，我将更新一些JavaScript基础练习题。这些习题，很大一部分是我在学习过程中记下的笔记或者遇到的坑，还有就是很重要很重要的基础概念。我觉得非常适合刚入门前端开发的朋友们，希望大家有所收获，这就足够咯。 正文1.1234var exerOne = false; if (exerOne = true) &#123; exerOne = true;&#125;执行以上代码后，exerOne 的值为______________。 2.1234567891011var weekday = new Date().getDay(); switch(weekday)&#123; case 0: weekday = "星期天"; case 1: weekday = "星期一"; case 2: weekday = "星期二"; case 3: weekday = "星期三"; case 4: weekday = "星期四"; case 5: weekday = "星期五"; case 6: weekday = "星期六"; default: weekday = 'unknown'; &#125;执行以上代码后，weekday 的值是______________。 3.给定一个变量，如何检测它是否为 NaN ? 4.123456789var array=[]; for (var i = 0; i &lt; 5; i++) &#123; if (i == 2) break; array.push(i); for (var j = 0; j &lt; 5; j++) &#123; if(j == 2) continue; array.push(j); &#125; &#125;执行完这段程序，array 的结果为______________。 5.123var foo = function bar() &#123; return 12; &#125;执行完这段代码后，请问：typeof(foo) = _________；typeof(foo()) = _________；typeof(bar) = _________；typeof(bar()) = _________。 6.12345678var a, b;(function() &#123; var a = b = 5; alert(a); alert(b);&#125;)();alert(a);alert(b);执行程序，依次弹出的值为_______、_______、_______、_______。 7.1var array = new Array(0x17);Number(array); 的结果是_______，array.length; 的值是_______。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第3天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+        <tag>类型检测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第2天]]></title>
+    <url>%2Fjsexer2.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第二天。 正文1.1var exerOne = 'test;则exerOne = __________。 2.1var exerTwo = 52 / 0;则 exerTwo = __________，typeof(exerTwo) = __________。 3.1var exerThree = 0 / 0;则exerThree = __________，typeof(exerThree) = __________。 4.1var exerFour = "-3.3E+2-5"; 则Number(exerFour) = __________，parseFloat(exerFour) = __________。 5.12var exerFive_1 = 5 / 2; var exerFive_2 = " is float?";则exerFive_1 + exerFive_2 = __________。 6.0.1 + 0.2 == 0.3 的返回值为__________，若结果为假，请设计一种方法，使结果准确。 7.1var exerSeven = "this is\" test string";则exerSeven.slice(5, 8)的返回值是__________。 8.下面哪些操作不会改变原始数组，而是返回一个新的数组__________。 选项 选项 选项 选项 A、forEach() B、reverse() C、sort() D、slice() E、concat() F、splice（） G、join（） H、shift（） I、reduce（） J、copyWithin() K、pop() L、map() 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第2天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第2天 答案及解析]]></title>
+    <url>%2Fjsexer2-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第二天的答案及解析部分，纯题目部分请移步js基础练习题 第2天 正文1.1var exerOne = 'test;则exerOne = __________。答案：报错（SyntaxError）字符串test缺少了闭合的引号。 2. 1var exerTwo = 52 / 0;则 exerTwo = __________，typeof(exerTwo) = __________。答案：Infinity、&quot;number&quot;在js中，大于0的数除0，结果为Infinity；0除0，结果为NaN；小于0的数除0，结果为-Infinity。 3. 1var exerThree = 0 / 0;则exerThree = __________，typeof(exerThree) = __________。 答案：NaN、&quot;number&quot;4.1var exerFour = "-3.3E+2-5"; 则Number(exerFour) = __________，parseFloat(exerFour) = __________。答案：NaN、-330该串字符为科学计数法与减法的混合，化为一般表示方法为-3.3 * 10^2 - 5。遇到第二个减号时就不再执行，Number()直接返回NaN，而parseFloat()则返回的是前部分的执行结果即-3.3 * 10^2。 5. 12var exerFive_1 = 5 / 2; var exerFive_2 = " is float?";则exerFive_1 + exerFive_2 = __________。答案：”2.5 is float?”6.0.1 + 0.2 == 0.3 的返回值为__________，若结果为假，请设计一种方法，使结果准确。答案：如下代码段所示： 12345// 方法一：固定小数位数(0.1 + 0.2).toFixed(1)// 方法二：化整再除(0.1 * 10 + 0.2 * 10) / 10 7.1var exerSeven = "this is\" test string";则exerSeven.slice(5, 8)的返回值是__________。答案：”is””\&quot;将被转义为&quot;，String.slice(b, e)方法将截取从b索引开始，到e索引（不包括e）结束的子串。 8.下面哪些操作不会改变原始数组，而是返回一个新的数组__________。 A、forEach() B、reverse() C、sort() D、slice() E、concat() F、splice（） G、join（） H、shift（） I、reduce（） J、copyWithin() K、pop() L、map() 答案：A、D、E、L数组方法总结： 方法 描述 是否改变原始数组 join() 返回以指定分隔符分隔而成的字符串 否 push()、unshift() 返回修改后数组的长度 是 pop()、shift() 返回弹出的元素 是 sort() 返回经过排序后的数组 是 reverse() 返回经过反序后的数组 是 concat() 返回合并后的数组 否 slice() 返回截取的数组 否 splice() 返回删除的元素组成的一个数组 是 indexOf()、lastIndexOf() 返回指定项的索引值 否 map() 返回每次函数调用结果组成的数组 否 filter() 返回符合过滤条件的结果组成的数组 否 reduce() 返回迭代函数处理后的值 否 copyWithin() 将数组中指定位置的成员复制到本数组其他位置 是 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第2天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+        <tag>Array</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第1天 答案及解析]]></title>
+    <url>%2Fjsexer1-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第一天的答案及解析部分，纯题目部分请移步js基础练习题 第1天 正文1.JS的两种注释格式是 __________ 和__________。答案：/* 多行注释 */、// 单行注释 2.向一个页面加入JS代码，有几种方式，试分别解释之。 内部式：在HTML内的script标签对之间添加JS代码。 内联式：即在HTML元素的属性上引入JS事件，如&lt;p onclick=&quot;alert(&#39;this is inner-JS&#39;);&quot;&gt;your text&lt;/p&gt;，这种方式是最不被推荐的。 外部式:即通过在HTML用script标签的src属性引入js文件。 3.myage 和 myAge 是两个不同的变量，判断正误。答案：正确，js中的变量区分大小写。 4._12在JS中是合法的变量名，判断正误。答案：正确5.声明变量 var test = 6 &lt; 3; 结果为 test = __________。答案：false 6. 12var num1 = 10; var num2 = 8; 则num2 + num1 / 8 + 2的结果为__________。 答案：11.257.var test = 3.2E+10;，则typeof(test) 的结果为__________。答案：”number” 8.console.log(3++);的结果为__________。答案：报错（ReferenceError）非变量不能使用自增、自减操作符。 9.var a = 3;，则console.log(a++)的结果为__________。答案：310.null == undefined的返回值为__________。答案：true 11.null == false的返回值为__________。答案：falsenull、undefined与布尔值进行比较时不会进行类型转换，即null == true仍会返回false。 12.JS有几种基本的数据类型，试列举。答案：JS中一共有7种基本类型，分别是number、boolean、null、undefined、string、symbol、bigint。13.typeof(null); 的返回值为__________。答案：&quot;object&quot; 说明 题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 答案中，若有错误和需完善的地方，可在下方留言反馈哈~~ 查看纯习题版，请点击js基础练习题 第1天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>数据类型</tag>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>js练习题答案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第1天]]></title>
+    <url>%2Fjsexer1.html</url>
+    <content type="text"><![CDATA[在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。该篇文章是该系列的第一天。 正文1.JS的两种注释格式是 __________ 和__________。 2.向一个页面加入JS代码，有几种方式，试分别解释之。 3.myage 和 myAge 是两个不同的变量，判断正误。 4._12 在JS中是合法的变量名，判断正误。 5.声明变量 var test = 6 &lt; 3; 结果为 test = __________。 6.12var num1 = 10; var num2 = 8; 则num2 + num1 / 8 + 2的结果为__________。 7.var test = 3.2E+10;则typeof(test) 的结果为__________。 8.console.log(3++); 的结果为__________。 9.var a = 3;则console.log(a++); 的结果为__________。 10.null == undefined 的返回值为__________。 11.null == false 的返回值为__________。 12.JS有几种基本的数据类型，试列举。 13.typeof(null); 的返回值为__________。 说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript 2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~ 3.查看答案和解析，请点击js基础练习题第1天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>数据类型</tag>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+      </tags>
+  </entry>
+</search>
