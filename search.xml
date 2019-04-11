@@ -262,9 +262,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
+        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
-        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -280,10 +280,10 @@
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>let</tag>
-        <tag>ES6</tag>
         <tag>const</tag>
+        <tag>let</tag>
         <tag>解构赋值</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -298,10 +298,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>let</tag>
-        <tag>ES6</tag>
         <tag>const</tag>
+        <tag>let</tag>
         <tag>解构赋值</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
