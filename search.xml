@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[公告]]></title>
+    <url>%2Fnotice.html</url>
+    <content type="text"><![CDATA[该页面为本网站的信息公告页面。当网站的结构发生比较大的变化或者增加了某些功能时，我都会在此页面进行简要的说明。这倒有点类似GitHub项目的README.md文件，该页面会一直处于置顶状态。如果想了解本网站的最新动态和近期计划，就快到碗里来吧！ Hello，欢迎来到我的个人网站。 本网站是我的一片小天地，该网站的定位为技术分享。我是一名前端开发工程师，因此我可能会更多得分享前端方向的一些知识和技术，面向对象为前端入门者和初级开发者。如果您感兴趣，可以收藏本站，以备后用。 本页面毕竟不是关于我(About Me)页，就不做过多的自我介绍啦，哈哈。如引言所述，本页面是起到一个通知和公告的作用，告知访问者该网站近期发生或者即将发生哪些比较重要的变化。 添加网站搭建及优化专栏 时间：2019年4月10日至2019年4月20日 详情：我的这个网站也折腾了近一个月了，在网站搭建和维护过程中也有一些心得和挖坑记录，所以我想在一个专栏里分享一下我的网站搭建、维护和优化过程中的一些技巧和方式 相关链接：hexo博客搭建与优化 状态：未完成 暂时停止更新JS基础练习题 时间：2019年4月10日至2019年4月20日 详情：由于近期想做网站的SEO以及想分享一下我博客的搭建过程，故暂时先不更新JS练习题了，预计4月21日会继续更新JS练习题 相关链接：JS基础练习题 状态：未完成]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo安装，撰写你的第一篇文章]]></title>
+    <url>%2Fhexo-create.html</url>
+    <content type="text"><![CDATA[Hexo是一个进行博客搭建和开发的框架，它的操作和配置相对来说非常得简单，也很受欢迎。本文讲解如何进行Hexo框架的安装、Hexo常见的几条命令操作以及利用Hexo编写自己的第一篇文章。 一、前言Hexo是一个十分轻量和流行的博客框架，其官方中文文档地址为https://hexo.io/zh-cn/docs/。我的个人网站当然也是采用的Hexo进行搭建的。 二、安装1.安装前提要进行Hexo的安装，则你的电脑里必须要安装Node.js和Git，不过本文暂不讲解这两个程序的安装说明，下面给出两个软件的官方网站以及安装参考教程。 Node.js中文官网 （注意至少需安装Nodejs 6.9以上的版本），Node.js安装配置 Git官网，Git安装配置 2.安装Hexo确保您的电脑上已安装配置好了Node.js和Git，接下来进行Hexo的安装就相当简单了，通过调出命令行(cmd窗口），输入以下命令，即可安装Hexo。1npm install -g hexo-cli 三、Hexo常用命令Hexo的常用命令很少，我经常用到的，也不过只有5、6条命令，并且非常好记。下面一一讲解之。 1、hexo init 命令该命令是用来初始化项目的，只有在新建项目时会用到，其使用格式为 hexo init folder，其中folder为你的项目名，常用的有blog、web、website等。 2、hexo new 命令该命令用于生成一篇文章，使用方法为 hexo new [layout] your_article_name 。若是省略layout参数，则以默认的方式进行布局。 3、hexo clean 命令该命令用于清除缓存，使用该命令会清除掉项目文件夹下的public文件夹，使用方式为hexo clean。 4、hexo g 命令该命令用于生成public文件夹中的内容，使用该命令会更新项目文件夹下的public文件夹，使用方式为hexo g。 5、hexo s 命令该命令用于生成启动服务预览，成功执行该命令，在浏览器中输入localhost:4000，即可预览你的网站，使用方式为hexo s。 6、hexo d 命令该命令用于部署，即将本地内容部署到设置的服务器上，使用方式为hexo d。 7、其他命令关于Hexo其他命令及更详细的介绍，请访问hexo官网指令讲解。 四、构建Hexo项目Hexo安装完成后，在你需要构建项目的文件夹下，进行Hexo项目的搭建。我是在G盘下进行操作的。 1、启动Git Bash进入相应盘符或者文件夹下，点击空白处，在出现的菜单中选择Git Bash Here，即可启动Git Bash。 2、初始化项目并安装依赖在启动的Git Bash中依次执行以下命令。123hexo init blogcd blognpm install注意其中的blog可以替换为其他字符串，推荐使用blog、website、web等，即根据功能来命名。cd命令是切换目录的意思。npm install命令会安装项目所需的依赖包，安装完成后，会在项目文件下生成一个node_modules目录。 3、新建一篇文章当项目搭建完成之后，就可以写文章咯。通过Git Bash，执行以下命令，则可以新建并生成一则篇名为test的文章。1hexo new test注意该篇文章默认采用的布局为post布局，新建的文章路径为blog\source\_posts\test.md，生成的文件路径为blog\public\年\月\日\test\index.html。 4、启动本地预览执行以下命令，然后打开浏览器，在地址栏中输入localhost:4000，则会看到刚生成的页面。1hexo s页面效果如下所示： 5、编辑文件打开刚才新建的文件，即blog\source\_posts\test.md，我们插入以下内容：这是我的第一篇文章，采用hexo框架搭建而成的，我也有自己的个人博客了。 保存文件，刷新一下网页，再次查看效果如下： 五、总结博客的搭建与新建文章的方法到此就介绍完毕了，各位看官应该能够新建和编辑文章了。顺便一提，Hexo的文章编辑采用的是MarkDown语法，不熟悉该语法的朋友，可以访问MarkDown语法说明进行学习。当然，目前的网站存在很大的不足： 只能在本地查看。博客也好，个人网站也好，应该是共享的，只能在本机上访问，又有何乐趣呢？ 页面样式丑陋。这个网站的外观和布局，确实让人看着有点难受呀。 没有互动功能。博客类网页常见的评论留言、友情链接、打赏、分享功能没有，互动性不强。 在下一篇文章中，将讲解如何将项目部署到Coding上，让所有用户都能搜索查看。后面的文章中， 将逐一改善以上提到的不足之处。 六、相关链接 Hexo中文文档 Node.js中文官网 Git官网 MarkDown教程]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[为博客添加站内搜索功能]]></title>
     <url>%2Flocal-search.html</url>
     <content type="text"><![CDATA[当我的博客文章和练习题发表得比较多的时候，要查询哪些习题是我曾经整理过的，就变得比较复杂和麻烦了，我们不可能一个一个文件的挨着去找。为了方便读者查询相应的题目以及为了我能快速定位我整理过哪些习题，故添加了站内搜索功能。 一、前言我的博客采用的是hexo进行搭建，选择的是next主题。而next主题其实也集成了几种搜索插件，我采用的是local-search插件。此插件会生成一个search.xml文件，其中包含了你网站上所有相关的数据，搜索的时候就从这个文件中根据关键字检索出相应的链接。 二、安装在项目的根目录下，通过cmd或者Git Bash执行下面这条命令以安装hexo-generator-searchdb插件。1npm install hexo-generator-searchdb --save 三、配置1、修改站点配置文件打开站点配置文件，即根目录下的_config.yml文件，添加以下代码：12345search: path: search.xml field: post format: html limit: 10000注意冒号和空格的处理。这些参数都是可以修改的，不过默认设置为这样就行了，一般也不需要修改。如果要修改，请查看hexo-generator-searchdb配置参数。 2、修改主题配置文件打开主题配置文件，即themes/next下的_config.yml文件，将local_search下的enable修改为true，即启用local_search插件。12local_search: enable: true 四、部署执行上述步骤后，再运行以下命令，部署上去，就可以看到在页面上有一个搜索图标，点击并输入相关文字，就可以看到搜索结果，点击即可跳转到对应页面，十分方便。1hexo d -g]]></content>
@@ -186,10 +202,10 @@
         <category>答案及解析</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -203,10 +219,10 @@
         <category>习题</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -262,9 +278,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
+        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
-        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -280,10 +296,10 @@
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>let</tag>
-        <tag>ES6</tag>
         <tag>const</tag>
+        <tag>let</tag>
         <tag>解构赋值</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -298,10 +314,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>let</tag>
-        <tag>ES6</tag>
         <tag>const</tag>
+        <tag>let</tag>
         <tag>解构赋值</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -612,11 +628,11 @@
         <category>答案及解析</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>数据类型</tag>
       </tags>
   </entry>
   <entry>
@@ -628,10 +644,10 @@
         <category>习题</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
       </tags>
   </entry>
 </search>

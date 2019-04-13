@@ -1275,6 +1275,14 @@ pre .javascript .function {
   color: #fc6423;
   border-bottom: 1px solid #fc6423;
 }
+.post-body li a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body li a:hover {
+  color: #fc6423;
+  border-bottom: 1px solid #fc6423;
+}
 .post-body .note a {
   color: #0593d3;
   border-bottom: none;
@@ -1892,7 +1900,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #466a87;
+  background: #a470ff;
 }
 .links-of-blogroll {
   font-size: 13px;
