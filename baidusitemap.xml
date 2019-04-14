@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.jealyn.top/hexo-deploy.html</loc>
+    <lastmod>2019-04-14</lastmod>
+  </url>  <url>
     <loc>https://www.jealyn.top/hexo-create.html</loc>
-    <lastmod>2019-04-13</lastmod>
+    <lastmod>2019-04-14</lastmod>
   </url>  <url>
     <loc>https://www.jealyn.top/notice.html</loc>
     <lastmod>2019-04-12</lastmod>
