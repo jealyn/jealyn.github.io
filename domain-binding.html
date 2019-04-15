@@ -104,7 +104,7 @@
 <meta property="og:image" content="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/domain-binding-03.png">
 <meta property="og:image" content="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/domain-binding-02.png">
 <meta property="og:image" content="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/domain-binding-04.png">
-<meta property="og:updated_time" content="2019-04-14T15:48:22.000Z">
+<meta property="og:updated_time" content="2019-04-15T14:50:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="域名申请与绑定到Coding Pages">
 <meta name="twitter:description" content="在Hexo建站系列的前两篇文章中，我分别分享了如何安装和新建Hexo项目以及将Hexo项目部署到Coding。这篇文章则是讲述如何申请属于自己的自定义域名以及将其绑定到Coding Pages上，从此，就可以通过自定义域名访问您的网站了。">
@@ -473,7 +473,7 @@
 <h4 id="2-添加解析记录"><a href="#2-添加解析记录" class="headerlink" title="2.添加解析记录"></a>2.添加解析记录</h4><p>我们需要添加两条解析记录，解析记录1如下图所示：<img src="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/domain-binding-01.png">注意记录类型为<code>A</code>，主机记录为<code>@</code>，解析线路选择默认，记录值为你<code>Hexo</code>项目所部署到Coding Pages的IP地址，可以通过<code>ping</code>得到。如我的Coding仓库为<code>jealyn.coding.me</code>，则打开<code>cmd</code>（<code>win</code> + <code>R</code>，然后再输入<code>cmd</code>），输入<code>ping jealyn.coding.me</code>，结果如下图所示：<img src="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/domain-binding-03.png">取出其中的<code>150.109.112.233</code>作为记录值即可。<br>解析记录2如下图所示：<img src="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/domain-binding-02.png">注意记录类型为<code>CNAME</code>，主机记录为<code>www</code>，解析线路选择默认，记录值为你<code>Hexo</code>项目所部署到Coding Pages的访问地址，如我的为<code>jealyn.coding.me</code>。</p>
 <h4 id="3-Coding绑定自定义域名"><a href="#3-Coding绑定自定义域名" class="headerlink" title="3.Coding绑定自定义域名"></a>3.Coding绑定自定义域名</h4><p>打开Coding的Pages服务，进入设置页面，为网站绑定自己的域名。添加刚才解析的两条记录，如下图所示：<img src="https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/domain-binding-04.png"></p>
 <h4 id="4-开启HTTPS强制访问"><a href="#4-开启HTTPS强制访问" class="headerlink" title="4.开启HTTPS强制访问"></a>4.开启HTTPS强制访问</h4><p>为了保证数据传输的安全，防止传输内容被第三方冒充或篡改，我建议尽可能得开启HTTPS强制访问。</p>
-<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>通过以上的操作，现在，就可以通过自定义的域名访问您的个人网站了，一下就感觉高大上了有不有！至此，网站的配置和域名的绑定就讲解完毕了。但是我们的网站还有一个很大的问题，那就是样式很丑呀，实在不愿多看。下一篇文章，我就会讲解<code>Hexo</code>的主题选择和配置，经过改进后，网站看着就会赏心悦目许多。希望继续关注我的文章哦！</p>
+<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>通过以上的操作，现在，就可以通过自定义的域名访问您的个人网站了，一下就感觉高大上了有不有！至此，网站的配置和域名的绑定就讲解完毕了。但是我们的网站还有一个很大的问题，那就是样式很丑呀，实在不愿多看。下一篇文章，我就会讲解<a href="/next-theme.html">Hexo的主题选择和配置</a>，经过改进后，网站看着就会赏心悦目许多。希望继续关注我的文章哦！</p>
 <h3 id="五、相关链接"><a href="#五、相关链接" class="headerlink" title="五、相关链接"></a>五、相关链接</h3><ul>
 <li><a href="https://cloud.tencent.com/" target="_blank" rel="noopener">腾讯云官网</a></li>
 <li><a href="https://www.aliyun.com/" target="_blank" rel="noopener">阿里云官网</a></li>
@@ -574,6 +574,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/next-theme.html" rel="prev" title="更换Hexo框架主题为Next主题">
+                更换Hexo框架主题为Next主题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -656,7 +660,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -678,7 +682,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

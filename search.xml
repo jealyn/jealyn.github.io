@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[更换Hexo框架主题为Next主题]]></title>
+    <url>%2Fnext-theme.html</url>
+    <content type="text"><![CDATA[Hexo框架默认使用的是landscape主题，该主题的显示效果其实大多数人是不太喜欢的。相比之下，Next主题给人的感觉则比较简洁、清爽，其在移动端的布局效果也是相当之好的，并且修改起来也十分的方便。我的这个个人网站使用的就是Next主题，本文就将介绍如何安装和配置Next主题。 一、前言Hexo具有非常多的主题可供选择，在这其中，Next主题深受很多使用者的喜爱。当然，萝卜青菜各有所爱，您可以在Hexo主题列表中选择您喜欢的主题进行设置。不过，Next主题确实是我特别安利的一款主题。 二、Next主题安装配置1.安装Next主题在Hexo中进行主题的安装，是非常简单和容易的。具体到Next主题，只需要在项目根目录下（我的为blog）打开Git Bash，输入以下命令，即可完成Next主题的安装。1git clone https://github.com/iissnan/hexo-theme-next themes/next 2.Next主题结构当Next主题下载安装完成后，可以看到，在项目根目录下的thems文件夹内，多了一个next文件夹，这就是刚才下载的next主题，进入next文件夹，我们看到，其项目结构如下所示：123456.├── _config.yml├── languages├── layout├── scripts└── source 在这里，各位朋友们，有两个概念一定要弄清楚。在某个主题下的_config.yml文件，我们通常称之为主题配置文件。而在项目根目录下的_config.yml文件，则称之为站点配置文件。后续文章会经常提到这两个名词，请大家注意区分。位于项目根目录下的_config.yml文件，称为站点配置文件；位于/themes/theme/下的_config.yml文件，称为主题配置文件。 3.启用并设置Next主题打开站点配置文件，找到theme字段，将其（从原来的landscape）修改为next即可启用Next主题。1234# Extensions## Plugins: https://hexo.io/plugins/## Themes: https://hexo.io/themes/theme: next然后打开Next主题的主题配置文件，找到scheme字段，选择Pisces Scheme。Next主题提供了4种不同的外观，您可以挨个测试，看您更喜欢哪一个效果。我个人选择的是Pisces。12345# Schemes#scheme: Muse#scheme: Mistscheme: Pisces#scheme: Gemini 4.查看并验证效果分别输入以下命名，即可查看和验证Next主题效果：12hexo cleanhexo s -g在Pisces下，效果如下图所示：当然了，Next主题还可以进行很多自定义的设置，可查看Next官方文档。 三、总结本文讲解了如何进行Next主题的安装和启用，通过使用Next主题，网站已经呈现出一种清爽、简洁之美。在下一篇文章中，我将介绍如何对Next主题进行自定义的配置，如菜单、友情链接、社交网站等等功能。 四、参考链接 Hexo主题列表 Next官方文档 GitHub Next项目 Hexo官方文档]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[域名申请与绑定到Coding Pages]]></title>
     <url>%2Fdomain-binding.html</url>
     <content type="text"><![CDATA[在Hexo建站系列的前两篇文章中，我分别分享了如何安装和新建Hexo项目以及将Hexo项目部署到Coding。这篇文章则是讲述如何申请属于自己的自定义域名以及将其绑定到Coding Pages上，从此，就可以通过自定义域名访问您的网站了。 一、前言在将Hexo项目部署到Coding这篇文章里，我提到过，当我们的项目推送成功并开启Pages服务后，其访问地址为username.coding.me/projectname。当然，当你的projectname与username相同的时候，其访问地址可以简化为username.coding.me。不过对于很多人来说，这样的url还是会让人觉得比较千篇一律，如果访问地址形如username.com、iamwho.net等是不是一下就觉得富有个性化一些了呢？本文就讲述如何进行个性化的域名绑定。 二、域名申请在国内，主要的域名注册商为腾讯云和阿里云（万网），它们的官网和域名申请地址如下所示。 腾讯云官网、腾讯云域名注册 阿里云官网、阿里云域名注册 您可以根据自己的喜好，选择相应的网站和喜欢的域名进行申请注册即可。我个人是选择的阿里云（万网）进行域名注册，对象存储选择的是腾讯云。关于域名申请和后续的实名认证操作之类的，本文就不进行讲解了，在相应的域名申请网站查看帮助文档即可。 三、域名解析与绑定1.进入域名解析设置页面确保您已经获得了您的自定义域名，现在，我们来将它绑定到Coding上吧，以下，我以阿里云为例，演示域名解析流程。 进入阿里云官网，点击页面顶部右上角的“控制台”，然后登录，进入到管理控制台。 展开页面左侧的菜单栏，选择“域名”，然后在你的相应域名下，点击解析，进入到解析设置页面。 点击“添加记录”按钮，在这里我们需要添加两条解析记录。 2.添加解析记录我们需要添加两条解析记录，解析记录1如下图所示：注意记录类型为A，主机记录为@，解析线路选择默认，记录值为你Hexo项目所部署到Coding Pages的IP地址，可以通过ping得到。如我的Coding仓库为jealyn.coding.me，则打开cmd（win + R，然后再输入cmd），输入ping jealyn.coding.me，结果如下图所示：取出其中的150.109.112.233作为记录值即可。解析记录2如下图所示：注意记录类型为CNAME，主机记录为www，解析线路选择默认，记录值为你Hexo项目所部署到Coding Pages的访问地址，如我的为jealyn.coding.me。 3.Coding绑定自定义域名打开Coding的Pages服务，进入设置页面，为网站绑定自己的域名。添加刚才解析的两条记录，如下图所示： 4.开启HTTPS强制访问为了保证数据传输的安全，防止传输内容被第三方冒充或篡改，我建议尽可能得开启HTTPS强制访问。 四、总结通过以上的操作，现在，就可以通过自定义的域名访问您的个人网站了，一下就感觉高大上了有不有！至此，网站的配置和域名的绑定就讲解完毕了。但是我们的网站还有一个很大的问题，那就是样式很丑呀，实在不愿多看。下一篇文章，我就会讲解Hexo的主题选择和配置，经过改进后，网站看着就会赏心悦目许多。希望继续关注我的文章哦！ 五、相关链接 腾讯云官网 阿里云官网 Coding官网]]></content>
