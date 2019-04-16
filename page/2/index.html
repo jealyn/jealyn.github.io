@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="前端小白一枚">
-<meta name="keywords" content="个人网站,个人博客,jealyn,H5博客,jealyn的个人网站,王金林">
+<meta name="description" content="本网站会分享一些web前端的基础知识和常见的面试习题以及通过Hexo框架和Next主题搭建个人网站的相关知识，面向对象为前端入门和前端初级开发者，希望大家多多关注，我会定期更新内容的。">
+<meta name="keywords" content="jealyn.wang,前端面试题,jealyn,前端基础知识,jealyn的个人网站,js练习题,JavsScript笔试题,个人博客搭建,Hexo配置,Next主题个性化设置">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jealyn的个人网站">
 <meta property="og:url" content="https://www.jealyn.top/page/2/index.html">
 <meta property="og:site_name" content="Jealyn的个人网站">
-<meta property="og:description" content="前端小白一枚">
+<meta property="og:description" content="本网站会分享一些web前端的基础知识和常见的面试习题以及通过Hexo框架和Next主题搭建个人网站的相关知识，面向对象为前端入门和前端初级开发者，希望大家多多关注，我会定期更新内容的。">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jealyn的个人网站">
-<meta name="twitter:description" content="前端小白一枚">
+<meta name="twitter:description" content="本网站会分享一些web前端的基础知识和常见的面试习题以及通过Hexo框架和Next主题搭建个人网站的相关知识，面向对象为前端入门和前端初级开发者，希望大家多多关注，我会定期更新内容的。">
 
 
 
@@ -174,7 +174,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">我的前端后花园</p>
+        <h1 class="site-subtitle" itemprop="description">我的前端后花园</h1>
       
   </div>
 
@@ -318,11 +318,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/jsexer18.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/three-cols-display.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -335,9 +335,200 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer18.html" itemprop="url">js基础练习题 第18天</a></h1>
+                <a class="post-title-link" href="/three-cols-display.html" itemprop="url">CSS三栏布局的几种实现方式</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T22:10:32+08:00">
+                2019-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/three-cols-display.html" class="leancloud_visitors" data-flag-title="CSS三栏布局的几种实现方式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.2k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote><p>如何实现三栏布局，也是前端面试常问的问题了。所谓的三栏布局，一般指的是“左右侧定宽，中间部分自适应”，在这篇文章中，我将分享实现三栏布局的5种方式。<br>关于两栏布局的实现方式，可访问：<a href="/two-cols-display.html">两栏布局的实现</a>。</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/three-cols-display.html" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/jsexer18.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jealyn.wang">
+      <meta itemprop="description" content="前端小白一枚">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jealyn的个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/jsexer18.html" itemprop="url">js基础练习题 第18天</a></h2>
         
 
         <div class="post-meta">
@@ -524,7 +715,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -537,9 +728,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer17.html" itemprop="url">js基础练习题 第17天</a></h1>
+                <a class="post-title-link" href="/jsexer17.html" itemprop="url">js基础练习题 第17天</a></h2>
         
 
         <div class="post-meta">
@@ -726,7 +917,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -739,9 +930,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer16.html" itemprop="url">js基础练习题 第16天</a></h1>
+                <a class="post-title-link" href="/jsexer16.html" itemprop="url">js基础练习题 第16天</a></h2>
         
 
         <div class="post-meta">
@@ -928,7 +1119,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -941,9 +1132,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer15.html" itemprop="url">js基础练习题 第15天</a></h1>
+                <a class="post-title-link" href="/jsexer15.html" itemprop="url">js基础练习题 第15天</a></h2>
         
 
         <div class="post-meta">
@@ -1130,7 +1321,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -1143,9 +1334,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer14.html" itemprop="url">js基础练习题 第14天</a></h1>
+                <a class="post-title-link" href="/jsexer14.html" itemprop="url">js基础练习题 第14天</a></h2>
         
 
         <div class="post-meta">
@@ -1332,7 +1523,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -1345,9 +1536,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer13.html" itemprop="url">js基础练习题 第13天</a></h1>
+                <a class="post-title-link" href="/jsexer13.html" itemprop="url">js基础练习题 第13天</a></h2>
         
 
         <div class="post-meta">
@@ -1534,7 +1725,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -1547,9 +1738,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer12.html" itemprop="url">js基础练习题 第12天</a></h1>
+                <a class="post-title-link" href="/jsexer12.html" itemprop="url">js基础练习题 第12天</a></h2>
         
 
         <div class="post-meta">
@@ -1736,7 +1927,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -1749,9 +1940,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer11.html" itemprop="url">js基础练习题 第11天</a></h1>
+                <a class="post-title-link" href="/jsexer11.html" itemprop="url">js基础练习题 第11天</a></h2>
         
 
         <div class="post-meta">
@@ -1938,7 +2129,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -1951,9 +2142,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/jsexer10.html" itemprop="url">js基础练习题 第10天</a></h1>
+                <a class="post-title-link" href="/jsexer10.html" itemprop="url">js基础练习题 第10天</a></h2>
         
 
         <div class="post-meta">
@@ -2123,208 +2314,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jealyn.top/jsexer9.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jealyn的个人网站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/jsexer9.html" itemprop="url">js基础练习题 第9天</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-16T22:05:59+08:00">
-                2019-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS基础练习题/" itemprop="url" rel="index">
-                    <span itemprop="name">JS基础练习题</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS基础练习题/习题/" itemprop="url" rel="index">
-                    <span itemprop="name">习题</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/jsexer9.html" class="leancloud_visitors" data-flag-title="js基础练习题 第9天">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text"> </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  267 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote><p>在本栏中，我将记录一些JavaScript基础练习题，提升大家对JS的理解。<br>该篇文章是<a href="/categories/JS基础练习题/">该系列</a>的第九天。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jsexer9.html" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2377,7 +2366,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

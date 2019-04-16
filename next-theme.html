@@ -101,7 +101,7 @@
 <meta property="og:description" content="Hexo框架默认使用的是landscape主题，该主题的显示效果其实大多数人是不太喜欢的。相比之下，Next主题给人的感觉则比较简洁、清爽，其在移动端的布局效果也是相当之好的，并且修改起来也十分的方便。我的这个个人网站使用的就是Next主题，本文就将介绍如何安装和配置Next主题。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="    https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/next-theme-01.png">
-<meta property="og:updated_time" content="2019-04-15T14:43:12.000Z">
+<meta property="og:updated_time" content="2019-04-16T14:24:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="更换Hexo框架主题为Next主题">
 <meta name="twitter:description" content="Hexo框架默认使用的是landscape主题，该主题的显示效果其实大多数人是不太喜欢的。相比之下，Next主题给人的感觉则比较简洁、清爽，其在移动端的布局效果也是相当之好的，并且修改起来也十分的方便。我的这个个人网站使用的就是Next主题，本文就将介绍如何安装和配置Next主题。">
@@ -176,7 +176,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">我的前端后花园</p>
+        <h1 class="site-subtitle" itemprop="description">我的前端后花园</h1>
       
   </div>
 
@@ -324,7 +324,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jealyn.wang">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="前端小白一枚">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -337,7 +337,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">更换Hexo框架主题为Next主题</h1>
+          <h2 class="post-title" itemprop="name headline">更换Hexo框架主题为Next主题</h2>
         
 
         <div class="post-meta">
@@ -414,7 +414,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  776 字
+                  774 字
                 </span>
               
 
@@ -460,7 +460,7 @@
 <p>在这里，各位朋友们，有两个概念一定要弄清楚。在某个主题下的<code>_config.yml</code>文件，我们通常称之为<code>主题配置文件</code>。而在项目根目录下的<code>_config.yml</code>文件，则称之为<code>站点配置文件</code>。后续文章会经常提到这两个名词，请大家注意区分。<br><div class="note info"><p>位于项目根目录下的_config.yml文件，称为站点配置文件；位于/themes/theme/下的_config.yml文件，称为主题配置文件。</p></div></p>
 <p></p><h4>3.启用并设置Next主题</h4>打开<code>站点配置文件</code>，找到<code>theme</code>字段，将其（从原来的<code>landscape</code>）修改为<code>next</code>即可启用<code>Next</code>主题。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>然后打开<code>Next</code>主题的<code>主题配置文件</code>，找到<code>scheme</code>字段，选择<code>Pisces Scheme</code>。<code>Next</code>主题提供了4种不同的外观，您可以挨个测试，看您更喜欢哪一个效果。我个人选择的是<code>Pisces</code>。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure><p></p>
 <p></p><h4>4.查看并验证效果</h4>分别输入以下命名，即可查看和验证<code>Next</code>主题效果：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s -g</span><br></pre></td></tr></table></figure>在<code>Pisces</code>下，效果如下图所示：<img src="    https://jealyn-1258764186.cos.ap-chengdu.myqcloud.com/next-theme-01.png">当然了，<code>Next</code>主题还可以进行很多自定义的设置，可查看<a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">Next官方文档</a>。<p></p>
-<h3 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h3><p>本文讲解了如何进行<code>Next</code>主题的安装和启用，通过使用<code>Next</code>主题，网站已经呈现出一种清爽、简洁之美。在下一篇文章中，我将介绍如何对<code>Next</code>主题进行自定义的配置，如菜单、友情链接、社交网站等等功能。</p>
+<h3 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h3><p>本文讲解了如何进行<code>Next</code>主题的安装和启用，通过使用<code>Next</code>主题，网站已经呈现出一种清爽、简洁之美。在下一篇文章中，我将介绍如何<a href="/site-setting.html">对网站进行个性化的设置</a>，如设置作者、网站标题、url形式等等。</p>
 <h3 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h3><ul>
 <li><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo主题列表</a></li>
 <li><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">Next官方文档</a></li>
@@ -564,6 +564,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/site-setting.html" rel="prev" title="站点基本信息设置">
+                站点基本信息设置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -646,7 +650,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
