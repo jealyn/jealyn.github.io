@@ -11,3 +11,4 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 Sitemap: https://www.jealyn.top/sitemap.xml
+Baidusitemap: https://www.jealyn.top/baidusitemap.xml
