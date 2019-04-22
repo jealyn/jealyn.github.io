@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js基础练习题 第19天]]></title>
+    <url>%2Fjsexer19.html</url>
+    <content type="text"><![CDATA[该篇文章是该系列的第十九天。本文的主要习题包括null与undefined的区别，==与===的区别，Error对象的内置类型，typeof的高级用法等，希望大家有所收获。正文1.请简述null与undefined的区别。2.[NaN].indexOf(NaN)的返回值为___________，[NaN].includes(NaN)的返回值为___________。3.parseInt(0.0000008)的返回值为___________，parseInt(0x11, 2)的返回值为___________。4.2 ** 3 ** 2 = ___________，{} + {} = ___________。5.请简述==与===的区别。6.利用位操作的相关知识，实现两个变量的值的互换。7.JS内置了哪几种错误对象(Error实例)，试分别简述之。8.编写一个type函数，要求其能进行精确的类型判断，如：1234type(/abcd/); // regexptype(function()&#123;&#125;); // functiontype(new Date()); // datetype([]); // array说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>undefined</tag>
+        <tag>typeof</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Next主题常用信息设置（三）]]></title>
     <url>%2Fnext-setting-03.html</url>
     <content type="text"><![CDATA[本篇文章介绍在Hexo框架下的Next主题中集成网站访问量插件（不蒜子），集成顶部加载条以实现加载loading状态以及设置站内搜索功能。一、前言在该系列的前两篇文章，即Next主题常用信息设置（一）、Next主题常用信息设置（二）中介绍了很多Next主题的自定义功能。本篇文章也是该系列的最后一篇文章了，将分享如何引入访问量统计功能、顶部加载条功能和站内搜索功能。二、实现访问量统计功能访问量统计功能，我们借助不蒜子脚本来实现。不蒜子的设置也相当简单，仅需一行脚本加一行标签即可。1.启用不蒜子计数功能打开主题配置文件，修改以下字段：123456789101112131415busuanzi_count: # count values only if the other configs are false enable: true # custom uv span for the whole site site_uv: true site_uv_header: 访客数 &lt;i class="fa fa-user"&gt;&lt;/i&gt; site_uv_footer: 人 # custom pv span for the whole site site_pv: true site_pv_header: 浏览数 &lt;i class="fa fa-eye"&gt;&lt;/i&gt; site_pv_footer: 次 # custom pv span for one page only page_pv: true page_pv_header: 阅读数 &lt;i class="fa fa-eye"&gt;&lt;/i&gt; page_pv_footer: 次，然后再打开blog\themes\next\layout\_third-party\analytics\busuanzi-counter.swig文件，将&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;修改为：1&lt;script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;即可启用不蒜子计数。效果如下图所示：其中每个子项的*_header和*_footer部分可以自定义，代表访问数字之前和之后的内容设置。2.字段含义不蒜子的计数方式有三种，即site_uv、site_pv、page_pv。三种方式的区别如下所示：site_uv：单个用户连续点击n篇文章，只记录1次访客数，可用来展示访客数量。site_pv: 单个用户连续点击n篇文章，记录n次访问量，可用来展示网页浏览数。page_pv： 单个用户点击1篇文章，本篇文章记录1次阅读量，可用来展示每篇文章的访问量。三、实现顶部加载条功能当进入页面的时候，有一个适当的loading状态展示给用户，给到访问者一个反馈，能提高浏览体验。打开主题配置文件，将pace字段设置为true，然后选择一个你喜欢的主题即可，如下所示：1234567891011121314151617# Progress bar in the top during page loading.pace: true# Themes list:#pace-theme-big-counter#pace-theme-bounce#pace-theme-barber-shop#pace-theme-center-atom#pace-theme-center-circle#pace-theme-center-radar#pace-theme-center-simple#pace-theme-corner-indicator#pace-theme-fill-left#pace-theme-flash#pace-theme-loading-bar#pace-theme-mac-osx#pace-theme-minimalpace_theme: pace-theme-mac-osx您可以挨个查看各个主题的加载效果，然后选择一个您喜欢的并应用就好了。三、设置站内搜索功能当网站内的文章数量变得越来越多的时候，有一个站内搜索功能对用户而言是十分得方便的。站内搜索功能请访问我的另一篇文章：为Hexo博客添加站内搜索功能。四、设置note样式Next拥有几种内置标签，可以方便的进行格式设置，其中Note就是其中之一，其为Bootstrap Callout。这些样式也是来源于BootStrap。其使用方式如下图所示：其中，className可以是以下字段之一：default，默认样式primary，普通样式success，成功状态信息显示info，告知或通知类信息显示warning，警告类信息danger，错误或危险操作设置是否显示图标和样式效果打开主题配置文件，修改以下代码：1234note: style: simple icons: true border_radius: 3其中style字段表示显示的样式，有simple、modern、flat和disabled可供选择，一般选择simple和modern即可。icons: true表示开启图标。下图是我上述设置下的效果：没有设置样式这是默认样式这是普通样式这是采用success的样式这是采用info的样式这是采用warning的样式这是采用danger的样式五、总结本文分享了在Next主题中引入网站访问量功能、实现顶部加载条功能以及修改Note Tag的显示效果。至此，关于Next主题的设置就告一段落了。当然，关于Next主题，还有很多很多的设置并没有提及，后面有机会的话，我再向大家分享哦。六、参考链接不蒜子脚本BootStrapNext内建标签]]></content>
@@ -109,7 +125,7 @@
   <entry>
     <title><![CDATA[公告]]></title>
     <url>%2Fnotice.html</url>
-    <content type="text"><![CDATA[该页面为本网站的信息公告页面。当网站的结构发生比较大的变化或者增加了某些功能时，我都会在此页面进行简要的说明。这倒有点类似GitHub项目的README.md文件，该页面会一直处于置顶状态。如果想了解本网站的最新动态和近期计划，就快到碗里来吧！Hello，欢迎来到我的个人网站。本网站是我的一片小天地，该网站的定位为技术分享。我是一名前端开发工程师，因此我可能会更多得分享前端方向的一些知识和技术，面向对象为前端入门者和初级开发者。如果您感兴趣，可以收藏本站，以备后用。本页面毕竟不是关于我(About Me)页，就不做过多的自我介绍啦，哈哈。如引言所述，本页面是起到一个通知和公告的作用，告知访问者该网站近期发生或者即将发生哪些比较重要的变化。添加网站搭建及优化专栏 时间：2019年4月10日至2019年4月20日 详情：我的这个网站也折腾了近一个月了，在网站搭建和维护过程中也有一些心得和挖坑记录，所以我想在一个专栏里分享一下我的网站搭建、维护和优化过程中的一些技巧和方式 相关链接：hexo博客搭建与优化 状态：未完成暂时停止更新JS基础练习题 时间：2019年4月10日至2019年4月20日 详情：由于近期想做网站的SEO以及想分享一下我博客的搭建过程，故暂时先不更新JS练习题了，预计4月21日会继续更新JS练习题 相关链接：JS基础练习题 状态：未完成]]></content>
+    <content type="text"><![CDATA[该页面为本网站的信息公告页面。当网站的结构发生比较大的变化或者增加了某些功能时，我都会在此页面进行简要的说明。这倒有点类似GitHub项目的README.md文件，该页面会一直处于置顶状态。如果想了解本网站的最新动态和近期计划，就快到碗里来吧！Hello，欢迎来到我的个人网站。本网站是我的一片小天地，该网站的定位为技术分享。我是一名前端开发工程师，因此我可能会更多得分享前端方向的一些知识和技术，面向对象为前端入门者和初级开发者。如果您感兴趣，可以收藏本站，以备后用。本页面毕竟不是关于我(About Me)页，就不做过多的自我介绍啦，哈哈。如引言所述，本页面是起到一个通知和公告的作用，告知访问者该网站近期发生或者即将发生哪些比较重要的变化。继续更新JS基础练习题 时间：2019年4月22日至2019年4月30日 详情：由于写博客搭建与优化专栏停止了大概10天左右的JS习题的更新，现在重新恢复更新了。不过由于近期上班工作任务较重，习题和答案就分开更新了。即当日更新习题，次日再撰写答案。还望各位小伙伴体谅！谢谢咯！ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：未完成添加网站搭建及优化专栏 时间：2019年4月10日至2019年4月20日 详情：我的这个网站也折腾了近一个月了，在网站搭建和维护过程中也有一些心得和挖坑记录，所以我想在一个专栏里分享一下我的网站搭建、维护和优化过程中的一些技巧和方式 相关链接：hexo博客搭建与优化 状态：已完成暂时停止更新JS基础练习题 时间：2019年4月10日至2019年4月20日 详情：由于近期想做网站的SEO以及想分享一下我博客的搭建过程，故暂时先不更新JS练习题了，预计4月21日会继续更新JS练习题 相关链接：JS基础练习题 状态：已完成]]></content>
   </entry>
   <entry>
     <title><![CDATA[Hexo安装并撰写你的第一篇文章]]></title>
@@ -308,10 +324,10 @@
         <category>答案及解析</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -325,10 +341,10 @@
         <category>习题</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -384,9 +400,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -402,10 +418,10 @@
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
@@ -420,10 +436,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
@@ -734,11 +750,11 @@
         <category>答案及解析</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
+        <tag>数据类型</tag>
       </tags>
   </entry>
   <entry>
@@ -750,10 +766,10 @@
         <category>习题</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
       </tags>
   </entry>
 </search>
