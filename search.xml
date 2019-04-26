@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js基础练习题 第21天]]></title>
+    <url>%2Fjsexer21.html</url>
+    <content type="text"><![CDATA[该篇文章是该系列的第二十一天。本文主要分享一些怪异和生僻的JS题，可能实际应用价值不大，不过就当娱乐放松下吧。正文1.[].reduce(Math.pow)的结果为___________。2.[0, 1, undefined, , null, 2].filter((item) =&gt; item === undefined)的结果为___________。3.[0, 1, undefined, , null, 2].map((item) =&gt; item)的结果为___________。4.[1, 2, 3].map(Math.pow)的结果为___________。5.12var name = 'Jealyn';console.log('Name is ' + (name === 'Jealyn') ? 'Jealyn' : 'Jinlin');则会在控制台输出___________。6.1234567var END = 2 ** 53;var START = END - 100n;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。7.1234567var END = 2n ** 53n;var START = END - 100;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。8.0.1 + 0.2 === 0.3的结果为___________，0.2 - 0.1 === 0.1的结果为___________。9.123456789101112131415function caseDemo(val) &#123; switch(val) &#123; case '1': console.log('1'); break; case 1: console.log(1); break; case undefined: console.log('undefined'); break; default: console.log('Other Value'); &#125;&#125;则调用caseDemo(new String(1))会在控制台输出___________，调用caseDemo(String(1))会在控制台输出___________。10.new Number(1) === 1的结果为___________，Number(1) === 1的结果为___________。11.&#39;12&#39; % 2 = ___________，-5 % 2 = ___________，Infinity % 2 = ___________。12.Array.isArray(Array.prototype)的返回值为___________。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+        <tag>循环语句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第20天 答案及解析]]></title>
+    <url>%2Fjsexer20-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第二十天的答案及解析部分，纯题目部分请移步js基础练习题 第20天正文1.当使用new命令时，实际上执行了哪些操作？答案：使用new命令时，执行了以下操作：创建一个空对象将这个对象的原型指向构造函数的prototype属性将这个对象赋值给函数内部的this关键字开始执行构造函数内部的代码2.如果指定setTimeout(f, 0)，那么f会立即执行吗？答案：不会必须要等到当前脚本的同步任务全部处理完以后才会执行setTimeout的回调函数f，也就是说f会在下一轮事件循环开始才执行。关于setTimeout的更多知识，参考MDN|setTimeout。3.12345678function f1() &#123; return new Promise(function(resolve,reject) &#123; resolve(1); &#125;);&#125;function f2() &#123; return 2;&#125;f1().then(function(){ return f2(); }).then(console.log)输出___________，f1().then(function(){ f2(); }).then(console.log)输出___________，f1().then(f2()).then(console.log)输出___________，f1().then(f2).then(console.log)输出___________。答案：2、undefined、1、2关于Promise这部分的分析，其实是比较繁琐的。记住Promise.prototype.then方法返回一个新的promise, 将以回调的返回值来resolve。关于Promise的更多信息，参考MDN|Promise。4.使用Promise完成图片的加载。编写一个preLoadImg(url)函数，其中url参数为图片的路径，当图片加载完成时，提示加载成功，否则提示加载失败。参考代码如下所示：1234567891011121314const preLoadImg = (url) =&gt; &#123; // 返回一个Promise，在其中创建图片并指定相关信息 return new Promise((resolve, reject) =&gt; &#123; let image = new Image(); image.onload = resolve; image.onerror = reject; image.src = url; &#125;);&#125;;preLoadImg(&#39;img/example.jpg&#39;) // 创建成功，则插入body尾部 .then((e) =&gt; document.body.append(e.target)) // 根据状态，执行resolve或者rejected回调 .then(() =&gt; console.log(&#39;加载成功&#39;), () =&gt; console.log(&#39;加载失败&#39;))5.当下列代码执行后，会在控制台依次输出______________________。123456789101112setTimeout(() =&gt; &#123; console.log(1);&#125;, 0);new Promise((resolve, reject) =&gt; &#123; console.log(2); resolve(3);&#125;).then(console.log);const f = async () =&gt; &#123; await console.log(4);&#125;;f().then(console.log);console.log(5);答案：2、4、5、3、undefined、1这道题牵扯到了JS的事件循环机制。简而言之呢，就是同步任务先执行，然后执行Promise的then回调，最后进入下一轮事件循环，执行setTimeout或者setInterval的回调。关于事件机制，可参考深入核心，详解事件循环机制。6.['1', '1', '1'].map(parseInt)的返回值为___________。答案：[1, NaN, 1]Array.prototype.map(item, index, arr)函数接收三个参数，即数组项、索引和整个数组。parseInt(str, base)函数接收两个参数，即要转换的字符串和转换基数。所以上面的代码拆开来就是：123parseInt(&#39;1&#39;, 0); // 返回1，基数为0，默认将基数重置为10parseInt(&#39;1&#39;, 1); // 返回NaN，基数为1，基数应大于等于2parseInt(&#39;1&#39;, 2); // 返回1，基数为27.[typeof null, null instanceof Object]的结果为___________。答案：[&quot;object&quot;, false]typeof null的结果为null，是一个特例；对任何基本类型值调用instanceof操作符，都会返回false。8.[3, 2, 1].reduce(Math.pow)的结果为___________。答案：9相当于(3 ** 2) ** 1。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击js基础练习题 第20天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Promise</tag>
+        <tag>setTimeout</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js基础练习题 第20天]]></title>
+    <url>%2Fjsexer20.html</url>
+    <content type="text"><![CDATA[该篇文章是该系列的第二十天。本文的主要习题包括new命令的执行过程，setTimeout机制，Promise机制，JS事件循环机制等，希望大家有所收获。正文1.当使用new命令时，实际上执行了哪些操作？2.如果指定setTimeout(f, 0)，那么f会立即执行吗？3.12345678function f1() &#123; return new Promise(function(resolve,reject) &#123; resolve(1); &#125;);&#125;function f2() &#123; return 2;&#125;f1().then(function(){ return f2(); }).then(console.log)输出___________，f1().then(function(){ f2(); }).then(console.log)输出___________，f1().then(f2()).then(console.log)输出___________，f1().then(f2).then(console.log)输出___________。4.使用Promise完成图片的加载。编写一个preLoadImg(url)函数，其中url参数为图片的路径，当图片加载完成时，提示加载成功，否则提示加载失败。5.当下列代码执行后，会在控制台依次输出______________________。123456789101112setTimeout(() =&gt; &#123; console.log(1);&#125;, 0);new Promise((resolve, reject) =&gt; &#123; console.log(2); resolve(3);&#125;).then(console.log);const f = async () =&gt; &#123; await console.log(4);&#125;;f().then(console.log);console.log(5);6.[&#39;1&#39;, &#39;1&#39;, &#39;1&#39;].map(parseInt)的返回值为___________。7.[typeof null, null instanceof Object]的结果为___________。8.[3, 2, 1].reduce(Math.pow)的结果为___________。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.查看答案和解析，请点击js基础练习题第20天 答案及解析]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Promise</tag>
+        <tag>setTimeout</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js练习题第19天 答案及解析]]></title>
+    <url>%2Fjsexer19-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第十九天的答案及解析部分，纯题目部分请移步js基础练习题 第19天正文1.请简述null与undefined的区别。答案：null表示一个空的对象，转为数值时为0；undefined表示一个未定义的原始值，转为数值时为NaN；undefined == null的结果为true。2.[NaN].indexOf(NaN)的返回值为___________，[NaN].includes(NaN)的返回值为___________。答案：-1、trueArray.prototype.indexOf(item)方法执行的是===（全等）判断;Array.prototype.includes(item)方法判断的是一个数组是否包含指定的值，如果是则返回true，否则返回false。3.parseInt(0.0000008)的返回值为___________，parseInt(0x11, 2)的返回值为___________。答案：8、1parseInt方法有两个参数，第一个参数为转换时的字符串，若非字符串，则先调用String()方法转为字符串；第二个参数为转换字符串采用的进制数。默认为十进制。针对上面两个题，0.0000008转为字符串为&quot;8e-7&quot;，故结果为8；0x11转为字符串，结果为&quot;17&quot;，由于该字符串采用的二进制，二进制中没有7，故停止继续转换，结果为1。4.2 ** 3 ** 2 = ___________，{} + {} = ___________。答案：512、&quot;[object Object][object Object]&quot;**的结合顺序为自右向左结合，即2 ** 3 ** 2 = 2 ** (3 ** 2) = 2 ** 9 = 512;{} + {}会调用Object.prototype.toString()方法，Object.prototype.toString({})返回&quot;[object Object]&quot;。5.请简述==与===的区别。答案：相等运算符（==）比较两个值是否相等；严格相等运算符（===）比较它们是否为同一个类型的同一个值。如果两个值不是同一类型，===直接返回false，而==会发生隐式类型转换，再进行比较是否为同一个值。由于==隐藏的类型转换会带来一些违反直觉的结果，因此建议不要使用==，最好只使用===。6.利用位操作的相关知识，实现两个变量的值的互换。答案如下所示：1234// ^为异或操作，位运算，相同为0，相异为1a ^= b;b ^= a;a ^= b;7.JS内置了哪几种错误对象(Error实例)，试分别简述之。JS定义了五种常见错误对象，如下所示：SyntaxError：表示解析代码时发生的语法错误ReferenceError：引用一个不存在的变量或将值分配给无法分配的对象时发生的错误RangeError：当值超出有效范围时发生的错误，比如数组长度为负数TypeError：指变量或参数不是预期类型时发生的错误，比如调用不存在的函数URIError：URI相关函数的参数不正确时抛出的错误8.编写一个type函数，要求其能进行精确的类型判断，如：1234type(/abcd/); // regexptype(function()&#123;&#125;); // functiontype(new Date()); // datetype([]); // array答案如下所示：12345678function type(obj) &#123; // 调用toString方法，得到形如 [object xxx]的形式 // 其中xxx就是该变量值准确的类型 var typeArr = Object.prototype.toString.call(obj); // 运用正则表达式，取出xxx这一部分 return typeArr.match(/\[object (.+)\]/)[1].toLowerCase();&#125;说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击js基础练习题 第19天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>undefined</tag>
+        <tag>typeof</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js基础练习题 第19天]]></title>
     <url>%2Fjsexer19.html</url>
-    <content type="text"><![CDATA[该篇文章是该系列的第十九天。本文的主要习题包括null与undefined的区别，==与===的区别，Error对象的内置类型，typeof的高级用法等，希望大家有所收获。正文1.请简述null与undefined的区别。2.[NaN].indexOf(NaN)的返回值为___________，[NaN].includes(NaN)的返回值为___________。3.parseInt(0.0000008)的返回值为___________，parseInt(0x11, 2)的返回值为___________。4.2 ** 3 ** 2 = ___________，{} + {} = ___________。5.请简述==与===的区别。6.利用位操作的相关知识，实现两个变量的值的互换。7.JS内置了哪几种错误对象(Error实例)，试分别简述之。8.编写一个type函数，要求其能进行精确的类型判断，如：1234type(/abcd/); // regexptype(function()&#123;&#125;); // functiontype(new Date()); // datetype([]); // array说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+    <content type="text"><![CDATA[该篇文章是该系列的第十九天。本文的主要习题包括null与undefined的区别，==与===的区别，Error对象的内置类型，typeof的高级用法等，希望大家有所收获。正文1.请简述null与undefined的区别。2.[NaN].indexOf(NaN)的返回值为___________，[NaN].includes(NaN)的返回值为___________。3.parseInt(0.0000008)的返回值为___________，parseInt(0x11, 2)的返回值为___________。4.2 ** 3 ** 2 = ___________，{} + {} = ___________。5.请简述==与===的区别。6.利用位操作的相关知识，实现两个变量的值的互换。7.JS内置了哪几种错误对象(Error实例)，试分别简述之。8.编写一个type函数，要求其能进行精确的类型判断，如：1234type(/abcd/); // regexptype(function()&#123;&#125;); // functiontype(new Date()); // datetype([]); // array说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.查看答案和解析，请点击js基础练习题第19天 答案及解析]]></content>
       <categories>
         <category>JS基础练习题</category>
         <category>习题</category>
@@ -400,9 +464,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
+        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
-        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -418,10 +482,10 @@
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>let</tag>
-        <tag>ES6</tag>
         <tag>const</tag>
+        <tag>let</tag>
         <tag>解构赋值</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -436,10 +500,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>let</tag>
-        <tag>ES6</tag>
         <tag>const</tag>
+        <tag>let</tag>
         <tag>解构赋值</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
