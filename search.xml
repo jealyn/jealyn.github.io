@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js练习题第21天 答案及解析]]></title>
+    <url>%2Fjsexer21-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是js基础练习题第二十一天的答案及解析部分，纯题目部分请移步js基础练习题 第21天正文1.[].reduce(Math.pow)的结果为___________。答案：报错(TypeError)对空数组进行reduce操作会报错。2.[0, 1, undefined, , null, 2].filter((item) => item == undefined)的结果为___________。答案：[undefined, null]filter操作会跳过数组中的缺失值，且null == undefined的结果为true。3.[0, 1, undefined, , null, 2].map((item) => item == undefined)的结果为___________。答案：[false, false, true, , true, false]map操作不会跳过数组中的缺失值。4.[1, 2, 3].map(Math.pow)的结果为___________。答案：[1, 2, 9]在map方法中的Math.pow方法获取的是数组项和索引值，即Math.pow(1, 0)， Math.pow(2, 1)， Math.pow(3, 2)。5.12var name = 'Jealyn';console.log('Name is ' + (name === 'Jealyn') ? 'Jealyn' : 'Jinlin');则会在控制台输出___________。答案：Jealyn+的优先级比?更高。6.1234567var END = 2 ** 53;var START = END - 100;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。答案：死循环2 ** 53为最大安全整数，超过这一数，js不能准确判断值的大小，故会进入死循环。7.1234567var END = 2n ** 53n;var START = END - 100n;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。答案：101BigInt这种数据类型，可以安全的进行数据的操作。详见BigInt数据类型解析。8.0.1 + 0.2 === 0.3的结果为___________，0.2 - 0.1 === 0.1的结果为___________。答案：false、true9.123456789101112131415function caseDemo(val) &#123; switch(val) &#123; case '1': console.log('1'); break; case 1: console.log(1); break; case undefined: console.log('undefined'); break; default: console.log('Other Value'); &#125;&#125;则调用caseDemo(new String(1))会在控制台输出___________，调用caseDemo(String(1))会在控制台输出___________。答案：&#39;Other Value&#39;、&#39;1&#39;case语句采用的是===判断。new String()会生成一个Object，String()只是对基本类型值的封装。10.new Number(1) === 1的结果为___________，Number(1) === 1的结果为___________。答案：false、true11.&#39;12&#39; % 2 = ___________，-5 % 2 = ___________，Infinity % 2 = ___________。答案：0、-1、NaN12.Array.isArray(Array.prototype)的返回值为___________。答案：true说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击js基础练习题 第21天本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+        <tag>循环语句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js基础练习题 第21天]]></title>
     <url>%2Fjsexer21.html</url>
-    <content type="text"><![CDATA[该篇文章是该系列的第二十一天。本文主要分享一些怪异和生僻的JS题，可能实际应用价值不大，不过就当娱乐放松下吧。正文1.[].reduce(Math.pow)的结果为___________。2.[0, 1, undefined, , null, 2].filter((item) =&gt; item === undefined)的结果为___________。3.[0, 1, undefined, , null, 2].map((item) =&gt; item)的结果为___________。4.[1, 2, 3].map(Math.pow)的结果为___________。5.12var name = 'Jealyn';console.log('Name is ' + (name === 'Jealyn') ? 'Jealyn' : 'Jinlin');则会在控制台输出___________。6.1234567var END = 2 ** 53;var START = END - 100n;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。7.1234567var END = 2n ** 53n;var START = END - 100;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。8.0.1 + 0.2 === 0.3的结果为___________，0.2 - 0.1 === 0.1的结果为___________。9.123456789101112131415function caseDemo(val) &#123; switch(val) &#123; case '1': console.log('1'); break; case 1: console.log(1); break; case undefined: console.log('undefined'); break; default: console.log('Other Value'); &#125;&#125;则调用caseDemo(new String(1))会在控制台输出___________，调用caseDemo(String(1))会在控制台输出___________。10.new Number(1) === 1的结果为___________，Number(1) === 1的结果为___________。11.&#39;12&#39; % 2 = ___________，-5 % 2 = ___________，Infinity % 2 = ___________。12.Array.isArray(Array.prototype)的返回值为___________。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。]]></content>
+    <content type="text"><![CDATA[该篇文章是该系列的第二十一天。本文主要分享一些怪异和生僻的JS题，可能实际应用价值不大，不过就当娱乐放松下吧。正文1.[].reduce(Math.pow)的结果为___________。2.[0, 1, undefined, , null, 2].filter((item) =&gt; item == undefined)的结果为___________。3.[0, 1, undefined, , null, 2].map((item) =&gt; item == undefined)的结果为___________。4.[1, 2, 3].map(Math.pow)的结果为___________。5.12var name = 'Jealyn';console.log('Name is ' + (name === 'Jealyn') ? 'Jealyn' : 'Jinlin');则会在控制台输出___________。6.1234567var END = 2 ** 53;var START = END - 100;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。7.1234567var END = 2n ** 53n;var START = END - 100n;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。8.0.1 + 0.2 === 0.3的结果为___________，0.2 - 0.1 === 0.1的结果为___________。9.123456789101112131415function caseDemo(val) &#123; switch(val) &#123; case '1': console.log('1'); break; case 1: console.log(1); break; case undefined: console.log('undefined'); break; default: console.log('Other Value'); &#125;&#125;则调用caseDemo(new String(1))会在控制台输出___________，调用caseDemo(String(1))会在控制台输出___________。10.new Number(1) === 1的结果为___________，Number(1) === 1的结果为___________。11.&#39;12&#39; % 2 = ___________，-5 % 2 = ___________，Infinity % 2 = ___________。12.Array.isArray(Array.prototype)的返回值为___________。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。4.查看答案和解析，请点击js基础练习题第21天 答案及解析]]></content>
       <categories>
         <category>JS基础练习题</category>
         <category>习题</category>
@@ -388,10 +404,10 @@
         <category>答案及解析</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -405,10 +421,10 @@
         <category>习题</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -464,9 +480,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -482,10 +498,10 @@
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
@@ -500,10 +516,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
@@ -814,11 +830,11 @@
         <category>答案及解析</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>数据类型</tag>
       </tags>
   </entry>
   <entry>
@@ -830,10 +846,10 @@
         <category>习题</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
       </tags>
   </entry>
 </search>
