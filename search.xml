@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js基础练习题 第22天]]></title>
+    <url>%2Fjsexer22.html</url>
+    <content type="text"><![CDATA[该篇文章是该系列的第二十二天。本文继续分享一些怪异和生僻的JS题，该部分题目来源于JavaScript Puzzlers!。正文1.[] == false = ___________，[1] == true = ___________，[1, 2] == true = ___________，[] == false = ___________。2.[] == [] = ___________，{} == {} = ___________，&quot;&quot; == &quot;&quot; = ___________。3.&#39;2&#39; + 3 = ___________，&#39;2&#39; - 3 = ___________。4.1 + - + + + - + 1 = ___________，1+-+++-+1 = ___________。5.Number.MIN_VALUE &gt; 0 = ___________，Number.NaN &gt; 0 = ___________。6.1 &lt; 2 &lt; 3 = ___________，3 &lt; 2 &lt; 1 = ___________。7.1 == [1] = ___________，2 == [[2]] = ___________，0 == [[[0]]] = ___________。8.6.toString() = ___________，6..toString() = ___________，.6.toString() = ___________。9./123/ == /123/ = ___________，/123/ === /123/ = ___________。10.[1, 5] &gt; [5] = ___________，[5] == [5] = ___________。11.{}.protype == Object.prototype = ___________，Object.getPrototypeOf({}) == Object.prototype = ___________。12.123function f() &#123;&#125;var a = f.prototypevar b = Object.getPrototypeOf(f);则a == b = ___________。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+        <tag>==与===</tag>
+        <tag>String</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js练习题第21天 答案及解析]]></title>
     <url>%2Fjsexer21-ans.html</url>
     <content type="text"><![CDATA[本篇文章是js基础练习题第二十一天的答案及解析部分，纯题目部分请移步js基础练习题 第21天正文1.[].reduce(Math.pow)的结果为___________。答案：报错(TypeError)对空数组进行reduce操作会报错。2.[0, 1, undefined, , null, 2].filter((item) => item == undefined)的结果为___________。答案：[undefined, null]filter操作会跳过数组中的缺失值，且null == undefined的结果为true。3.[0, 1, undefined, , null, 2].map((item) => item == undefined)的结果为___________。答案：[false, false, true, , true, false]map操作不会跳过数组中的缺失值。4.[1, 2, 3].map(Math.pow)的结果为___________。答案：[1, 2, 9]在map方法中的Math.pow方法获取的是数组项和索引值，即Math.pow(1, 0)， Math.pow(2, 1)， Math.pow(3, 2)。5.12var name = 'Jealyn';console.log('Name is ' + (name === 'Jealyn') ? 'Jealyn' : 'Jinlin');则会在控制台输出___________。答案：Jealyn+的优先级比?更高。6.1234567var END = 2 ** 53;var START = END - 100;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。答案：死循环2 ** 53为最大安全整数，超过这一数，js不能准确判断值的大小，故会进入死循环。7.1234567var END = 2n ** 53n;var START = END - 100n;var count = 0;for (var i = START; i &lt;= END; i++) &#123; count++;&#125;console.log(count);则会在控制台输出___________。答案：101BigInt这种数据类型，可以安全的进行数据的操作。详见BigInt数据类型解析。8.0.1 + 0.2 === 0.3的结果为___________，0.2 - 0.1 === 0.1的结果为___________。答案：false、true9.123456789101112131415function caseDemo(val) &#123; switch(val) &#123; case '1': console.log('1'); break; case 1: console.log(1); break; case undefined: console.log('undefined'); break; default: console.log('Other Value'); &#125;&#125;则调用caseDemo(new String(1))会在控制台输出___________，调用caseDemo(String(1))会在控制台输出___________。答案：&#39;Other Value&#39;、&#39;1&#39;case语句采用的是===判断。new String()会生成一个Object，String()只是对基本类型值的封装。10.new Number(1) === 1的结果为___________，Number(1) === 1的结果为___________。答案：false、true11.&#39;12&#39; % 2 = ___________，-5 % 2 = ___________，Infinity % 2 = ___________。答案：0、-1、NaN12.Array.isArray(Array.prototype)的返回值为___________。答案：true说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击js基础练习题 第21天本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。]]></content>
