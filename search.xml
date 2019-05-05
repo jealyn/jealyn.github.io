@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js基础练习题 第23天]]></title>
+    <url>%2Fjsexer23.html</url>
+    <content type="text"><![CDATA[该篇文章是该系列的第二十三天。本文继续分享一些怪异和生僻的JS题，该部分题目来源于JavaScript Puzzlers!。正文1.1234function foo() &#123; &#125;var oldName = foo.name;foo.name = 'bar';则oldName = ___________，foo.name = ___________。2.var foo = function bar() {}，则foo.name = ___________； var foo = function () {}，则foo.name = ___________。3.123var foo = function bar() &#123; return 1;&#125;则foo = ___________，foo() = ___________，bar = ___________，bar() = ___________。4.&quot;1 2 3&quot;.replace(/\d/g, parseInt)的返回值为___________。5.1var lower = /^[a-z]+$/;则lower.test(null) = ___________，lower.test() = ___________，lower.test(&#39;&#39;) = ___________。6.[,,,].join(&quot;, &quot;)的返回值为___________，[,,,].join()的返回值为___________，[,,,].join(&quot;&quot;)的返回值为___________。7.Function.length === new Function().length的返回值为___________，Array.length === new Array().length的返回值为___________。8.Date() === Date() = ___________，new Date() === new Date() = ___________。9.Array() === Array() = ___________，new Array() === new Array() = ___________。10.Math.min() &lt; Math.max() = ___________，Math.min(Math.max()) = ___________。11.12var a = new Date("2019-05-05");var b = new Date(2019, 05, 05);a.getDate() === b.getDate() = ___________，a.getMonth() === b.getMonth() = ___________。12.12345678function foo(a) &#123; var a; return a;&#125;function bar(a) &#123; var a = 'bye'; return a;&#125;则[foo(&#39;hello&#39;), bar(&#39;hello&#39;)]的结果为___________。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Array</tag>
+        <tag>Function</tag>
+        <tag>正则表达式</tag>
+        <tag>==与===</tag>
+        <tag>Date</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js练习题第22天 答案及解析]]></title>
     <url>%2Fjsexer22-ans.html</url>
     <content type="text"><![CDATA[本篇文章是js基础练习题第二十二天的答案及解析部分，纯题目部分请移步js基础练习题 第22天正文1.[] == false = ___________，[1] == true = ___________，[1, 2] == true = ___________，[0] == false = ___________。答案：true、true、false、true隐式类型转换，会将数组和布尔值分别转换为Number类型进行比较。Number([]) = 0，Number([1]) = 1，Number([1, 2]) = NaN。2.[] == [] = ___________，{} == {} = ___________，"" == "" = ___________。答案：false、false、true对于是引用类型的变量，其总是不相等的，如Array、Object、RegExp等。3.'2' + 3 = ___________，'2' - 3 = ___________。答案：&quot;23&quot;、-1+用在字符串中，其为拼接操作，即将Number转为String。而-是纯粹的算术运算符，其会将String转为Number。4.1 + - + + + - + 1 = ___________，1+-+++-+1 = ___________。答案：2、报错(ReferenceError)第一个表达式，按照从右向左的顺序计算即可，即1+(-(+(+(+(-(+1))))))；第二个表达式，错误的地方在于类似于1++这样的操作，自增/自减运算符不能作用在非变量上。5.Number.MIN_VALUE > 0 = ___________，Number.NaN > 0 = ___________。答案：true、falseNumber.MIN_VALUE是最小的大于0的值，Number.MIN_VALUE = 5e-324，NaN是一个特殊的值，其与任何值都不相等。6.1 &lt; 2 &lt; 3 = ___________，3 &lt; 2 &lt; 1 = ___________。答案：true、true隐式转换，(1 &lt; 2) &lt; 3即true &lt; 3即 1 &lt; 3，返回true；(3 &lt; 2) &lt; 1即false &lt; 3即 0 &lt; 3，返回true。7.1 == [1] = ___________，2 == [[2]] = ___________，0 == [[[0]]] = ___________。答案：true、true、true隐式转换。8.6.toString() = ___________，6..toString() = ___________，.6.toString() = ___________。答案：报错(SyntaxError)、&quot;6&quot;、&quot;0.6&quot;整数不能调用toString方法，而小数可以，不管它有没有省略小数的前置或后置0。9./123/ == /123/ = ___________，/123/ === /123/ = ___________。答案：false、false任意两个正则表达式都是不相等的。10.[1, 5] > [5] = ___________，[5] == [5] = ___________。答案：false、false对于第一个表达式，相当于[1, 5].join(&quot;&quot;) &gt; [5].join(&quot;&quot;)即&quot;15&quot; &gt; &quot;5&quot;，由于采用的Unicode编码，故返回false。11.{}.prototype == Object.prototype = ___________，Object.getPrototypeOf({}) == Object.prototype = ___________。答案：false、true只有function具有prototype属性。12.123function f() &#123;&#125;var a = f.prototypevar b = Object.getPrototypeOf(f);则a == b = ___________。答案：falseObject.getPrototypeOf(f) = Function.prototype。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击js基础练习题 第22天本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。]]></content>
@@ -239,7 +258,7 @@
   <entry>
     <title><![CDATA[公告]]></title>
     <url>%2Fnotice.html</url>
-    <content type="text"><![CDATA[该页面为本网站的信息公告页面。当网站的结构发生比较大的变化或者增加了某些功能时，我都会在此页面进行简要的说明。这倒有点类似GitHub项目的README.md文件，该页面会一直处于置顶状态。如果想了解本网站的最新动态和近期计划，就快到碗里来吧！Hello，欢迎来到我的个人网站。本网站是我的一片小天地，该网站的定位为技术分享。我是一名前端开发工程师，因此我可能会更多得分享前端方向的一些知识和技术，面向对象为前端入门者和初级开发者。如果您感兴趣，可以收藏本站，以备后用。本页面毕竟不是关于我(About Me)页，就不做过多的自我介绍啦，哈哈。如引言所述，本页面是起到一个通知和公告的作用，告知访问者该网站近期发生或者即将发生哪些比较重要的变化。五一期间停止更新内容 时间：2019年4月30日至2019年5月04日 详情：4天五一小长假将至，首先祝大家节日快乐，幸福美满！偷得浮生半日闲，在这几天中我也回老家了，就暂不更新博文了。祝大家玩得愉快~ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：未完成继续更新JS基础练习题 时间：2019年4月22日至2019年4月30日 详情：由于写博客搭建与优化专栏停止了大概10天左右的JS习题的更新，现在重新恢复更新了。不过由于近期上班工作任务较重，习题和答案就分开更新了。即当日更新习题，次日再撰写答案。还望各位小伙伴体谅！谢谢咯！ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：已完成添加网站搭建及优化专栏 时间：2019年4月10日至2019年4月20日 详情：我的这个网站也折腾了近一个月了，在网站搭建和维护过程中也有一些心得和挖坑记录，所以我想在一个专栏里分享一下我的网站搭建、维护和优化过程中的一些技巧和方式 相关链接：hexo博客搭建与优化 状态：已完成暂时停止更新JS基础练习题 时间：2019年4月10日至2019年4月20日 详情：由于近期想做网站的SEO以及想分享一下我博客的搭建过程，故暂时先不更新JS练习题了，预计4月21日会继续更新JS练习题 相关链接：JS基础练习题 状态：已完成]]></content>
+    <content type="text"><![CDATA[该页面为本网站的信息公告页面。当网站的结构发生比较大的变化或者增加了某些功能时，我都会在此页面进行简要的说明。这倒有点类似GitHub项目的README.md文件，该页面会一直处于置顶状态。如果想了解本网站的最新动态和近期计划，就快到碗里来吧！Hello，欢迎来到我的个人网站。本网站是我的一片小天地，该网站的定位为技术分享。我是一名前端开发工程师，因此我可能会更多得分享前端方向的一些知识和技术，面向对象为前端入门者和初级开发者。如果您感兴趣，可以收藏本站，以备后用。本页面毕竟不是关于我(About Me)页，就不做过多的自我介绍啦，哈哈。如引言所述，本页面是起到一个通知和公告的作用，告知访问者该网站近期发生或者即将发生哪些比较重要的变化。五一期间停止更新内容 时间：2019年4月30日至2019年5月04日 详情：4天五一小长假将至，首先祝大家节日快乐，幸福美满！偷得浮生半日闲，在这几天中我也回老家了，就暂不更新博文了。祝大家玩得愉快~ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：已完成继续更新JS基础练习题 时间：2019年4月22日至2019年4月30日 详情：由于写博客搭建与优化专栏停止了大概10天左右的JS习题的更新，现在重新恢复更新了。不过由于近期上班工作任务较重，习题和答案就分开更新了。即当日更新习题，次日再撰写答案。还望各位小伙伴体谅！谢谢咯！ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：已完成添加网站搭建及优化专栏 时间：2019年4月10日至2019年4月20日 详情：我的这个网站也折腾了近一个月了，在网站搭建和维护过程中也有一些心得和挖坑记录，所以我想在一个专栏里分享一下我的网站搭建、维护和优化过程中的一些技巧和方式 相关链接：hexo博客搭建与优化 状态：已完成暂时停止更新JS基础练习题 时间：2019年4月10日至2019年4月20日 详情：由于近期想做网站的SEO以及想分享一下我博客的搭建过程，故暂时先不更新JS练习题了，预计4月21日会继续更新JS练习题 相关链接：JS基础练习题 状态：已完成]]></content>
   </entry>
   <entry>
     <title><![CDATA[Hexo安装并撰写你的第一篇文章]]></title>
@@ -514,9 +533,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -532,10 +551,10 @@
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
@@ -550,10 +569,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
