@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端基础练习题第24天 答案及解析]]></title>
+    <url>%2Fjsexer24-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是前端基础练习题第二十四天的答案及解析部分，纯题目部分请移步前端基础练习题 第24天正文1.js中如何检测一个变量是否为String类型？请写出函数实现。如下方代码所示：123456789// 方法1 利用typeof操作符function isString(obj) &#123; return typeof obj === &quot;string&quot;;&#125;// 方法2 利用String包装函数 (用了ES6写法)const isString = (obj) =&gt; &#123; return String(obj) === obj;&#125;2.请用js去除字符串的首尾空格。方法有很多，此处提供原生trim函数和正则表达式两种方式：123456789// 方法1 利用trim函数function myTrim(str) &#123; return str.trim();&#125;// 方法2 利用正则表达式 (用了ES6写法)const myTrim = (str) =&gt; &#123; return str.replace(/^\s*|\s*$/g, &#39;&#39;);&#125;3.如何理解闭包？闭包就是能够读取其他函数内部变量的函数。并且只有内部函数访问了上层作用域链中的变量对象时，才会形成闭包，因此，我们可以利用闭包来访问函数内部的变量。关于闭包的更多知识，可以参阅阮一峰的个人博客和这波能反杀的个人博客。4.什么是跨域？跨域请求资源的方法有哪些？跨域请求指的是请求协议、域名和端口中至少有一项不同的url的资源。常见的跨域请求有以下几种方法：window.postMessage()方法，该方法是HTML5引入的API，即跨文档通信API，其允许跨窗口通信。Proxy代理，该方法是服务器代理方法，即浏览器请求同源服务器，再由该服务器请求外部服务器，最后将结果返回给前端。JSONP，该方法是向服务器请求一个脚本，并附带一个callback参数，服务器接收请求后，将JSON数据放在函数里面并返回。WebSocket协议，服务器通过请求头信息中的Origin字段判断是否可通信。CORS，CORS是跨源资源分享的意思，其是跨源AJAX的根本解决方法，CORS允许任何类型的请求。5.$(this)和this关键字在jQuery中有何不同？答案：$(this)是一个JQuery对象，代表的是用jQuery封装后的当前对象，其能调用jQuery的方法和属性；而this则是JavaScript对象，其能调用元素属性。一般情况下，$(this)[0] = this。6.$(document).ready()方法和window.onload有什么区别？答案：window.onload是在网页中所有的元素完全加载完毕后才执行，而$(document).ready()方法可以在DOM载入就绪时就对其进行操作，而不必等到加载完成。并且$(document).ready()方法可以编写和执行多个。7.行内元素有哪些？块级元素有哪些？空(void)元素有哪些？如下所示：行内元素指的是其默认display属性值为inline，且对其设置宽高、内外边距等属性都无效的元素。如span、a、em、button、label、select等。块级元素指的是其默认display属性值为block，且独占一行的元素。如div、p、li、h1、footer、blockquote、table等。空元素又称自闭合元素，如br、meta、hr、link、input、img等。8.CSS实现垂直水平居中的方案有哪些？这里给出6种解决方案：position + margin。对父元素相对定位，子元素绝对定位，并将子元素的上、右margin值设置为其宽、高的一半的负值。此情况适用于已知元素宽高。绝对定位。对父元素相对定位，子元素绝对定位，并将top、left、right、bottom的值都设置为0，以及设置margin值为auto即可。此情况适用于已知元素宽高。position + transform。对父元素相对定位，子元素绝对定位，并设置transform: translate(-50%,-50%);即可。此情况适用于未知元素宽高。table-cell布局。对元素设置display: table-cell;和vertical-align: middle;即可。此情况适用于未知元素宽高。flex布局。将父元素设置为flex布局且添加justify-content: center;和align-items: center;属性即可。此情况适用于未知元素宽高。grid布局。将父元素设置为grid布局且对子元素添加justify-self: center;和align-self: center;属性即可。此情况适用于未知元素宽高。9.浏览器的内核分别是什么？如下所示：Trident内核，IE6-IE10以及360极速浏览器等使用。Gecko内核，Firefox浏览器使用。WebKit内核，Safari、搜狗、360等浏览器使用。Blink内核，谷歌28以后的版本和Opera15以后的版本中进行使用。Presto内核，Opera15之前的版本中进行使用。10.sessionStorage、localStorage和cookie之间的区别是什么？它们都是保存在浏览器且同源，但也有以下几点区别：数据有限期不同。sessionStorage仅在当前浏览器会话期有效，localStorage永久有效，cookie在设置的过期时间之前有效。作用方式不同。cookie数据始终在http请求中携带，而sessionStorage和localStorage仅在本地保存。存储大小限制不同。cookie数据不能超过4KB，而sessionStorage和localStorage可以达到5MB或更大。作用域不同。sessionStorage不在不同的浏览器窗口中共享，而cookie和localStorage在所有同源窗口中都是共享的。11.请说出三种减低页面加载时间的方法。减低页面加载时间总体上来说是围绕着如何减少HTTP请求和如何减少资源体积来展开，以下给出几条具体措施：合理设置HTTP缓存。恰当的缓存设置可以大大的减少HTTP请求，可以将HTTP Header中的Expires设置一个很长的过期时间。资源合并。将多个CSS文件、JS文件等合并为一个文件，也可以将图片进行合并（CSS Sprites），可以减少HTTP请求次数。将外部脚本置底。即将脚本内容在页面信息内容加载后再加载，以规避浏览器的阻塞效应。异步加载第三方资源。对于脚本文件，可进行异步加载和请求。压缩资源。如开启GZip压缩、压缩CSS文件、压缩图片资源等，以减少资源体积。使用CDN来进行对图片、视频、外部脚本等静态资源的缓存，加快网站的加载速度。图片懒加载。当图片到达视口范围时，再进行图片的加载。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击前端基础练习题 第24天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>正则表达式</tag>
+        <tag>String</tag>
+        <tag>闭包</tag>
+        <tag>跨域请求</tag>
+        <tag>jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端基础练习题 第23天]]></title>
     <url>%2Fjsexer24.html</url>
-    <content type="text"><![CDATA[该篇文章是该系列的第二十四天。本文分享一篇某公司的前端实习生笔试真题。该部分题目涉及到了HTML、CSS、JavaScript和jQuery的基础知识，以供大家酌情参考。正文1.js中如何检测一个变量是否为String类型？请写出函数实现。2.请用js去除字符串空格。3.如何理解闭包？4.什么是跨域？跨域请求资源的方法有哪些？5.$(this)和this关键字在jQuery中有何不同？6.$(document).ready()方法和window.onload有什么区别？7.行内元素有哪些？块级元素有哪些？空(void)元素有哪些？8.CSS实现垂直水平居中的方案有哪些？9.浏览器的内核分别是什么？10.sessionStorage、localStorage和cookie之间的区别是什么？11.请说出三种减低页面加载时间的方法。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+    <content type="text"><![CDATA[该篇文章是该系列的第二十四天。本文分享一篇某公司的前端实习生笔试真题。该部分题目涉及到了HTML、CSS、JavaScript和jQuery的基础知识，以供大家酌情参考。正文1.js中如何检测一个变量是否为String类型？请写出函数实现。2.请用js去除字符串的首尾空格。3.如何理解闭包？4.什么是跨域？跨域请求资源的方法有哪些？5.$(this)和this关键字在jQuery中有何不同？6.$(document).ready()方法和window.onload有什么区别？7.行内元素有哪些？块级元素有哪些？空(void)元素有哪些？8.CSS实现垂直水平居中的方案有哪些？9.浏览器的内核分别是什么？10.sessionStorage、localStorage和cookie之间的区别是什么？11.请说出三种减低页面加载时间的方法。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.查看答案和解析，请点击前端基础练习题第24天 答案及解析]]></content>
       <categories>
         <category>JS基础练习题</category>
         <category>习题</category>
@@ -25,7 +44,7 @@
     <content type="text"><![CDATA[本篇文章是js基础练习题第二十三天的答案及解析部分，纯题目部分请移步js基础练习题 第23天正文1.1234function foo() &#123; &#125;var oldName = foo.name;foo.name = 'bar';则oldName = ___________，foo.name = ___________。答案：&quot;foo&quot;、&quot;foo&quot;函数的name属性是可读属性，尝试修改其值会静默失败。2.var foo = function bar() {}，则foo.name = ___________； var foo = function () {}，则foo.name = ___________；var foo = () => {}，则foo.name = ___________。答案：&quot;bar&quot;、&quot;foo&quot;、&quot;foo&quot;函数的name属性是指function关键字后面的标识符，若省略，则与赋值的变量名相同。3.123var foo = function bar() &#123; return 1;&#125;则foo = ___________，foo() = ___________，bar = ___________，bar() = ___________。答案：ƒ bar() { return 1; }、1、报错(ReferenceError)、报错(ReferenceError)4.&quot;1 2 3&quot;.replace(/\d/g, parseInt)的返回值为___。答案：&quot;1 NaN 3&quot;parseInt(str, base)函数接收两个参数。在本题中传入的参数分别为(1, 0)、(2, 2)、(3, 4)。5.1var lower = /^[a-z]+$/;则lower.test(null) = ___________，lower.test() = ___________，lower.test('') = ___________。答案：true、true、falsetest函数会将null、undefined、true、false转换为相应的字符串形式。6.[,,,].join(", ")的返回值为___________，[,,,].join()的返回值为___________，[,,,].join("")的返回值为___________。答案：&quot;, , &quot;、&quot;,,&quot;、&quot;&quot;Array的尾逗号可忽略。当join函数不传参数时，相当于join(&quot;,&quot;)。7.Function.length === new Function().length的返回值为___________，Array.length === new Array().length的返回值为___________。答案：false、falseFuncton\Object\Array的length值为1，而其未经过实例化的对象的length值默认为0。8.Date() === Date() = ___________，new Date() === new Date() = ___________。答案：true、falseDate()返回的是String类型，而new Date()返回Object类型。9.Array() === Array() = ___________，new Array() === new Array() = ___________。答案：false、falseArray()与new Array()返回的都是Object类型。10.Math.min() &lt; Math.max() = ___________，Math.min(Math.max()) = ___________。答案：false、-InfinityMath.min()是将传入值与Infinity中取最小值，Math.max()是将传入值与-Infinity中取最大值。11.12var a = new Date("2019-05-05");var b = new Date(2019, 05, 05);a.getDate() === b.getDate() = ___________，a.getMonth() === b.getMonth() = ____________。答案：true、false采用第二种写法时，实际上得到的应是6月。12.12345678function foo(a) &#123; var a; return a;&#125;function bar(a) &#123; var a = 'bye'; return a;&#125;则[foo('hello'), bar('hello')]的结果为___________。答案：[&quot;hello&quot;, &quot;bye&quot;]说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击js基础练习题 第23天本文的大部分题目原型取自于JavaScript Puzzlers!。大家可前往查看原题，并且还可以在线做题，查看自己的完成情况。]]></content>
       <categories>
         <category>JS基础练习题</category>
-        <category>习题</category>
+        <category>答案及解析</category>
       </categories>
       <tags>
         <tag>javascript</tag>
@@ -296,7 +315,7 @@
   <entry>
     <title><![CDATA[公告]]></title>
     <url>%2Fnotice.html</url>
-    <content type="text"><![CDATA[该页面为本网站的信息公告页面。当网站的结构发生比较大的变化或者增加了某些功能时，我都会在此页面进行简要的说明。这倒有点类似GitHub项目的README.md文件，该页面会一直处于置顶状态。如果想了解本网站的最新动态和近期计划，就快到碗里来吧！Hello，欢迎来到我的个人网站。本网站是我的一片小天地，该网站的定位为技术分享。我是一名前端开发工程师，因此我可能会更多得分享前端方向的一些知识和技术，面向对象为前端入门者和初级开发者。如果您感兴趣，可以收藏本站，以备后用。本页面毕竟不是关于我(About Me)页，就不做过多的自我介绍啦，哈哈。如引言所述，本页面是起到一个通知和公告的作用，告知访问者该网站近期发生或者即将发生哪些比较重要的变化。五一期间停止更新内容 时间：2019年4月30日至2019年5月04日 详情：4天五一小长假将至，首先祝大家节日快乐，幸福美满！偷得浮生半日闲，在这几天中我也回老家了，就暂不更新博文了。祝大家玩得愉快~ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：已完成继续更新JS基础练习题 时间：2019年4月22日至2019年4月30日 详情：由于写博客搭建与优化专栏停止了大概10天左右的JS习题的更新，现在重新恢复更新了。不过由于近期上班工作任务较重，习题和答案就分开更新了。即当日更新习题，次日再撰写答案。还望各位小伙伴体谅！谢谢咯！ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：已完成添加网站搭建及优化专栏 时间：2019年4月10日至2019年4月20日 详情：我的这个网站也折腾了近一个月了，在网站搭建和维护过程中也有一些心得和挖坑记录，所以我想在一个专栏里分享一下我的网站搭建、维护和优化过程中的一些技巧和方式 相关链接：hexo博客搭建与优化 状态：已完成暂时停止更新JS基础练习题 时间：2019年4月10日至2019年4月20日 详情：由于近期想做网站的SEO以及想分享一下我博客的搭建过程，故暂时先不更新JS练习题了，预计4月21日会继续更新JS练习题 相关链接：JS基础练习题 状态：已完成]]></content>
+    <content type="text"><![CDATA[该页面为本网站的信息公告页面。当网站的结构发生比较大的变化或者增加了某些功能时，我都会在此页面进行简要的说明。这倒有点类似GitHub项目的README.md文件，该页面会一直处于置顶状态。如果想了解本网站的最新动态和近期计划，就快到碗里来吧！Hello，欢迎来到我的个人网站。本网站是我的一片小天地，该网站的定位为技术分享。我是一名前端开发工程师，因此我可能会更多得分享前端方向的一些知识和技术，面向对象为前端入门者和初级开发者。如果您感兴趣，可以收藏本站，以备后用。本页面毕竟不是关于我(About Me)页，就不做过多的自我介绍啦，哈哈。如引言所述，本页面是起到一个通知和公告的作用，告知访问者该网站近期发生或者即将发生哪些比较重要的变化。非定期更新内容 时间：2019年5月14日至2019年5月17日 详情：由于我近期忙于毕业设计以及毕业答辩的事情，故无法保证每天更新博客。另JS基础练习题板块更名为前端基础练习题，以后我也会分享一些HTML、CSS、jQuery等方面的题目。 相关链接：前端基础练习题 状态：未完成五一期间停止更新内容 时间：2019年4月30日至2019年5月04日 详情：4天五一小长假将至，首先祝大家节日快乐，幸福美满！偷得浮生半日闲，在这几天中我也回老家了，就暂不更新博文了。祝大家玩得愉快~ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：已完成继续更新JS基础练习题 时间：2019年4月22日至2019年4月30日 详情：由于写博客搭建与优化专栏停止了大概10天左右的JS习题的更新，现在重新恢复更新了。不过由于近期上班工作任务较重，习题和答案就分开更新了。即当日更新习题，次日再撰写答案。还望各位小伙伴体谅！谢谢咯！ 相关链接：hexo博客搭建与优化、JS基础练习题 状态：已完成添加网站搭建及优化专栏 时间：2019年4月10日至2019年4月20日 详情：我的这个网站也折腾了近一个月了，在网站搭建和维护过程中也有一些心得和挖坑记录，所以我想在一个专栏里分享一下我的网站搭建、维护和优化过程中的一些技巧和方式 相关链接：hexo博客搭建与优化 状态：已完成暂时停止更新JS基础练习题 时间：2019年4月10日至2019年4月20日 详情：由于近期想做网站的SEO以及想分享一下我博客的搭建过程，故暂时先不更新JS练习题了，预计4月21日会继续更新JS练习题 相关链接：JS基础练习题 状态：已完成]]></content>
   </entry>
   <entry>
     <title><![CDATA[Hexo安装并撰写你的第一篇文章]]></title>
@@ -495,10 +514,10 @@
         <category>答案及解析</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -512,10 +531,10 @@
         <category>习题</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -571,9 +590,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
+        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
-        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -589,10 +608,10 @@
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>let</tag>
-        <tag>ES6</tag>
         <tag>const</tag>
+        <tag>let</tag>
         <tag>解构赋值</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -607,10 +626,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>let</tag>
-        <tag>ES6</tag>
         <tag>const</tag>
+        <tag>let</tag>
         <tag>解构赋值</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -921,11 +940,11 @@
         <category>答案及解析</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
+        <tag>数据类型</tag>
       </tags>
   </entry>
   <entry>
@@ -937,10 +956,10 @@
         <category>习题</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
       </tags>
   </entry>
 </search>
