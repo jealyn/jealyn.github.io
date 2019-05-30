@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端基础练习题第25天 答案及解析]]></title>
+    <url>%2Fjsexer25-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是前端基础练习题第二十五天的答案及解析部分，纯题目部分请移步前端基础练习题 第25天正文1.假设HTML为1&lt;div id="d1"&gt;hello world&lt;/div&gt;则1var div1 = document.getElementById('id');div1.nodeValue = ___________，div1.firstChild.nodeValue = ___________。null、&quot;hello world&quot;。文本节点具有nodeValue属性，而元素节点没有。2.利用JS在&lt;head&gt;标签中添加一张样式表，样式表如下所示：12345&lt;style media="screen"&gt; body &#123; color: red; &#125;&lt;/style&gt;如下方两种方式所示：123456789101112// 方法1 var style = document.createElement(&#39;style&#39;);style.setAttribute(&#39;media&#39;, &#39;screen&#39;);style.innerHTML = &#39;body&#123;color:red;&#125;&#39;;document.head.appendChild(style);// 方法2var style = (function() &#123; var style = &quot;&lt;style media=&#39;screen&#39;&gt;body&#123;color:red;&#125;&lt;/style&gt;&quot;; document.head.innerHTML += style; return style;&#125;)();3.123&lt;div onClick="console.log(2)"&gt; &lt;button onClick="console.log(1)"&gt;点击&lt;/button&gt;&lt;/div&gt;点击按钮后，会在控制台先后输出______、_______，答案：1、2。若修改为123&lt;div id="outer"&gt; &lt;button id="inner"&gt;点击&lt;/button&gt;&lt;/div&gt;12document.querySelcector("#inner").addEventListener('click', () =&gt; &#123; console.log(1); &#125;, true);document.querySelcector("#outer").addEventListener('click', () =&gt; &#123; console.log(2); &#125;, true);则点击按钮后，会在控制台先后输出______、_______。答案：2、1。JS事件流的执行顺序默认为冒泡执行，即按照由里即外的顺序执行。而如果使用addEventListener，且将第三个参数设置为true，则会采用捕获执行，即自上而下的顺序执行。4.试简述什么叫做事件代理机制。事件代理是指把子节点的监听函数定义在父节点上，由父节点的监听函数统一处理多个子元素的事件。这样做的好处是只要定义一个监听函数，就能处理多个子节点的事件，如果希望阻止事件传播，可用event.stopPropagation()方法，也可使用event.cancelBubble = true来取消冒泡。5.如何取消浏览器对当前事件的默认行为？如取消点击链接的默认跳转。使用e.preventDefault()方法可以取消事件对当前元素的默认影响。该方法生效的前提是事件对象的cancelable属性为true。6.在某个input框上绑定如下所示的三个事件123456789input.onkeydown = () =&gt; &#123; console.log(1);&#125;;input.onkeyup = () =&gt; &#123; console.log(2);&#125;;input.onkeypress = () =&gt; &#123; console.log(3);&#125;;则在该input框里执行一次粘贴操作（按下Ctrl + C键），在控制台会依次输出____________；答案：2、2。在该input框里输入一个字母，则在控制台会依次输出____。答案：3、2。键盘事件的执行顺序为按下按键(keydown) -&gt; 按住按键(keypress) -&gt; 松开按键(keyup)，且keypress事件会覆盖掉keydown事件，注意keypress事件是不会监听功能键的(如Ctrl、Alt、Shift、Fn键等)。7.为什么说尽量要把script标签放在页面底部？浏览器是从上至下解析的，当发现&lt;script&gt;元素时，会将网页渲染的控制权转交给JavaScript引擎。若脚本加载时间很长，那就会造成网页长时间失去响应，浏览器会呈现“假死”状态，被称之为“阻塞效应”。将脚本放在底部，能保证页面至少可以访问，增强了用户体验，并且此时DOM结构已生成，也可以放心的进行DOM操作。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击前端基础练习题 第25天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>DOM</tag>
+        <tag>事件代理机制</tag>
+        <tag>事件流</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端基础练习题 第25天]]></title>
     <url>%2Fjsexer25.html</url>
-    <content type="text"><![CDATA[该篇文章是该系列的第二十五天。本文将分享一些DOM操作和JS事件相关的练习题，JS对DOM和事件的控制是平常最常见的操作类型，愿共同学习。正文1.假设HTML为1&lt;div id="d1"&gt;hello world&lt;/div&gt;则1var div1 = document.getElementById('id');div.nodeValue = ___________，div.firstChild.nodeValue = ___________。2.利用JS在&lt;head&gt;标签中添加一张样式表，样式表如下所示：12345&lt;style media="screen"&gt; body &#123; color: red; &#125;&lt;/style&gt;3.123&lt;div onClick="console.log(2)"&gt; &lt;button onClick="console.log(1)"&gt;点击&lt;/button&gt;&lt;/div&gt;点击按钮后，会在控制台先后输出______、_______，若修改为123&lt;div id="outer"&gt; &lt;button id="inner"&gt;点击&lt;/button&gt;&lt;/div&gt;12document.querySelcector("#inner").addEventListener('click', () =&gt; &#123; console.log(1); &#125;, true);document.querySelcector("#outer").addEventListener('click', () =&gt; &#123; console.log(2); &#125;, true);则点击按钮后，会在控制台先后输出______、_______。4.试简述什么叫做事件代理机制。5.如何取消浏览器对当前事件的默认行为？如取消点击链接的默认跳转。6.在某个input框上绑定如下所示的三个事件123456789input.onkeydown = () =&gt; &#123; console.log(1);&#125;;input.onkeyup = () =&gt; &#123; console.log(2);&#125;;input.onkeypress = () =&gt; &#123; console.log(3);&#125;;则在该input框里执行一次粘贴操作（按下Ctrl + C键），在控制台会依次输出____________；在该input框里输入一个字母，则在控制台会依次输出____________。7.为什么说尽量要把script标签放在页面底部？说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+    <content type="text"><![CDATA[该篇文章是该系列的第二十五天。本文将分享一些DOM操作和JS事件相关的练习题，JS对DOM和事件的控制是平常最常见的操作类型，愿共同学习。正文1.假设HTML为1&lt;div id="d1"&gt;hello world&lt;/div&gt;则1var div1 = document.getElementById('id');div1.nodeValue = ___________，div1.firstChild.nodeValue = ___________。2.利用JS在&lt;head&gt;标签中添加一张样式表，样式表如下所示：12345&lt;style media="screen"&gt; body &#123; color: red; &#125;&lt;/style&gt;3.123&lt;div onClick="console.log(2)"&gt; &lt;button onClick="console.log(1)"&gt;点击&lt;/button&gt;&lt;/div&gt;点击按钮后，会在控制台先后输出______、_______，若修改为123&lt;div id="outer"&gt; &lt;button id="inner"&gt;点击&lt;/button&gt;&lt;/div&gt;12document.querySelcector("#inner").addEventListener('click', () =&gt; &#123; console.log(1); &#125;, true);document.querySelcector("#outer").addEventListener('click', () =&gt; &#123; console.log(2); &#125;, true);则点击按钮后，会在控制台先后输出______、_______。4.试简述什么叫做事件代理机制。5.如何取消浏览器对当前事件的默认行为？如取消点击链接的默认跳转。6.在某个input框上绑定如下所示的三个事件123456789input.onkeydown = () =&gt; &#123; console.log(1);&#125;;input.onkeyup = () =&gt; &#123; console.log(2);&#125;;input.onkeypress = () =&gt; &#123; console.log(3);&#125;;则在该input框里执行一次粘贴操作（按下Ctrl + C键），在控制台会依次输出____________；在该input框里输入一个字母，则在控制台会依次输出____________。7.为什么说尽量要把script标签放在页面底部？说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.查看答案和解析，请点击前端基础练习题第25天 答案及解析]]></content>
       <categories>
         <category>JS基础练习题</category>
         <category>习题</category>
@@ -607,9 +624,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -625,10 +642,10 @@
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
@@ -643,10 +660,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
