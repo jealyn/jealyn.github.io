@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端基础练习题第27天 答案及解析]]></title>
+    <url>%2Fjsexer27-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是前端基础练习题第二十七天的答案及解析部分，纯题目部分请移步前端基础练习题 第27天正文1.请简述GET请求与POST请求的区别。区别如下所示：参数传递方式不同。get请求会将参数跟在URL后进行传输，而post请求则是作为HTTP消息的实体内容发送给Web服务器的，这种传递是对用户不可见的。数据传输大小不同。get方式传输的数据大小不能超过2KB，而post要大得多。安全问题。get方式请求的数据会被浏览器缓存起来，因此有安全问题。2.试比较CORS与JSONP的区别。区别如下所示：CORS与JSONP的使用目的相同，但是它比JSONP更强大。JSONP只支持GET请求，CORS支持所有类型的HTTP请求。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。3.函数声明与函数表达式有何区别？函数声明必须始终带有一个标识符，而函数表达式可以省略。在JS中，解析器会率先读取函数声明，并使其在执行任何代码之前可以访问，即变量提升现象，而函数表达式必须等到解析器执行到它所在的代码行，才会真正的解析执行。4.form中的input可以设置为readonly和disabled，两者有什么区别？设置了readonly属性的input不可编辑，但其中的内容可以选择和复制，并且值可以传递到后台；设置了disabled的input不可编辑，但其中的内容不可选择和复制，并且值不能被传递到后台。5.未声明变量和未定义变量有什么区别？未声明的变量是指在程序中不存在且未声明(Undeclared)的变量，如果程序尝试读取未声明变量的值，则会抛出错误；未定义变量是在程序中声明但尚未初始化(Undefined)的变量，访问未定义变量的值，会得到undefined。6.谈谈你对渐进增强与优雅降级这两种设计模式的理解。渐进增强是优先考虑低版本，先保证系统最基本的功能可用，然后再逐步做加法，针对高版本浏览器进行效果、交互、追加功能以达到更好的用户体验；优雅降级是一开始就针对高版本浏览器构建应用的完整功能，然后再逐步做减法，针对低版本的浏览器设置兼容性方法、hack方案等。7.使用语义化元素有哪些好处？使用语义化元素有以下好处：去掉或样式丢失时能让页面呈现清晰的结构便于屏幕阅读器等设备正确“阅读”你的页面，以实现无障碍访问有利于SEO，有助于网络爬虫根据标签和权重抓取更多的有效信息便于团队开发和维护，语义化的代码具有可读性且能减少差异性8.如何视觉隐藏网页内容，只让它们在屏幕阅读器中可用？可采用以下两种方式：visibility: hidden;缺陷：隐藏内容会占据它所应该占据的物理空间overflow: hidden; 一种可供参考的样式如下所示：123456.text-hidden &#123; display: block; width: 0; height: 0; overflow: hidden;&#125;这样既不会占据物理空间，又会被屏幕阅读器所读取。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击前端基础练习题 第27天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>HTTP</tag>
+        <tag>跨域请求</tag>
+        <tag>HTML5</tag>
+        <tag>语义化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端基础练习题 第27天]]></title>
     <url>%2Fjsexer27.html</url>
-    <content type="text"><![CDATA[该篇文章是该系列的第二十七天。在本次习题中，将会有GET和POST的区别、CORS与JSONP、函数声明、变量声明、HTML5语义化等相关习题的练习。正文1.请简述GET请求与POST请求的区别。2.试比较CORS与JSONP的区别。3.函数声明与函数表达式有何区别？4.form中的input可以设置为readonly和disabled，两者有什么区别？5.未声明变量和未定义变量有什么区别？6.谈谈你对渐进增强与优雅降级这两种设计模式的理解。7.使用语义化元素有哪些好处？8.如何视觉隐藏网页内容，只让它们在屏幕阅读器中可用？说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+    <content type="text"><![CDATA[该篇文章是该系列的第二十七天。在本次习题中，将会有GET和POST的区别、CORS与JSONP、函数声明、变量声明、HTML5语义化等相关习题的练习。正文1.请简述GET请求与POST请求的区别。2.试比较CORS与JSONP的区别。3.函数声明与函数表达式有何区别？4.form中的input可以设置为readonly和disabled，两者有什么区别？5.未声明变量和未定义变量有什么区别？6.谈谈你对渐进增强与优雅降级这两种设计模式的理解。7.使用语义化元素有哪些好处？8.如何视觉隐藏网页内容，只让它们在屏幕阅读器中可用？说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.查看答案和解析，请点击前端基础练习题第27天 答案及解析]]></content>
       <categories>
         <category>JS基础练习题</category>
         <category>习题</category>
@@ -12,8 +30,8 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>跨域请求</tag>
         <tag>HTTP</tag>
+        <tag>跨域请求</tag>
         <tag>HTML5</tag>
         <tag>语义化</tag>
       </tags>
@@ -676,9 +694,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>const</tag>
         <tag>let</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -693,11 +711,11 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>let</tag>
+        <tag>ES6</tag>
         <tag>js练习题答案</tag>
         <tag>const</tag>
-        <tag>let</tag>
         <tag>解构赋值</tag>
-        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -712,10 +730,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>const</tag>
         <tag>let</tag>
-        <tag>解构赋值</tag>
         <tag>ES6</tag>
+        <tag>const</tag>
+        <tag>解构赋值</tag>
       </tags>
   </entry>
   <entry>
@@ -742,10 +760,10 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>js练习题答案</tag>
         <tag>let</tag>
         <tag>ES6</tag>
         <tag>IIFE</tag>
+        <tag>js练习题答案</tag>
       </tags>
   </entry>
   <entry>
