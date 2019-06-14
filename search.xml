@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端基础练习题 第30天]]></title>
+    <url>%2Fjsexer30.html</url>
+    <content type="text"><![CDATA[该篇文章是该系列的第三十天。本次习题将会针对jQuery进行展开，都是一些jQuery的基础概念和必备知识，没有了解过jQuery的朋友可以暂且跳过本部分内容哈。正文1.JS中常见的内存泄漏原因有哪些？2.相比于原生js，使用jQuery有哪些好处？3.jQuery中的$符号是什么？4.jQuery对象和DOM对象如何转化？5.jQuery中有几类选择器？6.jQuery如何去操作样式？7.请使用jQuery编写一个函数，此函数绑定到body的mousemove事件上，在事件中输出鼠标的位置。8.利用jQuery编写代码，使页面中的第一个表格能够进行隔行换色(表格的奇数行与偶数行的背景色不同)。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端基础练习题第29天 答案及解析]]></title>
     <url>%2Fjsexer29-ans.html</url>
     <content type="text"><![CDATA[本篇文章是前端基础练习题第二十九天的答案及解析部分，纯题目部分请移步前端基础练习题 第29天正文1.试利用JS代码在body中生成16个div，每个div的宽高为60 * 60px，里面内容为1-16自身序号，背景颜色为红橙蓝绿随机显示，布局为4行4列排列，具体如下图所示：参考代码如下所示：12345678910111213// CSS部分body &#123; position: relative;&#125;body div &#123; position: absolute; width: 60px; height: 60px; text-align: center; line-height: 60px; color: #fff; border-radius: 50%;&#125;1234567// JS部分var str = &#39;&#39;;var colors = [&#39;red&#39;, &#39;orange&#39;, &#39;blue&#39;, &#39;green&#39;];for (var i = 0; i &lt; 16; i++) &#123; str += &#39;&lt;div style=&quot;left:&#39; + i%4*60 + &#39;px;top:&#39; + Math.floor(i/4)*60 + &#39;px;background:&#39; + colors[Math.floor(Math.random()*4)] + &#39;;&quot;&gt;&#39; + (i + 1) + &#39;&lt;/div&gt;&#39;;&#125;document.body.innerHTML += str;本题目主要利用定位，通过改变元素的top和left的位置，使其呈现规律的排布。随机背景方面，用到了随机数，即Math.random()的相关知识。2.如何在数组的开头添加、删除元素？如何在数组的末尾添加、删除元素？在数组开头添加元素应使用unshift()方法，可添加一或多个；移除数组中的第一个元素应使用shift()方法；在数组末尾添加元素应使用push()方法，可添加一或多个；移除数组中的最后一个元素应使用pop()方法。3.在JS中，如何让a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3这个表达式返回true？可利用隐式转换的相关知识，代码如下所示：123456const a = &#123; i: 1, toString() &#123; return this.i++; &#125;&#125;本题利用了隐式转换，当对象/数组进行比较时，会调用toString和valueOf方法，通过修改这两个方法，就可以自定义转换时的返回值。4.在JS中，如何让a === 1 && a === 2 && a === 3这个表达式返回true？可利用劫持getter的知识来设计，代码如下所示：123456var i = 1;Object.defineProperty(window, &#39;a&#39;, &#123; get() &#123; return i++; &#125;&#125;);本题利用了劫持getter的知识，当访问变量a时，就会调用get方法，使其自增，下一次访问a时，a的值已经被修改过了。5.分析下列代码的执行结果：12345678910function a(b) &#123; console.log(b); var b = 22; console.log(b); function b() &#123; console.log(b); &#125; console.log(b);&#125;a(11);答案：function b() { console.log(b);}、22、22 。此题涉及到变量声明提升和函数声明优先的知识点。在函数体内，函数声明被提升到了顶部，故第一次输出的为函数，后面的变量赋值又覆盖了函数声明，故后续的访问值都为22。6.试描述浏览器对网页的渲染过程。浏览器对网页的渲染过程为：解析HTML以构建DOM(DOM树)，并行请求CSS/JS/image等CSS文件下载完成，构建CSSOM(CSS树)CSSOM构建结束后，和DOM一起生成渲染树(Render Tree)布局(Layout)，计算出每一个节点在屏幕中的位置显示(Painting)，通过显卡将页面显示到屏幕上7.试简述重绘与回流的区别和关系。重绘(repaint)是指当渲染树中的元素部分属性发生变化，如颜色、透明度等不会引起布局变化而重新渲染的过程；回流(reflow)是指当渲染树中的元素布局发生改变而需要重建的过程。回流必将引起重绘，而重绘不一定会引起回流。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击前端基础练习题 第29天]]></content>
@@ -128,9 +143,9 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>HTTP</tag>
         <tag>AJAX</tag>
         <tag>同源策略</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
@@ -145,9 +160,9 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>HTTP</tag>
         <tag>AJAX</tag>
         <tag>同源策略</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
@@ -698,10 +713,10 @@
         <category>答案及解析</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -715,10 +730,10 @@
         <category>习题</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -1124,11 +1139,11 @@
         <category>答案及解析</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
-        <tag>数据类型</tag>
       </tags>
   </entry>
   <entry>
@@ -1140,10 +1155,10 @@
         <category>习题</category>
       </categories>
       <tags>
+        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>数据类型</tag>
       </tags>
   </entry>
 </search>
