@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端基础练习题第30天 答案及解析]]></title>
+    <url>%2Fjsexer31-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是前端基础练习题第三十一天的答案及解析部分，纯题目部分请移步前端基础练习题 第31天正文1.HTML代码如下所示：123456&lt;select id="fruits" multiple="multiple"&gt; &lt;option value="apple"&gt;苹果&lt;/option&gt; &lt;option value="banana"&gt;香蕉&lt;/option&gt; &lt;option value="orange"&gt;橙子&lt;/option&gt; &lt;option value="pear"&gt;梨子&lt;/option&gt;&lt;/select&gt;则如何获取到该选择框的所有选中值，并分别在控制台打印出选中的文字，试用jQuery代码实现。参考代码如下所示：12345$(&#39;#fruits&#39;).blur(function() &#123; $(&#39;#fruits :selected&#39;).each(function(item) &#123; console.log($(this).text()); &#125;);&#125;);该题利用了jQuery的表单过滤选择符:selected，其会获取所有被选中的表单项；在本习题里，绑定blur事件主要是因为多选的存在。若修改为change事件，则只会获取到一个值；each函数用来循环遍历所有选中值；text函数用来输出文字，val函数用来获取value值。2.说说jQuery中的$.ajax方法如何使用？$.ajax是jQuery中封装好的使用ajax的方法，使用时传入url、请求类型、失败或成功的回调函数等，示例如下所示：12345678910111213$.ajax(&#123; url: &#39;/api/reserve&#39;, type: &#39;post&#39;, data: JSON.stringify(info), datatype: &#39;json&#39;, contentType: &#39;application/json&#39;, success: function(res) &#123; // … &#125;, error: function() &#123; // … &#125;&#125;);3.jQuery是如何处理缓存的？要处理缓存就是禁用缓存通过$.post()方法来获取数据，那么默认就是禁用缓存的通过$.get()方法获取数据，可以通过设置时间戳来避免缓存，可以在url后面加上 +(+new Date)通过$.ajax()来获取数据，只要设置cache:false即可。4.$.extend与$.fn.extend的区别在哪？$.fn.extend()和$.extend()是jQuery为扩展插件提供的两个方法。$.extend(object)是为jQuery添加静态方法，即工具方法，其拓展方法的调用方式为$.extendFn()$.fn.extend(json)用来为jQuery添加成员函数，即实例方法，其调用方式为$(&#39;dom&#39;).extendFn()。5.利用jQuery如何实现深拷贝？通过使用$.extend(true, target, object1 [, objectN])方法可实现深拷贝。其中第一个参数就是控制深浅拷贝的，为true时为深拷贝，不定义时为浅拷贝。不能显式地将第一个参数置为false，否则会报错。6.jQuery框架解决了前端开发的哪些痛点？jQuery的诞生为前端开发带来了极大的方便，主要表现在：浏览器兼容问题，使用jQuery后，IE9以下的浏览器基本不用再为其单独写样式和方法DOM元素选择问题，jQuery内置了非常丰富的元素选择器，操作DOM变得特别容易带来了便捷的动画效果制作简化了冗长的ajax请求，使得ajax请求变得简短和通用7.你觉得jQuery过时了吗？有哪些代替jQuery的解决方案。随着WEB的发展和众多优秀框架的涌现，jQuery的使用场景确已减少浏览器兼容方面，现在IF9以下的浏览器基本可以不用再考虑了元素选择方面，CSS3新增了大量的选择器动画效果方面，CSS3新增了动画方面的属性、HTML5中也有canvas可制作动画ajax方面，有axios等框架集成了更为完善和简便的ajaxDOM操作和事件绑定上，对DOM的操作尽量减少，现多利用MVVM框架，如Vue、React等组件化与模块化方面，可使用ES6的模块语法、webpack打包、gulp等尽管jQuery目前已渐渐淡出前端开发的舞台，但是还是有一些项目中在使用，自然也需要维护和开发的。所以jQuery的相关知识，仍然是需要掌握的。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击前端基础练习题 第31天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>jQuery</tag>
+        <tag>ajax</tag>
+        <tag>深拷贝</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端基础练习题 第31天]]></title>
     <url>%2Fjsexer31.html</url>
-    <content type="text"><![CDATA[该篇文章是该系列的第三十一天。本次习题将继续分享jQuery方面的习题，虽然jQuery目前已渐渐退出前端开发的舞台，不过其当初可是为前端开发带来了极大的便利，它的核心知识点还是有掌握的必要的。正文1.HTML代码如下所示：123456&lt;select id="fruits" multiple="multiple"&gt; &lt;option value="apple"&gt;苹果&lt;/option&gt; &lt;option value="banana"&gt;香蕉&lt;/option&gt; &lt;option value="orange"&gt;橙子&lt;/option&gt; &lt;option value="pear"&gt;梨子&lt;/option&gt;&lt;/select&gt;则如何获取到该选择框的所有选中值，并分别在控制台打印出选中的文字，试用jQuery代码实现。2.说说jQuery中的$.ajax方法如何使用？3.jQuery是如何处理缓存的？4.$.extend与$.fn.extend的区别在哪？5.利用jQuery如何实现深拷贝？6.jQuery框架解决了前端开发的哪些痛点？7.你觉得jQuery过时了吗？有哪些代替jQuery的解决方案。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+    <content type="text"><![CDATA[该篇文章是该系列的第三十一天。本次习题将继续分享jQuery方面的习题，虽然jQuery目前已渐渐退出前端开发的舞台，不过其当初可是为前端开发带来了极大的便利，它的核心知识点还是有掌握的必要的。正文1.HTML代码如下所示：123456&lt;select id="fruits" multiple="multiple"&gt; &lt;option value="apple"&gt;苹果&lt;/option&gt; &lt;option value="banana"&gt;香蕉&lt;/option&gt; &lt;option value="orange"&gt;橙子&lt;/option&gt; &lt;option value="pear"&gt;梨子&lt;/option&gt;&lt;/select&gt;则如何获取到该选择框的所有选中值，并分别在控制台打印出选中的文字，试用jQuery代码实现。2.说说jQuery中的$.ajax方法如何使用？3.jQuery是如何处理缓存的？4.$.extend与$.fn.extend的区别在哪？5.利用jQuery如何实现深拷贝？6.jQuery框架解决了前端开发的哪些痛点？7.你觉得jQuery过时了吗？有哪些代替jQuery的解决方案。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.查看答案和解析，请点击前端基础练习题第31天 答案及解析]]></content>
       <categories>
         <category>JS基础练习题</category>
         <category>习题</category>
@@ -175,9 +192,9 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>HTTP</tag>
         <tag>AJAX</tag>
         <tag>同源策略</tag>
-        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
@@ -192,9 +209,9 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>HTTP</tag>
         <tag>AJAX</tag>
         <tag>同源策略</tag>
-        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
@@ -745,10 +762,10 @@
         <category>答案及解析</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -762,10 +779,10 @@
         <category>习题</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
         <tag>柯里化</tag>
         <tag>Promise</tag>
       </tags>
@@ -1171,11 +1188,11 @@
         <category>答案及解析</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
         <tag>js练习题答案</tag>
+        <tag>数据类型</tag>
       </tags>
   </entry>
   <entry>
@@ -1187,10 +1204,10 @@
         <category>习题</category>
       </categories>
       <tags>
-        <tag>数据类型</tag>
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
+        <tag>数据类型</tag>
       </tags>
   </entry>
 </search>
