@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端基础练习题 第33天]]></title>
+    <url>%2Fjsexer33.html</url>
+    <content type="text"><![CDATA[该篇文章是该系列的第三十三天。本次的习题将探讨js的垃圾回收机制的方法和必要性、js引擎对代码的执行过程、回调地狱的解决方案和jQuery的on方法的使用以及鼠标事件的一些相关知识。正文1.JS中垃圾回收机制存在的必要性有哪些？2.试简述一下js中的垃圾回收方法？3.试简述JS引擎的执行过程。4.如何解决异步回调地狱问题？5.jQuery动态生成的元素如何绑定事件？6.mouseover与mouseenter事件有何区别？7.输入出生日期（YYYY-MM-DD格式），判断年龄是否大于18岁，大于18岁返回true，否则返回false。说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>习题</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Date</tag>
+        <tag>jQuery</tag>
+        <tag>垃圾回收机制</tag>
+        <tag>回调地狱</tag>
+        <tag>鼠标键盘事件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端基础练习题第32天 答案及解析]]></title>
     <url>%2Fjsexer32-ans.html</url>
     <content type="text"><![CDATA[本篇文章是前端基础练习题第三十二天的答案及解析部分，纯题目部分请移步前端基础练习题 第32天正文1.如何从new Date()返回的数据中提取出日期，并转换为YYYY-MM-DD的格式？参考代码如下所示：12345678// 方式1，利用正则表达式new Date().toLocaleDateString().replace(/\/(\d)(?!\d)/g, &#39;-0$1&#39;).replace(/\//g, &#39;-&#39;);// 方式2，利用toISOString和substrnew Date().toISOString().substr(0, 10);// 方式3，利用toJSON和substrnew Date().toJSON().substr(0, 10);当然了，最传统的方法还是写一个format函数，根据传入的格式进行转换。具体可参考标准时间格式化。2.如何从new Date()返回的数据中提取出时间，并转换为hh:mm:ss的格式？参考代码如下所示：12345678// 方式1，利用toTimeStringnew Date().toTimeString().split(&quot; &quot;)[0];// 方式2，利用toLocaleTimeString和正则替换new Date().toLocaleTimeString().replace(/下午(\d+)/g, ($0, $1) =&gt; 12 + Number($1));// 方式3，利用toStringnew Date().toString().split(&quot; &quot;)[4];同理，本题也可以写一个format函数，将传入的时间值转换为指定的格式。具体可参考时间格式转换。3.js如何获取当前时间的时间戳？在js中有如下几种方式获取时间戳Date.now()，ES6新增API，直接获取当前时间的时间戳new Date().getTime()Date.parse(new Date())new Date().valueOf()常用的方式是第一种和第三种。不过第一种方式只能获取当前时间的时间戳而不能传入指定的时间日期，第三种方式则可以获取指定日期时间的时间戳。4.js如何将时间戳转换为日期时间格式？通过将时间戳传入Date的构造函数里，即 new Date(timeStamp)即可得到该timeStamp所对应的日期时间。将时间戳转换为标准日期时间后，亦可进行一些格式化操作，如题目1和题目2所示。5.如何对数组中的对象进行去重，并返回一个无重复对象的数组？试完善arrayUnique函数，如下所示1234567let arr = [ &#123; id: 1, name: 'Jealyn' &#125;, &#123; id: 1, name: 'Jinlin' &#125;, &#123; id: 2, name: 'Jealyn' &#125;, &#123; id: 2, name: 'Jinlin' &#125;];arrayUnique(arr, 'id'); // [&#123; id: 1, name: 'Jealyn' &#125;, &#123; id: 2, name: 'Jealyn' &#125;]参考代码如下所示：1234567function arrayUnique(arr, name) &#123; let hash = &#123;&#125;; return arr.reduce((item, next) =&gt; &#123; hash[next[name]] ? &#39;&#39; : hash[next[name]] = true &amp;&amp; item.push(next); return item; &#125;, []);&#125;该函数根据指定的键值(name)对数组中的对象进行去重，去除对象数组中后出现的name属性值相同的元素。对数组的循环上，采用的是reduce方法进行迭代。6.js如何按照指定的长度为数字前面补0？参考代码如下所示：123const fixCount = (str, count = 0) =&gt; &#123; return (&#39;0&#39;.repeat(count) + str).slice(-count);&#125;这段程序主要利用了repeat函数和slice函数。repeat函数将&#39;0&#39;重复指定次数，再拼接上该数字，然后从这一段字符串的-count位开始取值，取count位即可。7.jQuery如何实现缓慢回到顶部的功能(即为回到顶部添加动画功能)？参考代码如下所示：12345$(&quot;#scrollTop&quot;).click(function() &#123; $(&quot;html,body&quot;).animate(&#123; scrollTop: 0 &#125;, 500);&#125;);既然是缓慢回到顶部，实则就是考查对animate函数的应用以及scrollTop属性的明确。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击前端基础练习题 第32天]]></content>
