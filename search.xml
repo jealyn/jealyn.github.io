@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端基础练习题第34天 答案及解析]]></title>
+    <url>%2Fjsexer34-ans.html</url>
+    <content type="text"><![CDATA[本篇文章是前端基础练习题第三十四天的答案及解析部分，纯题目部分请移步前端基础练习题 第34天正文1.页面有一个按钮button，id为button1，通过原生JS如何禁用（IE考虑IE8以上）该按钮？参考代码如下所示：12345// 方式1document.getElementById(&#39;button1&#39;).disabled = true;// 方式2document.getElementById(&#39;button1&#39;).setAttribute(&#39;disabled&#39;, &#39;true&#39;);diabled属性为禁用输入框、按钮等，readonly属性为设置内容为只读状态。2.简述instanceof和typeof的区别。typeof为一元操作符，用来检测基本数据类型，返回值为数据类型的字符串形式，返回值共有8种。(&quot;undefined&quot;, &quot;string&quot;, &quot;boolean&quot;, &quot;object&quot;, &quot;number&quot;, &quot;function&quot;, &quot;symbol&quot;, &quot;bigint&quot;)。instanceof为双目运算符，是用来检测一个对象是否属于一个类的实例，返回值为true/false。bigint是ECMAScript新增的一种数据类型，具体介绍请参看我的文章bigint介绍。3.JS中，对象的内部属性[[Class]]可为哪些值？一共有12个值，即Arguments, Array, Boolean, Date, Error, Function, JSON, Math, Number, Object, RegExp, String。对该对象调用toString方法，即可看到其Class值。也通常利用该值来判断其真正的数据类型。4.简单谈一下JS动画和CSS3动画的差异性。两者的差异性表型在以下几方面：实现难度上，CSS3动画利用transform、animation等方式即可简单实现动画，而JS动画实现方式比较复杂功能涵盖上，CSS3动画功能相对简单，而JS动画的控制力更强，能实现比较繁琐的交互动画渲染性能上，CSS3动画的渲染速度较快且比JS动画更加流畅兼容性上，CSS3动画由于是最新标准，故存在兼容性问题，而JS动画则几乎不存在兼容性问题5.简要介绍一下flex布局。flex布局是CSS3中新增的一种布局方式，即弹性布局。flex内部的元素具有伸缩性，可按照设置的比例决定元素的宽高。利用flex布局可以轻易设置和值的布局流、对齐方式、显示顺序等，亦能简单的实现水平垂直居中、三栏布局等常见的布局效果。flex布局需在IE9及以上的浏览器运行。6.简述transition和animation的区别。transition是过渡属性，强调过渡，它的实现需要一个触发事件，如click、hover等才执行动画，其只有两个关键帧，即开始和结束；animation是动画属性，它的实现不需要触发事件，设定好事件之后可以自己执行，且可设置多个关键帧完成动画效果。7.visibility:hidden、opacity:0与display:none三者之间有何区别？visibility:hidden是把元素隐藏起来，但不会改变页面布局，且不会触发该元素已经绑定的事件；opacity:0隐藏元素，亦不会改变布局，但会触发该元素绑定的事件；display:none改变页面布局，使元素不存在于页面，相当于删除该元素和相关事件。说明题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript答案中，若有错误和需完善的地方，可在下方留言反馈哈~~查看纯习题版，请点击前端基础练习题 第34天]]></content>
+      <categories>
+        <category>JS基础练习题</category>
+        <category>答案及解析</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>web前端</tag>
+        <tag>前端面试题</tag>
+        <tag>Object</tag>
+        <tag>typeof</tag>
+        <tag>CSS</tag>
+        <tag>flex</tag>
+        <tag>animation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端基础练习题 第34天]]></title>
     <url>%2Fjsexer34.html</url>
-    <content type="text"><![CDATA[该篇文章是该系列的第三十四天。本文主要讨论一些css属性的区别，如transition属性与animation属性的区别，控制元素显隐的几个属性的区别、flex布局的理解以及js对css的一些常见控制。正文`1.页面有一个按钮button，id为button1，通过原生JS如何禁用（IE考虑IE8以上）该按钮？2.简述instanceof和typeof的区别。3.JS中，对象的内部属性[[Class]]可为哪些值？4.简单谈一下JS动画和CSS3动画的差异性。5.简要介绍一下flex布局。6.简述transition和animation的区别。7.visibility:hidden、opacity:0与display:none三者之间有何区别？说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~]]></content>
+    <content type="text"><![CDATA[该篇文章是该系列的第三十四天。本文主要讨论一些css属性的区别，如transition属性与animation属性的区别，控制元素显隐的几个属性的区别、flex布局的理解以及js对css的一些常见控制。正文`1.页面有一个按钮button，id为button1，通过原生JS如何禁用（IE考虑IE8以上）该按钮？2.简述instanceof和typeof的区别。3.JS中，对象的内部属性[[Class]]可为哪些值？4.简单谈一下JS动画和CSS3动画的差异性。5.简要介绍一下flex布局。6.简述transition和animation的区别。7.visibility:hidden、opacity:0与display:none三者之间有何区别？说明1.题目中出现的JS指的是采用ECMAScript 2015及之后标准的JavaScript2.题目中，若有错误和需完善的地方，可在下方留言反馈哈~~3.查看答案和解析，请点击前端基础练习题第34天 答案及解析]]></content>
       <categories>
         <category>JS基础练习题</category>
         <category>习题</category>
@@ -283,9 +302,9 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>HTTP</tag>
         <tag>AJAX</tag>
         <tag>同源策略</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
@@ -300,9 +319,9 @@
         <tag>javascript</tag>
         <tag>web前端</tag>
         <tag>前端面试题</tag>
-        <tag>HTTP</tag>
         <tag>AJAX</tag>
         <tag>同源策略</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
